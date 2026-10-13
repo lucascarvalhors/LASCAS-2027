@@ -1,0 +1,126 @@
+ht_mlp/b6_expand/Conv1D/ExpandDims
+[10/13/2026-06:19:41] [I]        5.73       0.0122       0.0121       0.6   tri_light_mlp/b6_expand/Conv1D
+[10/13/2026-06:19:41] [I]        5.66       0.0121       0.0119       0.6   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b6_expand/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        5.04       0.0107       0.0106       0.5   PWN(PWN(PWN(tri_light_mlp/b6_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b6_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_9, PWN(tri_light_mlp/b6_expand_hs/add)), PWN(tri_light_mlp/b6_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_9 + ONNXTRT_Broadcast_334, PWN(tri_light_mlp/b6_expand_hs/mul))), PWN(tri_light_mlp/b6_expand_hs/truediv)))
+[10/13/2026-06:19:41] [I]        9.65       0.0206       0.0205       1.0   tri_light_mlp/b6_dw/depthwise
+[10/13/2026-06:19:41] [I]        3.40       0.0072       0.0072       0.4   PWN(PWN(PWN(tri_light_mlp/b6_dw_bn/batchnorm/mul_1), PWN(tri_light_mlp/b6_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_10, PWN(tri_light_mlp/b6_dw_hs/add)), PWN(tri_light_mlp/b6_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_10 + ONNXTRT_Broadcast_351, PWN(tri_light_mlp/b6_dw_hs/mul))), PWN(tri_light_mlp/b6_dw_hs/truediv)))
+[10/13/2026-06:19:41] [I]        3.53       0.0075       0.0074       0.4   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b6_project/Conv1D
+[10/13/2026-06:19:41] [I]        4.25       0.0091       0.0090       0.4   tri_light_mlp/b6_project/Conv1D
+[10/13/2026-06:19:41] [I]        5.73       0.0122       0.0121       0.6   tri_light_mlp/b6_project/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        3.71       0.0079       0.0076       0.4   PWN(PWN(tri_light_mlp/b6_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b6_project_bn/batchnorm/add_1))
+[10/13/2026-06:19:41] [I]        4.46       0.0095       0.0094       0.5   tri_light_mlp/b7_expand/Conv1D/ExpandDims
+[10/13/2026-06:19:41] [I]        5.42       0.0116       0.0114       0.6   tri_light_mlp/b7_expand/Conv1D
+[10/13/2026-06:19:41] [I]        5.14       0.0110       0.0108       0.5   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b7_expand/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        4.87       0.0104       0.0103       0.5   PWN(PWN(PWN(tri_light_mlp/b7_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b7_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_11, PWN(tri_light_mlp/b7_expand_hs/add)), PWN(tri_light_mlp/b7_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_11 + ONNXTRT_Broadcast_383, PWN(tri_light_mlp/b7_expand_hs/mul))), PWN(tri_light_mlp/b7_expand_hs/truediv)))
+[10/13/2026-06:19:41] [I]        6.25       0.0133       0.0131       0.7   tri_light_mlp/b7_dw/depthwise
+[10/13/2026-06:19:41] [I]        4.23       0.0090       0.0089       0.4   PWN(PWN(PWN(tri_light_mlp/b7_dw_bn/batchnorm/mul_1), PWN(tri_light_mlp/b7_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_12, PWN(tri_light_mlp/b7_dw_hs/add)), PWN(tri_light_mlp/b7_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_12 + ONNXTRT_Broadcast_400, PWN(tri_light_mlp/b7_dw_hs/mul))), PWN(tri_light_mlp/b7_dw_hs/truediv)))
+[10/13/2026-06:19:41] [I]        5.30       0.0113       0.0113       0.6   tri_light_mlp/b7_project/Conv1D/ExpandDims
+[10/13/2026-06:19:41] [I]        4.81       0.0103       0.0102       0.5   tri_light_mlp/b7_project/Conv1D
+[10/13/2026-06:19:41] [I]        5.62       0.0120       0.0119       0.6   tri_light_mlp/b7_project/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        3.63       0.0077       0.0076       0.4   PWN(PWN(PWN(tri_light_mlp/b7_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b7_project_bn/batchnorm/add_1)), PWN(tri_light_mlp/b7_residual/add))
+[10/13/2026-06:19:41] [I]        4.28       0.0091       0.0089       0.4   tri_light_mlp/b8_expand/Conv1D/ExpandDims
+[10/13/2026-06:19:41] [I]        5.42       0.0116       0.0115       0.6   tri_light_mlp/b8_expand/Conv1D
+[10/13/2026-06:19:41] [I]        5.32       0.0114       0.0112       0.6   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b8_expand/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        4.76       0.0101       0.0100       0.5   PWN(PWN(PWN(tri_light_mlp/b8_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b8_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_13, PWN(tri_light_mlp/b8_expand_hs/add)), PWN(tri_light_mlp/b8_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_13 + ONNXTRT_Broadcast_432, PWN(tri_light_mlp/b8_expand_hs/mul))), PWN(tri_light_mlp/b8_expand_hs/truediv)))
+[10/13/2026-06:19:41] [I]        6.32       0.0135       0.0134       0.7   tri_light_mlp/b8_dw/depthwise
+[10/13/2026-06:19:41] [I]        4.21       0.0090       0.0089       0.4   PWN(PWN(PWN(tri_light_mlp/b8_dw_bn/batchnorm/mul_1), PWN(tri_light_mlp/b8_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_14, PWN(tri_light_mlp/b8_dw_hs/add)), PWN(tri_light_mlp/b8_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_14 + ONNXTRT_Broadcast_449, PWN(tri_light_mlp/b8_dw_hs/mul))), PWN(tri_light_mlp/b8_dw_hs/truediv)))
+[10/13/2026-06:19:41] [I]        5.07       0.0108       0.0106       0.5   tri_light_mlp/b8_project/Conv1D/ExpandDims
+[10/13/2026-06:19:41] [I]        4.82       0.0103       0.0101       0.5   tri_light_mlp/b8_project/Conv1D
+[10/13/2026-06:19:41] [I]        5.56       0.0119       0.0118       0.6   tri_light_mlp/b8_project/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        3.54       0.0075       0.0074       0.4   PWN(PWN(PWN(tri_light_mlp/b8_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b8_project_bn/batchnorm/add_1)), PWN(tri_light_mlp/b8_residual/add))
+[10/13/2026-06:19:41] [I]        4.15       0.0088       0.0087       0.4   tri_light_mlp/b9_expand/Conv1D/ExpandDims
+[10/13/2026-06:19:41] [I]        6.02       0.0128       0.0128       0.6   tri_light_mlp/b9_expand/Conv1D
+[10/13/2026-06:19:41] [I]        4.89       0.0104       0.0102       0.5   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b9_expand/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        4.95       0.0105       0.0105       0.5   PWN(PWN(PWN(tri_light_mlp/b9_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b9_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_15, PWN(tri_light_mlp/b9_expand_hs/add)), PWN(tri_light_mlp/b9_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_15 + ONNXTRT_Broadcast_481, PWN(tri_light_mlp/b9_expand_hs/mul))), PWN(tri_light_mlp/b9_expand_hs/truediv)))
+[10/13/2026-06:19:41] [I]        6.24       0.0133       0.0132       0.6   tri_light_mlp/b9_dw/depthwise
+[10/13/2026-06:19:41] [I]        1.29       0.0027       0.0027       0.1   dummy_shape_call__mye3721_0_myl185_0
+[10/13/2026-06:19:41] [I]        4.90       0.0104       0.0104       0.5   __myl_MulAddAddMinMaxMulMulTraMea_myl185_1
+[10/13/2026-06:19:41] [I]        3.75       0.0080       0.0081       0.4   __myl_MulSumAddRel_myl185_2
+[10/13/2026-06:19:41] [I]        3.32       0.0071       0.0071       0.3   __myl_ResMulSumAddAdd_myl185_3
+[10/13/2026-06:19:41] [I]        3.63       0.0077       0.0077       0.4   __myl_MinMaxMulResMulResTra_myl185_4
+[10/13/2026-06:19:41] [I]        7.16       0.0153       0.0151       0.7   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b9_project/Conv1D
+[10/13/2026-06:19:41] [I]        6.45       0.0137       0.0136       0.7   tri_light_mlp/b9_project/Conv1D
+[10/13/2026-06:19:41] [I]        6.45       0.0137       0.0137       0.7   tri_light_mlp/b9_project/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        3.44       0.0073       0.0073       0.4   PWN(PWN(tri_light_mlp/b9_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b9_project_bn/batchnorm/add_1))
+[10/13/2026-06:19:41] [I]        4.86       0.0104       0.0103       0.5   tri_light_mlp/b10_expand/Conv1D/ExpandDims
+[10/13/2026-06:19:41] [I]       34.84       0.0743       0.0122       3.6   tri_light_mlp/b10_expand/Conv1D
+[10/13/2026-06:19:41] [I]        5.26       0.0112       0.0112       0.5   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b10_expand/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        4.99       0.0107       0.0106       0.5   PWN(PWN(PWN(tri_light_mlp/b10_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b10_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_16, PWN(tri_light_mlp/b10_expand_hs/add)), PWN(tri_light_mlp/b10_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_16 + ONNXTRT_Broadcast_539, PWN(tri_light_mlp/b10_expand_hs/mul))), PWN(tri_light_mlp/b10_expand_hs/truediv)))
+[10/13/2026-06:19:41] [I]        7.33       0.0156       0.0153       0.8   tri_light_mlp/b10_dw/depthwise
+[10/13/2026-06:19:41] [I]        1.23       0.0026       0.0026       0.1   dummy_shape_call__mye3717_0_myl203_0
+[10/13/2026-06:19:41] [I]        4.86       0.0104       0.0103       0.5   __myl_MulAddAddMinMaxMulMulTraMea_myl203_1
+[10/13/2026-06:19:41] [I]        3.65       0.0078       0.0077       0.4   __myl_MulSumAddRel_myl203_2
+[10/13/2026-06:19:41] [I]        3.36       0.0072       0.0072       0.3   __myl_ResMulSumAddAdd_myl203_3
+[10/13/2026-06:19:41] [I]        3.74       0.0080       0.0079       0.4   __myl_MinMaxMulResMulResTra_myl203_4
+[10/13/2026-06:19:41] [I]        7.37       0.0157       0.0155       0.8   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b10_project/Conv1D
+[10/13/2026-06:19:41] [I]        6.48       0.0138       0.0136       0.7   tri_light_mlp/b10_project/Conv1D
+[10/13/2026-06:19:41] [I]        6.21       0.0132       0.0131       0.6   tri_light_mlp/b10_project/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        3.62       0.0077       0.0076       0.4   PWN(PWN(PWN(tri_light_mlp/b10_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b10_project_bn/batchnorm/add_1)), PWN(tri_light_mlp/b10_residual/add))
+[10/13/2026-06:19:41] [I]        4.75       0.0101       0.0100       0.5   tri_light_mlp/b11_expand/Conv1D/ExpandDims
+[10/13/2026-06:19:41] [I]        5.73       0.0122       0.0121       0.6   tri_light_mlp/b11_expand/Conv1D
+[10/13/2026-06:19:41] [I]        5.17       0.0110       0.0110       0.5   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b11_expand/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        5.15       0.0110       0.0109       0.5   PWN(PWN(PWN(tri_light_mlp/b11_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b11_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_17, PWN(tri_light_mlp/b11_expand_hs/add)), PWN(tri_light_mlp/b11_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_17 + ONNXTRT_Broadcast_597, PWN(tri_light_mlp/b11_expand_hs/mul))), PWN(tri_light_mlp/b11_expand_hs/truediv)))
+[10/13/2026-06:19:41] [I]        4.94       0.0105       0.0104       0.5   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b11_dw/depthwise
+[10/13/2026-06:19:41] [I]        5.94       0.0127       0.0124       0.6   tri_light_mlp/b11_dw/depthwise
+[10/13/2026-06:19:41] [I]        1.27       0.0027       0.0026       0.1   dummy_shape_call__mye3708_0_myl222_0
+[10/13/2026-06:19:41] [I]        5.27       0.0112       0.0112       0.5   __myl_ResMulAddAddMinMaxMulMulTraMea_myl222_1
+[10/13/2026-06:19:41] [I]        3.28       0.0070       0.0070       0.3   __myl_MulSumAddRel_myl222_2
+[10/13/2026-06:19:41] [I]        3.54       0.0075       0.0074       0.4   __myl_ResMulSumAddAdd_myl222_3
+[10/13/2026-06:19:41] [I]        4.39       0.0094       0.0091       0.5   __myl_MinMaxMulResMulResTra_myl222_4
+[10/13/2026-06:19:41] [I]        7.29       0.0155       0.0154       0.8   tri_light_mlp/b11_project/Conv1D
+[10/13/2026-06:19:41] [I]        6.40       0.0137       0.0136       0.7   tri_light_mlp/b11_project/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        3.61       0.0077       0.0076       0.4   PWN(PWN(tri_light_mlp/b11_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b11_project_bn/batchnorm/add_1))
+[10/13/2026-06:19:41] [I]        4.82       0.0103       0.0102       0.5   tri_light_mlp/b12_expand/Conv1D/ExpandDims
+[10/13/2026-06:19:41] [I]        5.81       0.0124       0.0123       0.6   tri_light_mlp/b12_expand/Conv1D
+[10/13/2026-06:19:41] [I]        5.34       0.0114       0.0112       0.6   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b12_expand/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        4.91       0.0105       0.0103       0.5   PWN(PWN(PWN(tri_light_mlp/b12_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b12_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_18, PWN(tri_light_mlp/b12_expand_hs/add)), PWN(tri_light_mlp/b12_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_18 + ONNXTRT_Broadcast_655, PWN(tri_light_mlp/b12_expand_hs/mul))), PWN(tri_light_mlp/b12_expand_hs/truediv)))
+[10/13/2026-06:19:41] [I]        6.28       0.0134       0.0132       0.7   tri_light_mlp/b12_dw/depthwise
+[10/13/2026-06:19:41] [I]        1.17       0.0025       0.0025       0.1   dummy_shape_call__mye3717_0_myl238_0
+[10/13/2026-06:19:41] [I]        4.81       0.0103       0.0101       0.5   __myl_MulAddAddMinMaxMulMulTraMea_myl238_1
+[10/13/2026-06:19:41] [I]        3.79       0.0081       0.0081       0.4   __myl_MulSumAddRel_myl238_2
+[10/13/2026-06:19:41] [I]        3.36       0.0072       0.0072       0.3   __myl_ResMulSumAddAdd_myl238_3
+[10/13/2026-06:19:41] [I]        3.41       0.0073       0.0072       0.4   __myl_MinMaxMulResMulResTra_myl238_4
+[10/13/2026-06:19:41] [I]        7.31       0.0156       0.0151       0.8   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b12_project/Conv1D
+[10/13/2026-06:19:41] [I]        5.97       0.0127       0.0124       0.6   tri_light_mlp/b12_project/Conv1D
+[10/13/2026-06:19:41] [I]        6.31       0.0135       0.0132       0.7   tri_light_mlp/b12_project/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        3.55       0.0076       0.0075       0.4   PWN(PWN(tri_light_mlp/b12_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b12_project_bn/batchnorm/add_1))
+[10/13/2026-06:19:41] [I]        4.84       0.0103       0.0102       0.5   tri_light_mlp/b13_expand/Conv1D/ExpandDims
+[10/13/2026-06:19:41] [I]        5.34       0.0114       0.0112       0.6   tri_light_mlp/b13_expand/Conv1D
+[10/13/2026-06:19:41] [I]        5.38       0.0115       0.0112       0.6   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b13_expand/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        4.97       0.0106       0.0106       0.5   PWN(PWN(PWN(tri_light_mlp/b13_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b13_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_19, PWN(tri_light_mlp/b13_expand_hs/add)), PWN(tri_light_mlp/b13_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_19 + ONNXTRT_Broadcast_713, PWN(tri_light_mlp/b13_expand_hs/mul))), PWN(tri_light_mlp/b13_expand_hs/truediv)))
+[10/13/2026-06:19:41] [I]        7.64       0.0163       0.0162       0.8   tri_light_mlp/b13_dw/depthwise
+[10/13/2026-06:19:41] [I]        1.24       0.0027       0.0026       0.1   dummy_shape_call__mye3717_0_myl255_0
+[10/13/2026-06:19:41] [I]        4.82       0.0103       0.0102       0.5   __myl_MulAddAddMinMaxMulMulTraMea_myl255_1
+[10/13/2026-06:19:41] [I]        3.75       0.0080       0.0079       0.4   __myl_MulSumAddRel_myl255_2
+[10/13/2026-06:19:41] [I]        3.38       0.0072       0.0070       0.4   __myl_ResMulSumAddAdd_myl255_3
+[10/13/2026-06:19:41] [I]        3.48       0.0074       0.0073       0.4   __myl_MinMaxMulResMulResTra_myl255_4
+[10/13/2026-06:19:41] [I]        6.39       0.0136       0.0131       0.7   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/ord_c1/Conv1D
+[10/13/2026-06:19:41] [I]        7.05       0.0150       0.0148       0.7   tri_light_mlp/ord_c1/Conv1D
+[10/13/2026-06:19:41] [I]        5.91       0.0126       0.0125       0.6   tri_light_mlp/ord_c1/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        4.48       0.0095       0.0093       0.5   PWN(PWN(PWN(tri_light_mlp/ord_c1/BiasAdd + tri_light_mlp/ord_c1/Relu), PWN(tri_light_mlp/ord_bn1/batchnorm/mul_1)), PWN(tri_light_mlp/ord_bn1/batchnorm/add_1))
+[10/13/2026-06:19:41] [I]        3.97       0.0085       0.0085       0.4   tri_light_mlp/ord_c2/Conv1D/ExpandDims
+[10/13/2026-06:19:41] [I]        6.53       0.0139       0.0138       0.7   tri_light_mlp/ord_c2/Conv1D
+[10/13/2026-06:19:41] [I]        4.41       0.0094       0.0092       0.5   Reformatting CopyNode for Input Tensor 0 to tri_light_mlp/b13_project/Conv1D
+[10/13/2026-06:19:41] [I]        5.96       0.0127       0.0126       0.6   tri_light_mlp/b13_project/Conv1D
+[10/13/2026-06:19:41] [I]        5.57       0.0119       0.0118       0.6   tri_light_mlp/b13_project/Conv1D/Squeeze
+[10/13/2026-06:19:41] [I]        3.89       0.0083       0.0080       0.4   PWN(PWN(PWN(tri_light_mlp/b13_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b13_project_bn/batchnorm/add_1)), PWN(tri_light_mlp/b13_residual/add))
+[10/13/2026-06:19:41] [I]        4.42       0.0094       0.0094       0.5   tri_light_mlp/last_conv/Conv1D/ExpandDims
+[10/13/2026-06:19:41] [I]        4.82       0.0103       0.0100       0.5   tri_light_mlp/last_conv/Conv1D
+[10/13/2026-06:19:41] [I]        3.26       0.0070       0.0068       0.3   Reformatting CopyNode for Input Tensor 0 to {ForeignNode[tri_light_mlp/sc_fc1/MatMul/ReadVariableOp:0...tri_light_mlp/mlp_logits/BiasAdd]}
+[10/13/2026-06:19:41] [I]        5.29       0.0113       0.0112       0.6   Reformatting CopyNode for Input Tensor 1 to {ForeignNode[tri_light_mlp/sc_fc1/MatMul/ReadVariableOp:0...tri_light_mlp/mlp_logits/BiasAdd]}
+[10/13/2026-06:19:41] [I]        5.74       0.0122       0.0122       0.6   Reformatting CopyNode for Input Tensor 2 to {ForeignNode[tri_light_mlp/sc_fc1/MatMul/ReadVariableOp:0...tri_light_mlp/mlp_logits/BiasAdd]}
+[10/13/2026-06:19:41] [I]        1.31       0.0028       0.0027       0.1   dummy_shape_call__mye3097_0_myl279_0
+[10/13/2026-06:19:41] [I]        4.84       0.0103       0.0103       0.5   __myl_AddRelMea_myl279_1
+[10/13/2026-06:19:41] [I]        3.66       0.0078       0.0077       0.4   __myl_MulSum_myl279_2
+[10/13/2026-06:19:41] [I]        3.22       0.0069       0.0066       0.3   __myl_AddRel_myl279_3
+[10/13/2026-06:19:41] [I]        3.95       0.0084       0.0084       0.4   __myl_MulAddResMulSumAddRel_myl279_4
+[10/13/2026-06:19:41] [I]        3.43       0.0073       0.0073       0.4   __myl_ResMulSum_myl279_5
+[10/13/2026-06:19:41] [I]        3.03       0.0065       0.0061       0.3   __myl_AddRel_myl279_6
+[10/13/2026-06:19:41] [I]        3.70       0.0079       0.0078       0.4   __myl_MulAddAddMinMaxMulMulMea_myl279_7
+[10/13/2026-06:19:41] [I]        2.93       0.0062       0.0061       0.3   __myl_Res_myl279_8
+[10/13/2026-06:19:41] [I]        4.12       0.0088       0.0087       0.4   __myl_ResMulSumAddRel_myl279_9
+[10/13/2026-06:19:41] [I]        2.86       0.0061       0.0060       0.3   __myl_ResMulSumAdd_myl279_10
+[10/13/2026-06:19:41] [I]        5.64       0.0120       0.0117       0.6   Reformatting CopyNode for Output Tensor 0 to {ForeignNode[tri_light_mlp/sc_fc1/MatMul/ReadVariableOp:0...tri_light_mlp/mlp_logits/BiasAdd]}
+[10/13/2026-06:19:41] [I]      959.92       2.0467       1.9441     100.0   Total
+[10/13/2026-06:19:41] [I] 
+&&&& PASSED TensorRT.trtexec [TensorRT v100300] # /usr/src/tensorrt/bin/trtexec --loadEngine=/home/jetson-nano-super/LASCAS-2027/engines/b2/mobilenetv3_light_mlp_tribranch_18cls/fp16.plan --iterations=300 --warmUp=500 --duration=0 --avgRuns=1 --dumpProfile --exportProfile=/home/jetson-nano-super/LASCAS-2027/results/c3/rep01/mobilenetv3_light_mlp_tribranch_18cls__fp16/trt_profile.json

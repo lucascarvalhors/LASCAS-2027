@@ -1,0 +1,175 @@
+{
+ "model": "mobilenetv3_light_mlp_tribranch_18cls",
+ "backbone": "light",
+ "head": "MLP",
+ "variant": "ort_cuda",
+ "backend": "onnxruntime-cuda",
+ "runtime": "onnxruntime 1.24.0",
+ "providers": [
+  "CUDAExecutionProvider",
+  "CPUExecutionProvider"
+ ],
+ "input_names_fed": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "aux_outputs": [],
+ "n_eval": 900,
+ "accuracy": 0.9,
+ "macro_f1": 0.8996856648735471,
+ "vs_keras": {
+  "max_abs": 0.011907339096069336,
+  "mean_abs": 0.00026834812728159223,
+  "argmax_agree": 1.0,
+  "n_argmax_diff": 0
+ },
+ "latency_e2e_us": {
+  "n": 2000,
+  "mean": 5749.555770499999,
+  "std": 116.50280300239362,
+  "min": 5462.077,
+  "p50": 5740.516,
+  "p90": 5873.4085,
+  "p95": 5920.335,
+  "p99": 6056.15433,
+  "max": 7206.532
+ },
+ "latency_gpu_us": null,
+ "latency_first_us": 392590.731,
+ "latency_accpass_us": {
+  "n": 899,
+  "mean": 5774.95006340378,
+  "std": 115.91212253237032,
+  "min": 5479.005,
+  "p50": 5769.028,
+  "p90": 5896.9798,
+  "p95": 5934.8783,
+  "p99": 6039.37192,
+  "max": 7486.859
+ },
+ "load_s": 0.3224767129868269,
+ "n_warmup": 521,
+ "power_idle": {
+  "n_samples": 450,
+  "duration_s": 9.010040487977676,
+  "vdd_in_w": 5.86339982222222,
+  "vdd_in_w_std": 0.019335020306272075,
+  "cpu_gpu_cv_w": 0.8866432,
+  "soc_w": 2.24205511111111,
+  "gpu_load_pct": 0.0
+ },
+ "power_active": {
+  "n_samples": 950,
+  "duration_s": 19.002361312974244,
+  "vdd_in_w": 7.189028581052633,
+  "vdd_in_w_std": 0.013197917091135443,
+  "cpu_gpu_cv_w": 1.8125184,
+  "soc_w": 2.3164371536842103,
+  "gpu_load_pct": 49.16873684210526
+ },
+ "active_s": 20.002361312974244,
+ "n_active": 3481,
+ "throughput_ips": 174.02945309972475,
+ "energy": {
+  "vdd_in_total_mj": 41.30926376544479,
+  "vdd_in_dynamic_mj": 7.617266705255821,
+  "cpu_gpu_cv_total_mj": 10.415009457975863,
+  "cpu_gpu_cv_dynamic_mj": 5.320221281563428
+ },
+ "memory": {
+  "avail_baseline_kb": 5729500,
+  "avail_loaded_kb": 5579884,
+  "avail_min_kb": 5311112.0,
+  "footprint_peak_mb": 408.58203125,
+  "footprint_loaded_mb": 146.109375,
+  "vmhwm_mb": 641.453125,
+  "vmrss_mb": 641.453125
+ },
+ "engine_mb": null,
+ "engine_device_mem_mb": null,
+ "onnx_mb": 0.865104,
+ "snapshot_start": {
+  "gpu_freq_mhz": 612.0,
+  "gpu_max_mhz": 612.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1497.6,
+   "cpu1": 1497.6,
+   "cpu2": 1497.6,
+   "cpu3": 1497.6,
+   "cpu4": 1497.6,
+   "cpu5": 1497.6
+  },
+  "temp_c": {
+   "cpu-thermal": 37.718,
+   "gpu-thermal": 36.843,
+   "soc0-thermal": 37.406,
+   "soc1-thermal": 37.812,
+   "soc2-thermal": 37.093,
+   "tj-thermal": 37.812
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3199636,
+   "MemAvailable": 5779024,
+   "Buffers": 101628,
+   "Cached": 2645280
+  }
+ },
+ "snapshot_end": {
+  "gpu_freq_mhz": 612.0,
+  "gpu_max_mhz": 612.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1497.6,
+   "cpu1": 1497.6,
+   "cpu2": 1497.6,
+   "cpu3": 1497.6,
+   "cpu4": 1497.6,
+   "cpu5": 1497.6
+  },
+  "temp_c": {
+   "cpu-thermal": 36.968,
+   "gpu-thermal": 36.781,
+   "soc0-thermal": 37.125,
+   "soc1-thermal": 37.593,
+   "soc2-thermal": 36.906,
+   "tj-thermal": 37.593
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 2747872,
+   "MemAvailable": 5327372,
+   "Buffers": 101668,
+   "Cached": 2645352
+  }
+ },
+ "marks_s": {
+  "start": 0.0,
+  "baseline": 1.527,
+  "load_start": 1.5272,
+  "load_end": 1.8497,
+  "acc_start": 1.8499,
+  "acc_end": 7.444,
+  "lat_start": 10.4486,
+  "lat_end": 21.9647,
+  "idle_start": 21.9647,
+  "idle_end": 31.9747,
+  "act_start": 31.9747,
+  "act_end": 51.9771
+ },
+ "protocol": {
+  "model": "mobilenetv3_light_mlp_tribranch_18cls",
+  "variant": "ort_cuda",
+  "engines": "/home/jetson-nano-super/LASCAS-2027/engines/b1",
+  "out": "/home/jetson-nano-super/LASCAS-2027/results/c2_15w/rep03/mobilenetv3_light_mlp_tribranch_18cls__ort_cuda",
+  "warmup_s": 3.0,
+  "lat_iters": 2000,
+  "lat_max_s": 40.0,
+  "idle_s": 10.0,
+  "active_s": 20.0,
+  "sample_hz": 50.0,
+  "trim_s": 1.0
+ }
+}

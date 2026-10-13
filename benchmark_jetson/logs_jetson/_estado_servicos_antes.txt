@@ -1,0 +1,9 @@
+# Estado antes do benchmark LASCAS-2027 (2026-10-12T23:19:33-03:00)
+# Para restaurar: sudo systemctl start telescope-console telescope-studio telescope-panel telescope-mdns
+telescope-console enabled=enabled active=active
+telescope-studio enabled=enabled active=active
+telescope-panel enabled=enabled active=active
+telescope-mdns enabled=enabled active=active
+telescope-indi enabled=static active=inactive
+nvpmodel: NV Power Mode: MAXN_SUPER
+[2026-10-13 09:24:49] restaurado: MAXN_SUPER, jetson_clocks --restore, serviços do telescópio religados

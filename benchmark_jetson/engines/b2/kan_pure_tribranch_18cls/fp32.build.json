@@ -1,0 +1,79 @@
+{
+ "model": "kan_pure_tribranch_18cls",
+ "precision": "fp32",
+ "trt": "10.3.0",
+ "build_s": 3.55,
+ "engine_bytes": 521756,
+ "device_memory_bytes": 7168,
+ "io": [
+  {
+   "name": "time",
+   "mode": "INPUT",
+   "shape": [
+    1,
+    2048,
+    6
+   ],
+   "dtype": "FLOAT"
+  },
+  {
+   "name": "orders",
+   "mode": "INPUT",
+   "shape": [
+    1,
+    6,
+    21
+   ],
+   "dtype": "FLOAT"
+  },
+  {
+   "name": "scalars",
+   "mode": "INPUT",
+   "shape": [
+    1,
+    36
+   ],
+   "dtype": "FLOAT"
+  },
+  {
+   "name": "kan_logits",
+   "mode": "OUTPUT",
+   "shape": [
+    1,
+    18
+   ],
+   "dtype": "FLOAT"
+  }
+ ],
+ "network_inputs": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "flags": {
+  "tf32": false,
+  "fp16": false,
+  "int8": false,
+  "forced_layers": 0,
+  "workspace_mb": 1024,
+  "timing_cache": false,
+  "aux_outputs": []
+ },
+ "calib_fold": null,
+ "calib_algo": null,
+ "n_layers": 22,
+ "out_dtype_counts": {
+  "fp32": 21,
+  "none": 1
+ },
+ "compute_layers": {
+  "n": 2,
+  "int8_in": 0,
+  "fp16_in": 0
+ },
+ "warnings": [
+  "WARNING: Unused Input: time",
+  "WARNING: [RemoveDeadLayers] Input Tensor time is unused or used only at compile-time, but is not being removed."
+ ],
+ "n_missing_scale_warnings": 0
+}

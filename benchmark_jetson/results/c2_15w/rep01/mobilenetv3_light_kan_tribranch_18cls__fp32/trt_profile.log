@@ -1,0 +1,117 @@
+d_hs/mul))), PWN(tri_light_kan/b2_expand_hs/truediv)))
+[10/13/2026-06:57:21] [I]        9.36       0.0176       0.0175       1.1   tri_light_kan/b2_dw/depthwise
+[10/13/2026-06:57:21] [I]        6.18       0.0116       0.0115       0.7   PWN(PWN(PWN(tri_light_kan/b2_dw_bn/batchnorm/mul_1), PWN(tri_light_kan/b2_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_4, PWN(tri_light_kan/b2_dw_hs/add)), PWN(tri_light_kan/b2_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_4 + ONNXTRT_Broadcast_137, PWN(tri_light_kan/b2_dw_hs/mul))), PWN(tri_light_kan/b2_dw_hs/truediv)))
+[10/13/2026-06:57:21] [I]        9.39       0.0177       0.0176       1.1   tri_light_kan/b2_project/Conv1D
+[10/13/2026-06:57:21] [I]        5.16       0.0097       0.0097       0.6   PWN(PWN(tri_light_kan/b2_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b2_project_bn/batchnorm/add_1))
+[10/13/2026-06:57:21] [I]        9.57       0.0180       0.0180       1.1   tri_light_kan/b3_expand/Conv1D
+[10/13/2026-06:57:21] [I]        5.77       0.0109       0.0108       0.7   PWN(PWN(PWN(tri_light_kan/b3_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b3_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_5, PWN(tri_light_kan/b3_expand_hs/add)), PWN(tri_light_kan/b3_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_5 + ONNXTRT_Broadcast_169, PWN(tri_light_kan/b3_expand_hs/mul))), PWN(tri_light_kan/b3_expand_hs/truediv)))
+[10/13/2026-06:57:21] [I]        6.64       0.0125       0.0124       0.8   tri_light_kan/b3_dw/depthwise
+[10/13/2026-06:57:21] [I]        5.60       0.0106       0.0105       0.6   PWN(PWN(PWN(tri_light_kan/b3_dw_bn/batchnorm/mul_1), PWN(tri_light_kan/b3_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_6, PWN(tri_light_kan/b3_dw_hs/add)), PWN(tri_light_kan/b3_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_6 + ONNXTRT_Broadcast_186, PWN(tri_light_kan/b3_dw_hs/mul))), PWN(tri_light_kan/b3_dw_hs/truediv)))
+[10/13/2026-06:57:21] [I]        8.73       0.0164       0.0164       1.0   tri_light_kan/b3_project/Conv1D
+[10/13/2026-06:57:21] [I]        4.98       0.0094       0.0092       0.6   PWN(PWN(PWN(tri_light_kan/b3_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b3_project_bn/batchnorm/add_1)), PWN(tri_light_kan/b3_residual/add))
+[10/13/2026-06:57:21] [I]        7.77       0.0146       0.0146       0.9   tri_light_kan/b4_expand/Conv1D
+[10/13/2026-06:57:21] [I]        5.71       0.0107       0.0108       0.7   PWN(PWN(PWN(tri_light_kan/b4_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b4_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_7, PWN(tri_light_kan/b4_expand_hs/add)), PWN(tri_light_kan/b4_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_7 + ONNXTRT_Broadcast_218, PWN(tri_light_kan/b4_expand_hs/mul))), PWN(tri_light_kan/b4_expand_hs/truediv)))
+[10/13/2026-06:57:21] [I]        7.60       0.0143       0.0142       0.9   tri_light_kan/b4_dw/depthwise
+[10/13/2026-06:57:21] [I]        0.84       0.0016       0.0015       0.1   dummy_shape_call__mye3721_0_myl75_0
+[10/13/2026-06:57:21] [I]        5.27       0.0099       0.0097       0.6   __myl_MulAddAddMinMaxMulMulTraMea_myl75_1
+[10/13/2026-06:57:21] [I]        5.19       0.0098       0.0098       0.6   __myl_MulSumAddRel_myl75_2
+[10/13/2026-06:57:21] [I]        5.36       0.0101       0.0100       0.6   __myl_ResMulSumAddAdd_myl75_3
+[10/13/2026-06:57:21] [I]        4.51       0.0085       0.0084       0.5   __myl_MinMaxMulResMulResTra_myl75_4
+[10/13/2026-06:57:21] [I]        8.68       0.0164       0.0160       1.0   tri_light_kan/b4_project/Conv1D
+[10/13/2026-06:57:21] [I]        4.90       0.0092       0.0092       0.6   PWN(PWN(tri_light_kan/b4_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b4_project_bn/batchnorm/add_1))
+[10/13/2026-06:57:21] [I]        9.55       0.0180       0.0178       1.1   tri_light_kan/b5_expand/Conv1D
+[10/13/2026-06:57:21] [I]        5.22       0.0098       0.0098       0.6   PWN(PWN(PWN(tri_light_kan/b5_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b5_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_8, PWN(tri_light_kan/b5_expand_hs/add)), PWN(tri_light_kan/b5_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_8 + ONNXTRT_Broadcast_276, PWN(tri_light_kan/b5_expand_hs/mul))), PWN(tri_light_kan/b5_expand_hs/truediv)))
+[10/13/2026-06:57:21] [I]        5.99       0.0113       0.0112       0.7   tri_light_kan/b5_dw/depthwise
+[10/13/2026-06:57:21] [I]        0.91       0.0017       0.0017       0.1   dummy_shape_call__mye3721_0_myl89_0
+[10/13/2026-06:57:21] [I]        5.28       0.0099       0.0095       0.6   __myl_MulAddAddMinMaxMulMulTraMea_myl89_1
+[10/13/2026-06:57:21] [I]        5.32       0.0100       0.0099       0.6   __myl_MulSumAddRel_myl89_2
+[10/13/2026-06:57:21] [I]        5.40       0.0102       0.0100       0.6   __myl_ResMulSumAddAdd_myl89_3
+[10/13/2026-06:57:21] [I]        4.79       0.0090       0.0090       0.6   __myl_MinMaxMulResMulResTra_myl89_4
+[10/13/2026-06:57:21] [I]        9.41       0.0177       0.0174       1.1   tri_light_kan/b5_project/Conv1D
+[10/13/2026-06:57:21] [I]        5.01       0.0094       0.0093       0.6   PWN(PWN(tri_light_kan/b5_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b5_project_bn/batchnorm/add_1))
+[10/13/2026-06:57:21] [I]       12.84       0.0242       0.0240       1.5   tri_light_kan/b6_expand/Conv1D
+[10/13/2026-06:57:21] [I]        6.73       0.0127       0.0126       0.8   PWN(PWN(PWN(tri_light_kan/b6_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b6_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_9, PWN(tri_light_kan/b6_expand_hs/add)), PWN(tri_light_kan/b6_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_9 + ONNXTRT_Broadcast_334, PWN(tri_light_kan/b6_expand_hs/mul))), PWN(tri_light_kan/b6_expand_hs/truediv)))
+[10/13/2026-06:57:21] [I]        8.28       0.0156       0.0156       1.0   tri_light_kan/b6_dw/depthwise
+[10/13/2026-06:57:21] [I]        5.96       0.0112       0.0112       0.7   PWN(PWN(PWN(tri_light_kan/b6_dw_bn/batchnorm/mul_1), PWN(tri_light_kan/b6_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_10, PWN(tri_light_kan/b6_dw_hs/add)), PWN(tri_light_kan/b6_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_10 + ONNXTRT_Broadcast_351, PWN(tri_light_kan/b6_dw_hs/mul))), PWN(tri_light_kan/b6_dw_hs/truediv)))
+[10/13/2026-06:57:21] [I]       11.57       0.0218       0.0217       1.3   tri_light_kan/b6_project/Conv1D
+[10/13/2026-06:57:21] [I]        5.26       0.0099       0.0099       0.6   PWN(PWN(tri_light_kan/b6_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b6_project_bn/batchnorm/add_1))
+[10/13/2026-06:57:21] [I]        8.58       0.0162       0.0161       1.0   tri_light_kan/b7_expand/Conv1D
+[10/13/2026-06:57:21] [I]        5.33       0.0100       0.0100       0.6   PWN(PWN(PWN(tri_light_kan/b7_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b7_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_11, PWN(tri_light_kan/b7_expand_hs/add)), PWN(tri_light_kan/b7_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_11 + ONNXTRT_Broadcast_383, PWN(tri_light_kan/b7_expand_hs/mul))), PWN(tri_light_kan/b7_expand_hs/truediv)))
+[10/13/2026-06:57:21] [I]        6.86       0.0129       0.0129       0.8   tri_light_kan/b7_dw/depthwise
+[10/13/2026-06:57:21] [I]        5.24       0.0099       0.0099       0.6   PWN(PWN(PWN(tri_light_kan/b7_dw_bn/batchnorm/mul_1), PWN(tri_light_kan/b7_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_12, PWN(tri_light_kan/b7_dw_hs/add)), PWN(tri_light_kan/b7_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_12 + ONNXTRT_Broadcast_400, PWN(tri_light_kan/b7_dw_hs/mul))), PWN(tri_light_kan/b7_dw_hs/truediv)))
+[10/13/2026-06:57:21] [I]        9.82       0.0185       0.0185       1.1   tri_light_kan/b7_project/Conv1D
+[10/13/2026-06:57:21] [I]        5.50       0.0103       0.0103       0.6   PWN(PWN(PWN(tri_light_kan/b7_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b7_project_bn/batchnorm/add_1)), PWN(tri_light_kan/b7_residual/add))
+[10/13/2026-06:57:21] [I]        8.61       0.0162       0.0162       1.0   tri_light_kan/b8_expand/Conv1D
+[10/13/2026-06:57:21] [I]        5.28       0.0099       0.0099       0.6   PWN(PWN(PWN(tri_light_kan/b8_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b8_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_13, PWN(tri_light_kan/b8_expand_hs/add)), PWN(tri_light_kan/b8_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_13 + ONNXTRT_Broadcast_432, PWN(tri_light_kan/b8_expand_hs/mul))), PWN(tri_light_kan/b8_expand_hs/truediv)))
+[10/13/2026-06:57:21] [I]        6.72       0.0127       0.0126       0.8   tri_light_kan/b8_dw/depthwise
+[10/13/2026-06:57:21] [I]        5.26       0.0099       0.0098       0.6   PWN(PWN(PWN(tri_light_kan/b8_dw_bn/batchnorm/mul_1), PWN(tri_light_kan/b8_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_14, PWN(tri_light_kan/b8_dw_hs/add)), PWN(tri_light_kan/b8_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_14 + ONNXTRT_Broadcast_449, PWN(tri_light_kan/b8_dw_hs/mul))), PWN(tri_light_kan/b8_dw_hs/truediv)))
+[10/13/2026-06:57:21] [I]        9.91       0.0187       0.0186       1.1   tri_light_kan/b8_project/Conv1D
+[10/13/2026-06:57:21] [I]        5.25       0.0099       0.0098       0.6   PWN(PWN(PWN(tri_light_kan/b8_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b8_project_bn/batchnorm/add_1)), PWN(tri_light_kan/b8_residual/add))
+[10/13/2026-06:57:21] [I]       10.53       0.0198       0.0198       1.2   tri_light_kan/b9_expand/Conv1D
+[10/13/2026-06:57:21] [I]        6.15       0.0116       0.0115       0.7   PWN(PWN(PWN(tri_light_kan/b9_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b9_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_15, PWN(tri_light_kan/b9_expand_hs/add)), PWN(tri_light_kan/b9_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_15 + ONNXTRT_Broadcast_481, PWN(tri_light_kan/b9_expand_hs/mul))), PWN(tri_light_kan/b9_expand_hs/truediv)))
+[10/13/2026-06:57:21] [I]        7.32       0.0138       0.0138       0.8   tri_light_kan/b9_dw/depthwise
+[10/13/2026-06:57:21] [I]        0.80       0.0015       0.0014       0.1   dummy_shape_call__mye3721_0_myl157_0
+[10/13/2026-06:57:21] [I]        5.63       0.0106       0.0105       0.6   __myl_MulAddAddMinMaxMulMulTraMea_myl157_1
+[10/13/2026-06:57:21] [I]        5.09       0.0096       0.0095       0.6   __myl_MulSumAddRel_myl157_2
+[10/13/2026-06:57:21] [I]        5.22       0.0098       0.0098       0.6   __myl_ResMulSumAddAdd_myl157_3
+[10/13/2026-06:57:21] [I]        5.19       0.0098       0.0097       0.6   __myl_MinMaxMulResMulResTra_myl157_4
+[10/13/2026-06:57:21] [I]       11.70       0.0220       0.0218       1.3   tri_light_kan/b9_project/Conv1D
+[10/13/2026-06:57:21] [I]        5.18       0.0098       0.0098       0.6   PWN(PWN(tri_light_kan/b9_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b9_project_bn/batchnorm/add_1))
+[10/13/2026-06:57:21] [I]       11.17       0.0210       0.0210       1.3   tri_light_kan/b10_expand/Conv1D
+[10/13/2026-06:57:21] [I]        5.95       0.0112       0.0112       0.7   PWN(PWN(PWN(tri_light_kan/b10_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b10_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_16, PWN(tri_light_kan/b10_expand_hs/add)), PWN(tri_light_kan/b10_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_16 + ONNXTRT_Broadcast_539, PWN(tri_light_kan/b10_expand_hs/mul))), PWN(tri_light_kan/b10_expand_hs/truediv)))
+[10/13/2026-06:57:21] [I]        8.03       0.0151       0.0150       0.9   tri_light_kan/b10_dw/depthwise
+[10/13/2026-06:57:21] [I]        0.77       0.0015       0.0013       0.1   dummy_shape_call__mye3721_0_myl171_0
+[10/13/2026-06:57:21] [I]        5.76       0.0108       0.0108       0.7   __myl_MulAddAddMinMaxMulMulTraMea_myl171_1
+[10/13/2026-06:57:21] [I]        5.46       0.0103       0.0102       0.6   __myl_MulSumAddRel_myl171_2
+[10/13/2026-06:57:21] [I]        5.30       0.0100       0.0099       0.6   __myl_ResMulSumAddAdd_myl171_3
+[10/13/2026-06:57:21] [I]        5.50       0.0104       0.0103       0.6   __myl_MinMaxMulResMulResTra_myl171_4
+[10/13/2026-06:57:21] [I]       12.75       0.0240       0.0239       1.5   tri_light_kan/b10_project/Conv1D
+[10/13/2026-06:57:21] [I]        5.29       0.0100       0.0099       0.6   PWN(PWN(PWN(tri_light_kan/b10_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b10_project_bn/batchnorm/add_1)), PWN(tri_light_kan/b10_residual/add))
+[10/13/2026-06:57:21] [I]        9.89       0.0186       0.0186       1.1   tri_light_kan/b11_expand/Conv1D
+[10/13/2026-06:57:21] [I]        6.01       0.0113       0.0113       0.7   PWN(PWN(PWN(tri_light_kan/b11_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b11_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_17, PWN(tri_light_kan/b11_expand_hs/add)), PWN(tri_light_kan/b11_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_17 + ONNXTRT_Broadcast_597, PWN(tri_light_kan/b11_expand_hs/mul))), PWN(tri_light_kan/b11_expand_hs/truediv)))
+[10/13/2026-06:57:21] [I]        8.17       0.0154       0.0153       0.9   tri_light_kan/b11_dw/depthwise
+[10/13/2026-06:57:21] [I]        0.75       0.0014       0.0013       0.1   dummy_shape_call__mye3721_0_myl185_0
+[10/13/2026-06:57:21] [I]        4.92       0.0093       0.0092       0.6   __myl_MulAddAddMinMaxMulMulTraMea_myl185_1
+[10/13/2026-06:57:21] [I]        4.95       0.0093       0.0092       0.6   __myl_MulSumAddRel_myl185_2
+[10/13/2026-06:57:21] [I]        5.32       0.0100       0.0100       0.6   __myl_ResMulSumAddAdd_myl185_3
+[10/13/2026-06:57:21] [I]        4.82       0.0091       0.0091       0.6   __myl_MinMaxMulResMulResTra_myl185_4
+[10/13/2026-06:57:21] [I]       12.72       0.0240       0.0238       1.5   tri_light_kan/b11_project/Conv1D
+[10/13/2026-06:57:21] [I]        4.93       0.0093       0.0092       0.6   PWN(PWN(tri_light_kan/b11_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b11_project_bn/batchnorm/add_1))
+[10/13/2026-06:57:21] [I]        9.62       0.0181       0.0181       1.1   tri_light_kan/b12_expand/Conv1D
+[10/13/2026-06:57:21] [I]        5.23       0.0098       0.0098       0.6   PWN(PWN(PWN(tri_light_kan/b12_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b12_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_18, PWN(tri_light_kan/b12_expand_hs/add)), PWN(tri_light_kan/b12_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_18 + ONNXTRT_Broadcast_655, PWN(tri_light_kan/b12_expand_hs/mul))), PWN(tri_light_kan/b12_expand_hs/truediv)))
+[10/13/2026-06:57:21] [I]        7.25       0.0137       0.0136       0.8   tri_light_kan/b12_dw/depthwise
+[10/13/2026-06:57:21] [I]        0.79       0.0015       0.0014       0.1   dummy_shape_call__mye3721_0_myl199_0
+[10/13/2026-06:57:21] [I]        5.08       0.0096       0.0095       0.6   __myl_MulAddAddMinMaxMulMulTraMea_myl199_1
+[10/13/2026-06:57:21] [I]        5.05       0.0095       0.0095       0.6   __myl_MulSumAddRel_myl199_2
+[10/13/2026-06:57:21] [I]        5.13       0.0097       0.0096       0.6   __myl_ResMulSumAddAdd_myl199_3
+[10/13/2026-06:57:21] [I]        4.83       0.0091       0.0091       0.6   __myl_MinMaxMulResMulResTra_myl199_4
+[10/13/2026-06:57:21] [I]       13.41       0.0253       0.0251       1.5   tri_light_kan/b12_project/Conv1D
+[10/13/2026-06:57:21] [I]        5.11       0.0096       0.0096       0.6   PWN(PWN(tri_light_kan/b12_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b12_project_bn/batchnorm/add_1))
+[10/13/2026-06:57:21] [I]       11.85       0.0223       0.0222       1.4   tri_light_kan/b13_expand/Conv1D
+[10/13/2026-06:57:21] [I]        5.64       0.0106       0.0106       0.6   PWN(PWN(PWN(tri_light_kan/b13_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b13_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_19, PWN(tri_light_kan/b13_expand_hs/add)), PWN(tri_light_kan/b13_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_19 + ONNXTRT_Broadcast_713, PWN(tri_light_kan/b13_expand_hs/mul))), PWN(tri_light_kan/b13_expand_hs/truediv)))
+[10/13/2026-06:57:21] [I]        8.65       0.0163       0.0163       1.0   tri_light_kan/b13_dw/depthwise
+[10/13/2026-06:57:21] [I]        0.76       0.0014       0.0013       0.1   dummy_shape_call__mye3721_0_myl213_0
+[10/13/2026-06:57:21] [I]        5.26       0.0099       0.0098       0.6   __myl_MulAddAddMinMaxMulMulTraMea_myl213_1
+[10/13/2026-06:57:21] [I]        5.41       0.0102       0.0101       0.6   __myl_MulSumAddRel_myl213_2
+[10/13/2026-06:57:21] [I]        5.46       0.0103       0.0102       0.6   __myl_ResMulSumAddAdd_myl213_3
+[10/13/2026-06:57:21] [I]        5.13       0.0097       0.0096       0.6   __myl_MinMaxMulResMulResTra_myl213_4
+[10/13/2026-06:57:21] [I]        9.06       0.0171       0.0169       1.0   tri_light_kan/ord_c1/Conv1D
+[10/13/2026-06:57:21] [I]        4.71       0.0089       0.0088       0.5   PWN(PWN(PWN(tri_light_kan/ord_c1/BiasAdd + tri_light_kan/ord_c1/Relu), PWN(tri_light_kan/ord_bn1/batchnorm/mul_1)), PWN(tri_light_kan/ord_bn1/batchnorm/add_1))
+[10/13/2026-06:57:21] [I]       11.63       0.0219       0.0218       1.3   tri_light_kan/ord_c2/Conv1D
+[10/13/2026-06:57:21] [I]       20.41       0.0384       0.0384       2.3   tri_light_kan/b13_project/Conv1D
+[10/13/2026-06:57:21] [I]        5.36       0.0101       0.0102       0.6   PWN(PWN(PWN(tri_light_kan/b13_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b13_project_bn/batchnorm/add_1)), PWN(tri_light_kan/b13_residual/add))
+[10/13/2026-06:57:21] [I]        9.91       0.0187       0.0187       1.1   tri_light_kan/last_conv/Conv1D
+[10/13/2026-06:57:21] [I]        0.70       0.0013       0.0013       0.1   dummy_shape_call__mye45702_0_myl230_0
+[10/13/2026-06:57:21] [I]        4.24       0.0080       0.0079       0.5   __myl_AddRelMea_myl230_1
+[10/13/2026-06:57:21] [I]        4.58       0.0086       0.0086       0.5   __myl_MulAddAddMinMaxMulMulMea_myl230_2
+[10/13/2026-06:57:21] [I]        5.00       0.0094       0.0094       0.6   __myl_MulSumAddRel_myl230_3
+[10/13/2026-06:57:21] [I]        5.60       0.0105       0.0106       0.6   __myl_MulAddResMulSumAddRel_myl230_4
+[10/13/2026-06:57:21] [I]        5.24       0.0099       0.0099       0.6   __myl_ResMulSumAddRel_myl230_5
+[10/13/2026-06:57:21] [I]        4.95       0.0093       0.0093       0.6   __myl_ConResMeaSubMulSum_myl230_6
+[10/13/2026-06:57:21] [I]       18.00       0.0339       0.0339       2.1   __myl_DivResAddSqrDivMulAddResMulAddTanNegExpAddDivMulResLtGtrEqlOrAndCasSliSliResMulSubMulAddMulEtc_myl230_7
+[10/13/2026-06:57:21] [I]        4.58       0.0086       0.0086       0.5   __myl_ResMeaSubMulSum_myl230_8
+[10/13/2026-06:57:21] [I]        7.25       0.0136       0.0137       0.8   __myl_DivResAddSqrDivMulAddResMulAddTanResNegExpAddDivMulResMulLtEqlGtrOrAndCasSliSliAddSubAddSubEtc_myl230_9
+[10/13/2026-06:57:21] [I]      870.73       1.6398       1.6164     100.0   Total
+[10/13/2026-06:57:21] [I] 
+&&&& PASSED TensorRT.trtexec [TensorRT v100300] # /usr/src/tensorrt/bin/trtexec --loadEngine=/home/jetson-nano-super/LASCAS-2027/engines/b1/mobilenetv3_light_kan_tribranch_18cls/fp32.plan --iterations=300 --warmUp=500 --duration=0 --avgRuns=1 --dumpProfile --exportProfile=/home/jetson-nano-super/LASCAS-2027/results/c2_15w/rep01/mobilenetv3_light_kan_tribranch_18cls__fp32/trt_profile.json
+[10/13/2026-06:57:19] [W] [TRT] Using an engine plan file across different models of devices is not recommended and is likely to affect performance or even cause errors.

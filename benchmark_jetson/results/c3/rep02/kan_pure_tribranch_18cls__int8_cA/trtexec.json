@@ -1,0 +1,55 @@
+{
+ "throughput_qps": 2030.74,
+ "latency": {
+  "min": 0.460205,
+  "max": 0.702148,
+  "mean": 0.475416,
+  "median": 0.470947,
+  "percentile(50%)": 0.470947,
+  "percentile(90%)": 0.491699,
+  "percentile(95%)": 0.499268,
+  "percentile(99%)": 0.532227
+ },
+ "gpu_compute": {
+  "min": 0.435303,
+  "max": 0.67627,
+  "mean": 0.449779,
+  "median": 0.445801,
+  "percentile(50%)": 0.445801,
+  "percentile(90%)": 0.464844,
+  "percentile(95%)": 0.473389,
+  "percentile(99%)": 0.502441
+ },
+ "h2d": {
+  "min": 0.0141602,
+  "max": 0.0913086,
+  "mean": 0.0158301,
+  "median": 0.015625,
+  "percentile(50%)": 0.015625,
+  "percentile(90%)": 0.0161133,
+  "percentile(95%)": 0.017334,
+  "percentile(99%)": 0.0227051
+ },
+ "d2h": {
+  "min": 0.00854492,
+  "max": 0.0266113,
+  "mean": 0.00980664,
+  "median": 0.00976562,
+  "percentile(50%)": 0.00976562,
+  "percentile(90%)": 0.0102539,
+  "percentile(95%)": 0.010498,
+  "percentile(99%)": 0.0114746
+ },
+ "enqueue": {
+  "min": 0.426758,
+  "max": 0.669678,
+  "mean": 0.441592,
+  "median": 0.4375,
+  "percentile(50%)": 0.4375,
+  "percentile(90%)": 0.456787,
+  "percentile(95%)": 0.465088,
+  "percentile(99%)": 0.494873
+ },
+ "returncode": 0,
+ "cmd": "/usr/src/tensorrt/bin/trtexec --loadEngine=/home/jetson-nano-super/LASCAS-2027/engines/b2/kan_pure_tribranch_18cls/int8_cA.plan --iterations=2000 --warmUp=2000 --duration=0 --avgRuns=1 --percentile=50,90,95,99 --exportTimes=/home/jetson-nano-super/LASCAS-2027/results/c3/rep02/kan_pure_tribranch_18cls__int8_cA/trtexec_times.json"
+}

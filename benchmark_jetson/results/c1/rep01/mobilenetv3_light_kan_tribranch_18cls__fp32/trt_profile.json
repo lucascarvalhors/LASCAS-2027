@@ -1,0 +1,271 @@
+[
+  { "count" : 558 }
+, { "name" : "tri_light_kan/stem_conv/Conv1D/ExpandDims + tri_light_kan/stem_conv/Conv1D__5372", "timeMs" : 12.241, "averageMs" : 0.0219372, "medianMs" : 0.018176, "percentage" : 1.78557 }
+, { "name" : "tri_light_kan/stem_conv/Conv1D", "timeMs" : 9.64899, "averageMs" : 0.0172921, "medianMs" : 0.018432, "percentage" : 1.40748 }
+, { "name" : "const_fold_opt__7155", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/stem_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/stem_conv/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/stem_bn/batchnorm/mul_1), PWN(tri_light_kan/stem_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094, PWN(tri_light_kan/stem_hs/add)), PWN(tri_light_kan/stem_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0 + ONNXTRT_Broadcast_54, PWN(tri_light_kan/stem_hs/mul))), PWN(tri_light_kan/stem_hs/truediv)))", "timeMs" : 3.84355, "averageMs" : 0.00688809, "medianMs" : 0.006784, "percentage" : 0.560653 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to Transpose__6083", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "Transpose__6083", "timeMs" : 10.1333, "averageMs" : 0.0181599, "medianMs" : 0.010752, "percentage" : 1.47812 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to Transpose__6083", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b1_expand/Conv1D/ExpandDims + tri_light_kan/b1_expand/Conv1D__5398", "timeMs" : 5.82269, "averageMs" : 0.0104349, "medianMs" : 0.011056, "percentage" : 0.849347 }
+, { "name" : "tri_light_kan/b1_expand/Conv1D", "timeMs" : 7.01299, "averageMs" : 0.0125681, "medianMs" : 0.012208, "percentage" : 1.02297 }
+, { "name" : "const_fold_opt__6949", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b1_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b1_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b1_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b1_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_1, PWN(tri_light_kan/b1_expand_hs/add)), PWN(tri_light_kan/b1_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_1 + ONNXTRT_Broadcast_71, PWN(tri_light_kan/b1_expand_hs/mul))), PWN(tri_light_kan/b1_expand_hs/truediv)))", "timeMs" : 4.37648, "averageMs" : 0.00784316, "medianMs" : 0.0076, "percentage" : 0.638391 }
+, { "name" : "tri_light_kan/b1_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b1_dw/depthwise", "timeMs" : 6.42976, "averageMs" : 0.0115229, "medianMs" : 0.011776, "percentage" : 0.9379 }
+, { "name" : "const_fold_opt__7130", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b1_dw_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b1_dw/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b1_dw_bn/batchnorm/mul_1), PWN(tri_light_kan/b1_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_2, PWN(tri_light_kan/b1_dw_hs/add)), PWN(tri_light_kan/b1_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_2 + ONNXTRT_Broadcast_88, PWN(tri_light_kan/b1_dw_hs/mul))), PWN(tri_light_kan/b1_dw_hs/truediv)))", "timeMs" : 4.21715, "averageMs" : 0.00755762, "medianMs" : 0.00736, "percentage" : 0.61515 }
+, { "name" : "tri_light_kan/b1_project/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b1_project/Conv1D", "timeMs" : 6.79974, "averageMs" : 0.0121859, "medianMs" : 0.012432, "percentage" : 0.991868 }
+, { "name" : "const_fold_opt__7063", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b1_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b1_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_kan/b1_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b1_project_bn/batchnorm/add_1))", "timeMs" : 4.12135, "averageMs" : 0.00738592, "medianMs" : 0.007296, "percentage" : 0.601175 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to Transpose__6122", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "Transpose__6122", "timeMs" : 5.03082, "averageMs" : 0.0090158, "medianMs" : 0.009488, "percentage" : 0.733838 }
+, { "name" : "Reformatting CopyNode for Input Tensor 1 to PWN(tri_light_kan/b1_residual/add)", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(tri_light_kan/b1_residual/add)", "timeMs" : 4.37667, "averageMs" : 0.0078435, "medianMs" : 0.007376, "percentage" : 0.638419 }
+, { "name" : "tri_light_kan/b2_expand/Conv1D/ExpandDims + tri_light_kan/b2_expand/Conv1D__5429", "timeMs" : 5.236, "averageMs" : 0.00938352, "medianMs" : 0.009344, "percentage" : 0.763768 }
+, { "name" : "tri_light_kan/b2_expand/Conv1D", "timeMs" : 8.14483, "averageMs" : 0.0145965, "medianMs" : 0.014528, "percentage" : 1.18807 }
+, { "name" : "const_fold_opt__7011", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b2_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b2_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b2_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b2_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_3, PWN(tri_light_kan/b2_expand_hs/add)), PWN(tri_light_kan/b2_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_3 + ONNXTRT_Broadcast_120, PWN(tri_light_kan/b2_expand_hs/mul))), PWN(tri_light_kan/b2_expand_hs/truediv)))", "timeMs" : 5.24224, "averageMs" : 0.0093947, "medianMs" : 0.009344, "percentage" : 0.764678 }
+, { "name" : "tri_light_kan/b2_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b2_dw/depthwise", "timeMs" : 6.51373, "averageMs" : 0.0116734, "medianMs" : 0.01152, "percentage" : 0.950149 }
+, { "name" : "const_fold_opt__7092", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b2_dw_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b2_dw/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b2_dw_bn/batchnorm/mul_1), PWN(tri_light_kan/b2_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_4, PWN(tri_light_kan/b2_dw_hs/add)), PWN(tri_light_kan/b2_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_4 + ONNXTRT_Broadcast_137, PWN(tri_light_kan/b2_dw_hs/mul))), PWN(tri_light_kan/b2_dw_hs/truediv)))", "timeMs" : 4.44009, "averageMs" : 0.00795715, "medianMs" : 0.007904, "percentage" : 0.64767 }
+, { "name" : "tri_light_kan/b2_project/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b2_project/Conv1D", "timeMs" : 6.47485, "averageMs" : 0.0116037, "medianMs" : 0.011424, "percentage" : 0.944476 }
+, { "name" : "const_fold_opt__7137", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b2_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b2_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_kan/b2_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b2_project_bn/batchnorm/add_1))", "timeMs" : 3.76263, "averageMs" : 0.00674306, "medianMs" : 0.006752, "percentage" : 0.548849 }
+, { "name" : "tri_light_kan/b3_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b3_expand/Conv1D", "timeMs" : 6.97705, "averageMs" : 0.0125037, "medianMs" : 0.011968, "percentage" : 1.01773 }
+, { "name" : "const_fold_opt__7082", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b3_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b3_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b3_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b3_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_5, PWN(tri_light_kan/b3_expand_hs/add)), PWN(tri_light_kan/b3_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_5 + ONNXTRT_Broadcast_169, PWN(tri_light_kan/b3_expand_hs/mul))), PWN(tri_light_kan/b3_expand_hs/truediv)))", "timeMs" : 4.08522, "averageMs" : 0.00732118, "medianMs" : 0.007296, "percentage" : 0.595905 }
+, { "name" : "tri_light_kan/b3_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b3_dw/depthwise", "timeMs" : 4.69603, "averageMs" : 0.00841582, "medianMs" : 0.008288, "percentage" : 0.685003 }
+, { "name" : "const_fold_opt__7018", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b3_dw_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b3_dw/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b3_dw_bn/batchnorm/mul_1), PWN(tri_light_kan/b3_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_6, PWN(tri_light_kan/b3_dw_hs/add)), PWN(tri_light_kan/b3_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_6 + ONNXTRT_Broadcast_186, PWN(tri_light_kan/b3_dw_hs/mul))), PWN(tri_light_kan/b3_dw_hs/truediv)))", "timeMs" : 4.84829, "averageMs" : 0.00868869, "medianMs" : 0.007792, "percentage" : 0.707213 }
+, { "name" : "tri_light_kan/b3_project/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b3_project/Conv1D", "timeMs" : 6.80624, "averageMs" : 0.0121976, "medianMs" : 0.01232, "percentage" : 0.992816 }
+, { "name" : "const_fold_opt__6993", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b3_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b3_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b3_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b3_project_bn/batchnorm/add_1)), PWN(tri_light_kan/b3_residual/add))", "timeMs" : 3.96957, "averageMs" : 0.00711393, "medianMs" : 0.007072, "percentage" : 0.579036 }
+, { "name" : "tri_light_kan/b4_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b4_expand/Conv1D", "timeMs" : 6.42877, "averageMs" : 0.0115211, "medianMs" : 0.011344, "percentage" : 0.937755 }
+, { "name" : "const_fold_opt__6974", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b4_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b4_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b4_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b4_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_7, PWN(tri_light_kan/b4_expand_hs/add)), PWN(tri_light_kan/b4_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_7 + ONNXTRT_Broadcast_218, PWN(tri_light_kan/b4_expand_hs/mul))), PWN(tri_light_kan/b4_expand_hs/truediv)))", "timeMs" : 4.37494, "averageMs" : 0.0078404, "medianMs" : 0.007712, "percentage" : 0.638167 }
+, { "name" : "tri_light_kan/b4_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b4_dw/depthwise", "timeMs" : 6.50397, "averageMs" : 0.0116559, "medianMs" : 0.012032, "percentage" : 0.948725 }
+, { "name" : "dummy_shape_call__mye3721_0_myl75_0", "timeMs" : 1.11885, "averageMs" : 0.0020051, "medianMs" : 0.002368, "percentage" : 0.163205 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl75_1", "timeMs" : 4.97398, "averageMs" : 0.00891395, "medianMs" : 0.010256, "percentage" : 0.725548 }
+, { "name" : "__myl_MulSumAddRel_myl75_2", "timeMs" : 3.9039, "averageMs" : 0.00699624, "medianMs" : 0.0068, "percentage" : 0.569456 }
+, { "name" : "__myl_ResMulSumAddAdd_myl75_3", "timeMs" : 3.85385, "averageMs" : 0.00690655, "medianMs" : 0.006752, "percentage" : 0.562156 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl75_4", "timeMs" : 3.76557, "averageMs" : 0.00674833, "medianMs" : 0.006592, "percentage" : 0.549278 }
+, { "name" : "tri_light_kan/b4_project/Conv1D", "timeMs" : 8.47232, "averageMs" : 0.0151834, "medianMs" : 0.017696, "percentage" : 1.23584 }
+, { "name" : "const_fold_opt__7075", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b4_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b4_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_kan/b4_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b4_project_bn/batchnorm/add_1))", "timeMs" : 4.14256, "averageMs" : 0.00742394, "medianMs" : 0.007264, "percentage" : 0.604269 }
+, { "name" : "tri_light_kan/b5_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b5_expand/Conv1D", "timeMs" : 7.85049, "averageMs" : 0.014069, "medianMs" : 0.014896, "percentage" : 1.14514 }
+, { "name" : "const_fold_opt__7166", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b5_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b5_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b5_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b5_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_8, PWN(tri_light_kan/b5_expand_hs/add)), PWN(tri_light_kan/b5_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_8 + ONNXTRT_Broadcast_276, PWN(tri_light_kan/b5_expand_hs/mul))), PWN(tri_light_kan/b5_expand_hs/truediv)))", "timeMs" : 3.90534, "averageMs" : 0.00699882, "medianMs" : 0.006784, "percentage" : 0.569667 }
+, { "name" : "tri_light_kan/b5_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b5_dw/depthwise", "timeMs" : 5.10202, "averageMs" : 0.0091434, "medianMs" : 0.00872, "percentage" : 0.744224 }
+, { "name" : "dummy_shape_call__mye3721_0_myl89_0", "timeMs" : 0.988383, "averageMs" : 0.0017713, "medianMs" : 0.00208, "percentage" : 0.144174 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl89_1", "timeMs" : 4.98377, "averageMs" : 0.0089315, "medianMs" : 0.010208, "percentage" : 0.726976 }
+, { "name" : "__myl_MulSumAddRel_myl89_2", "timeMs" : 3.92595, "averageMs" : 0.00703576, "medianMs" : 0.006944, "percentage" : 0.572673 }
+, { "name" : "__myl_ResMulSumAddAdd_myl89_3", "timeMs" : 3.83162, "averageMs" : 0.0068667, "medianMs" : 0.006656, "percentage" : 0.558912 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl89_4", "timeMs" : 3.98253, "averageMs" : 0.00713715, "medianMs" : 0.006976, "percentage" : 0.580925 }
+, { "name" : "tri_light_kan/b5_project/Conv1D", "timeMs" : 8.71167, "averageMs" : 0.0156123, "medianMs" : 0.017968, "percentage" : 1.27076 }
+, { "name" : "const_fold_opt__7151", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b5_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b5_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_kan/b5_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b5_project_bn/batchnorm/add_1))", "timeMs" : 4.03431, "averageMs" : 0.00722994, "medianMs" : 0.006944, "percentage" : 0.588478 }
+, { "name" : "tri_light_kan/b6_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b6_expand/Conv1D", "timeMs" : 10.1499, "averageMs" : 0.0181898, "medianMs" : 0.018624, "percentage" : 1.48055 }
+, { "name" : "const_fold_opt__7088", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b6_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b6_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b6_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b6_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_9, PWN(tri_light_kan/b6_expand_hs/add)), PWN(tri_light_kan/b6_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_9 + ONNXTRT_Broadcast_334, PWN(tri_light_kan/b6_expand_hs/mul))), PWN(tri_light_kan/b6_expand_hs/truediv)))", "timeMs" : 5.12877, "averageMs" : 0.00919134, "medianMs" : 0.009088, "percentage" : 0.748126 }
+, { "name" : "tri_light_kan/b6_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b6_dw/depthwise", "timeMs" : 6.01821, "averageMs" : 0.0107853, "medianMs" : 0.010624, "percentage" : 0.877867 }
+, { "name" : "const_fold_opt__7125", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b6_dw_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b6_dw/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b6_dw_bn/batchnorm/mul_1), PWN(tri_light_kan/b6_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_10, PWN(tri_light_kan/b6_dw_hs/add)), PWN(tri_light_kan/b6_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_10 + ONNXTRT_Broadcast_351, PWN(tri_light_kan/b6_dw_hs/mul))), PWN(tri_light_kan/b6_dw_hs/truediv)))", "timeMs" : 4.44266, "averageMs" : 0.00796175, "medianMs" : 0.007872, "percentage" : 0.648044 }
+, { "name" : "tri_light_kan/b6_project/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b6_project/Conv1D", "timeMs" : 8.18272, "averageMs" : 0.0146644, "medianMs" : 0.014592, "percentage" : 1.1936 }
+, { "name" : "const_fold_opt__7058", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b6_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b6_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_kan/b6_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b6_project_bn/batchnorm/add_1))", "timeMs" : 4.00784, "averageMs" : 0.00718251, "medianMs" : 0.007072, "percentage" : 0.584618 }
+, { "name" : "tri_light_kan/b7_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b7_expand/Conv1D", "timeMs" : 6.22099, "averageMs" : 0.0111487, "medianMs" : 0.010944, "percentage" : 0.907446 }
+, { "name" : "const_fold_opt__7076", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b7_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b7_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b7_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b7_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_11, PWN(tri_light_kan/b7_expand_hs/add)), PWN(tri_light_kan/b7_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_11 + ONNXTRT_Broadcast_383, PWN(tri_light_kan/b7_expand_hs/mul))), PWN(tri_light_kan/b7_expand_hs/truediv)))", "timeMs" : 3.96349, "averageMs" : 0.00710302, "medianMs" : 0.006944, "percentage" : 0.578148 }
+, { "name" : "tri_light_kan/b7_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b7_dw/depthwise", "timeMs" : 5.26857, "averageMs" : 0.00944189, "medianMs" : 0.009056, "percentage" : 0.768519 }
+, { "name" : "const_fold_opt__6992", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b7_dw_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b7_dw/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b7_dw_bn/batchnorm/mul_1), PWN(tri_light_kan/b7_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_12, PWN(tri_light_kan/b7_dw_hs/add)), PWN(tri_light_kan/b7_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_12 + ONNXTRT_Broadcast_400, PWN(tri_light_kan/b7_dw_hs/mul))), PWN(tri_light_kan/b7_dw_hs/truediv)))", "timeMs" : 3.99536, "averageMs" : 0.00716014, "medianMs" : 0.006944, "percentage" : 0.582797 }
+, { "name" : "tri_light_kan/b7_project/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b7_project/Conv1D", "timeMs" : 7.22301, "averageMs" : 0.0129445, "medianMs" : 0.012576, "percentage" : 1.05361 }
+, { "name" : "const_fold_opt__7110", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b7_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b7_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b7_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b7_project_bn/batchnorm/add_1)), PWN(tri_light_kan/b7_residual/add))", "timeMs" : 4.21251, "averageMs" : 0.0075493, "medianMs" : 0.007424, "percentage" : 0.614473 }
+, { "name" : "tri_light_kan/b8_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b8_expand/Conv1D", "timeMs" : 6.20704, "averageMs" : 0.0111237, "medianMs" : 0.010944, "percentage" : 0.905412 }
+, { "name" : "const_fold_opt__7042", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b8_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b8_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b8_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b8_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_13, PWN(tri_light_kan/b8_expand_hs/add)), PWN(tri_light_kan/b8_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_13 + ONNXTRT_Broadcast_432, PWN(tri_light_kan/b8_expand_hs/mul))), PWN(tri_light_kan/b8_expand_hs/truediv)))", "timeMs" : 3.97059, "averageMs" : 0.00711575, "medianMs" : 0.006976, "percentage" : 0.579184 }
+, { "name" : "tri_light_kan/b8_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b8_dw/depthwise", "timeMs" : 5.40329, "averageMs" : 0.00968332, "medianMs" : 0.00912, "percentage" : 0.78817 }
+, { "name" : "const_fold_opt__7035", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b8_dw_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b8_dw/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b8_dw_bn/batchnorm/mul_1), PWN(tri_light_kan/b8_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_14, PWN(tri_light_kan/b8_dw_hs/add)), PWN(tri_light_kan/b8_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_14 + ONNXTRT_Broadcast_449, PWN(tri_light_kan/b8_dw_hs/mul))), PWN(tri_light_kan/b8_dw_hs/truediv)))", "timeMs" : 4.26916, "averageMs" : 0.00765082, "medianMs" : 0.007168, "percentage" : 0.622735 }
+, { "name" : "tri_light_kan/b8_project/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b8_project/Conv1D", "timeMs" : 7.64803, "averageMs" : 0.0137061, "medianMs" : 0.013744, "percentage" : 1.11561 }
+, { "name" : "const_fold_opt__6928", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b8_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b8_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b8_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b8_project_bn/batchnorm/add_1)), PWN(tri_light_kan/b8_residual/add))", "timeMs" : 3.85936, "averageMs" : 0.00691642, "medianMs" : 0.006816, "percentage" : 0.562959 }
+, { "name" : "tri_light_kan/b9_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b9_expand/Conv1D", "timeMs" : 7.66006, "averageMs" : 0.0137277, "medianMs" : 0.013408, "percentage" : 1.11736 }
+, { "name" : "const_fold_opt__7139", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b9_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b9_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b9_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b9_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_15, PWN(tri_light_kan/b9_expand_hs/add)), PWN(tri_light_kan/b9_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_15 + ONNXTRT_Broadcast_481, PWN(tri_light_kan/b9_expand_hs/mul))), PWN(tri_light_kan/b9_expand_hs/truediv)))", "timeMs" : 4.50701, "averageMs" : 0.00807708, "medianMs" : 0.007968, "percentage" : 0.657431 }
+, { "name" : "tri_light_kan/b9_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b9_dw/depthwise", "timeMs" : 5.17162, "averageMs" : 0.00926813, "medianMs" : 0.009248, "percentage" : 0.754376 }
+, { "name" : "dummy_shape_call__mye3721_0_myl157_0", "timeMs" : 1.04323, "averageMs" : 0.00186959, "medianMs" : 0.002112, "percentage" : 0.152175 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl157_1", "timeMs" : 5.5472, "averageMs" : 0.00994122, "medianMs" : 0.011168, "percentage" : 0.809162 }
+, { "name" : "__myl_MulSumAddRel_myl157_2", "timeMs" : 4.3129, "averageMs" : 0.00772921, "medianMs" : 0.007584, "percentage" : 0.629116 }
+, { "name" : "__myl_ResMulSumAddAdd_myl157_3", "timeMs" : 3.93386, "averageMs" : 0.00704992, "medianMs" : 0.006944, "percentage" : 0.573826 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl157_4", "timeMs" : 3.7657, "averageMs" : 0.00674857, "medianMs" : 0.006672, "percentage" : 0.549297 }
+, { "name" : "tri_light_kan/b9_project/Conv1D", "timeMs" : 10.2604, "averageMs" : 0.0183877, "medianMs" : 0.020288, "percentage" : 1.49666 }
+, { "name" : "const_fold_opt__6932", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b9_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b9_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_kan/b9_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b9_project_bn/batchnorm/add_1))", "timeMs" : 3.89194, "averageMs" : 0.0069748, "medianMs" : 0.00688, "percentage" : 0.567711 }
+, { "name" : "tri_light_kan/b10_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b10_expand/Conv1D", "timeMs" : 8.17853, "averageMs" : 0.0146569, "medianMs" : 0.014416, "percentage" : 1.19299 }
+, { "name" : "const_fold_opt__7066", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b10_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b10_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b10_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b10_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_16, PWN(tri_light_kan/b10_expand_hs/add)), PWN(tri_light_kan/b10_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_16 + ONNXTRT_Broadcast_539, PWN(tri_light_kan/b10_expand_hs/mul))), PWN(tri_light_kan/b10_expand_hs/truediv)))", "timeMs" : 4.5439, "averageMs" : 0.00814319, "medianMs" : 0.008064, "percentage" : 0.662812 }
+, { "name" : "tri_light_kan/b10_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b10_dw/depthwise", "timeMs" : 6.19162, "averageMs" : 0.0110961, "medianMs" : 0.010944, "percentage" : 0.903162 }
+, { "name" : "dummy_shape_call__mye3721_0_myl171_0", "timeMs" : 0.995775, "averageMs" : 0.00178454, "medianMs" : 0.0016, "percentage" : 0.145252 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl171_1", "timeMs" : 5.56515, "averageMs" : 0.00997339, "medianMs" : 0.011104, "percentage" : 0.811781 }
+, { "name" : "__myl_MulSumAddRel_myl171_2", "timeMs" : 4.32426, "averageMs" : 0.00774957, "medianMs" : 0.0076, "percentage" : 0.630773 }
+, { "name" : "__myl_ResMulSumAddAdd_myl171_3", "timeMs" : 4.21274, "averageMs" : 0.00754971, "medianMs" : 0.007424, "percentage" : 0.614506 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl171_4", "timeMs" : 4.06451, "averageMs" : 0.00728407, "medianMs" : 0.007264, "percentage" : 0.592884 }
+, { "name" : "tri_light_kan/b10_project/Conv1D", "timeMs" : 11.2297, "averageMs" : 0.020125, "medianMs" : 0.021552, "percentage" : 1.63806 }
+, { "name" : "const_fold_opt__7126", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b10_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b10_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b10_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b10_project_bn/batchnorm/add_1)), PWN(tri_light_kan/b10_residual/add))", "timeMs" : 4.05453, "averageMs" : 0.00726618, "medianMs" : 0.007264, "percentage" : 0.591428 }
+, { "name" : "tri_light_kan/b11_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b11_expand/Conv1D", "timeMs" : 7.21754, "averageMs" : 0.0129347, "medianMs" : 0.012672, "percentage" : 1.05281 }
+, { "name" : "const_fold_opt__7167", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b11_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b11_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b11_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b11_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_17, PWN(tri_light_kan/b11_expand_hs/add)), PWN(tri_light_kan/b11_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_17 + ONNXTRT_Broadcast_597, PWN(tri_light_kan/b11_expand_hs/mul))), PWN(tri_light_kan/b11_expand_hs/truediv)))", "timeMs" : 4.57946, "averageMs" : 0.00820691, "medianMs" : 0.008064, "percentage" : 0.667999 }
+, { "name" : "tri_light_kan/b11_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b11_dw/depthwise", "timeMs" : 5.94845, "averageMs" : 0.0106603, "medianMs" : 0.010528, "percentage" : 0.867691 }
+, { "name" : "dummy_shape_call__mye3721_0_myl185_0", "timeMs" : 0.997504, "averageMs" : 0.00178764, "medianMs" : 0.001904, "percentage" : 0.145504 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl185_1", "timeMs" : 5.07718, "averageMs" : 0.00909889, "medianMs" : 0.010272, "percentage" : 0.740601 }
+, { "name" : "__myl_MulSumAddRel_myl185_2", "timeMs" : 4.39859, "averageMs" : 0.00788279, "medianMs" : 0.007776, "percentage" : 0.641616 }
+, { "name" : "__myl_ResMulSumAddAdd_myl185_3", "timeMs" : 4.1848, "averageMs" : 0.00749964, "medianMs" : 0.007392, "percentage" : 0.610431 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl185_4", "timeMs" : 3.70371, "averageMs" : 0.00663748, "medianMs" : 0.00656, "percentage" : 0.540255 }
+, { "name" : "tri_light_kan/b11_project/Conv1D", "timeMs" : 11.3618, "averageMs" : 0.0203617, "medianMs" : 0.022208, "percentage" : 1.65733 }
+, { "name" : "const_fold_opt__7087", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b11_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b11_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_kan/b11_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b11_project_bn/batchnorm/add_1))", "timeMs" : 3.83683, "averageMs" : 0.00687605, "medianMs" : 0.006816, "percentage" : 0.559673 }
+, { "name" : "tri_light_kan/b12_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b12_expand/Conv1D", "timeMs" : 7.03914, "averageMs" : 0.0126149, "medianMs" : 0.012416, "percentage" : 1.02679 }
+, { "name" : "const_fold_opt__6975", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b12_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b12_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b12_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b12_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_18, PWN(tri_light_kan/b12_expand_hs/add)), PWN(tri_light_kan/b12_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_18 + ONNXTRT_Broadcast_655, PWN(tri_light_kan/b12_expand_hs/mul))), PWN(tri_light_kan/b12_expand_hs/truediv)))", "timeMs" : 3.81885, "averageMs" : 0.00684382, "medianMs" : 0.006688, "percentage" : 0.55705 }
+, { "name" : "tri_light_kan/b12_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b12_dw/depthwise", "timeMs" : 4.67645, "averageMs" : 0.00838073, "medianMs" : 0.00816, "percentage" : 0.682147 }
+, { "name" : "dummy_shape_call__mye3721_0_myl199_0", "timeMs" : 1.05334, "averageMs" : 0.00188771, "medianMs" : 0.00208, "percentage" : 0.15365 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl199_1", "timeMs" : 5.05821, "averageMs" : 0.00906489, "medianMs" : 0.010208, "percentage" : 0.737833 }
+, { "name" : "__myl_MulSumAddRel_myl199_2", "timeMs" : 4.21981, "averageMs" : 0.00756238, "medianMs" : 0.007392, "percentage" : 0.615537 }
+, { "name" : "__myl_ResMulSumAddAdd_myl199_3", "timeMs" : 4.20032, "averageMs" : 0.00752746, "medianMs" : 0.00736, "percentage" : 0.612695 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl199_4", "timeMs" : 3.57834, "averageMs" : 0.00641279, "medianMs" : 0.006208, "percentage" : 0.521967 }
+, { "name" : "tri_light_kan/b12_project/Conv1D", "timeMs" : 12.1442, "averageMs" : 0.0217638, "medianMs" : 0.02408, "percentage" : 1.77146 }
+, { "name" : "const_fold_opt__7108", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b12_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b12_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_kan/b12_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b12_project_bn/batchnorm/add_1))", "timeMs" : 3.90022, "averageMs" : 0.00698965, "medianMs" : 0.006848, "percentage" : 0.56892 }
+, { "name" : "tri_light_kan/b13_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b13_expand/Conv1D", "timeMs" : 8.37456, "averageMs" : 0.0150082, "medianMs" : 0.014784, "percentage" : 1.22158 }
+, { "name" : "const_fold_opt__7132", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b13_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b13_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b13_expand_bn/batchnorm/mul_1), PWN(tri_light_kan/b13_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__7094_clone_19, PWN(tri_light_kan/b13_expand_hs/add)), PWN(tri_light_kan/b13_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_kan/b9_se_hsig/truediv_recip:0_clone_19 + ONNXTRT_Broadcast_713, PWN(tri_light_kan/b13_expand_hs/mul))), PWN(tri_light_kan/b13_expand_hs/truediv)))", "timeMs" : 4.06234, "averageMs" : 0.00728017, "medianMs" : 0.007264, "percentage" : 0.592567 }
+, { "name" : "tri_light_kan/b13_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b13_dw/depthwise", "timeMs" : 6.1814, "averageMs" : 0.0110778, "medianMs" : 0.010912, "percentage" : 0.901672 }
+, { "name" : "dummy_shape_call__mye3721_0_myl213_0", "timeMs" : 0.779327, "averageMs" : 0.00139664, "medianMs" : 0.001248, "percentage" : 0.113679 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl213_1", "timeMs" : 4.90512, "averageMs" : 0.00879054, "medianMs" : 0.00944, "percentage" : 0.715502 }
+, { "name" : "__myl_MulSumAddRel_myl213_2", "timeMs" : 4.13478, "averageMs" : 0.00741001, "medianMs" : 0.007168, "percentage" : 0.603135 }
+, { "name" : "__myl_ResMulSumAddAdd_myl213_3", "timeMs" : 4.42976, "averageMs" : 0.00793864, "medianMs" : 0.007744, "percentage" : 0.646163 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl213_4", "timeMs" : 3.91505, "averageMs" : 0.00701621, "medianMs" : 0.00688, "percentage" : 0.571082 }
+, { "name" : "tri_light_kan/ord_c1/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/ord_c1/Conv1D", "timeMs" : 8.63838, "averageMs" : 0.015481, "medianMs" : 0.017472, "percentage" : 1.26007 }
+, { "name" : "const_fold_opt__7023", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/ord_bn1/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "const_fold_opt__6991", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/ord_c1/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/ord_c1/BiasAdd + tri_light_kan/ord_c1/Relu), PWN(tri_light_kan/ord_bn1/batchnorm/mul_1)), PWN(tri_light_kan/ord_bn1/batchnorm/add_1))", "timeMs" : 4.43043, "averageMs" : 0.00793984, "medianMs" : 0.007904, "percentage" : 0.64626 }
+, { "name" : "tri_light_kan/ord_c2/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/ord_c2/Conv1D", "timeMs" : 9.43616, "averageMs" : 0.0169107, "medianMs" : 0.017456, "percentage" : 1.37644 }
+, { "name" : "tri_light_kan/b13_project/Conv1D", "timeMs" : 14.3314, "averageMs" : 0.0256836, "medianMs" : 0.025632, "percentage" : 2.0905 }
+, { "name" : "const_fold_opt__7153", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b13_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/b13_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_kan/b13_project_bn/batchnorm/mul_1), PWN(tri_light_kan/b13_project_bn/batchnorm/add_1)), PWN(tri_light_kan/b13_residual/add))", "timeMs" : 3.79776, "averageMs" : 0.00680603, "medianMs" : 0.006784, "percentage" : 0.553974 }
+, { "name" : "tri_light_kan/last_conv/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_kan/last_conv/Conv1D", "timeMs" : 7.2048, "averageMs" : 0.0129118, "medianMs" : 0.012736, "percentage" : 1.05095 }
+, { "name" : "dummy_shape_call__mye45702_0_myl230_0", "timeMs" : 0.708319, "averageMs" : 0.00126939, "medianMs" : 0.00112, "percentage" : 0.103321 }
+, { "name" : "__myl_AddRelMea_myl230_1", "timeMs" : 3.6464, "averageMs" : 0.00653477, "medianMs" : 0.00632, "percentage" : 0.531895 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulMea_myl230_2", "timeMs" : 3.86861, "averageMs" : 0.006933, "medianMs" : 0.006624, "percentage" : 0.564309 }
+, { "name" : "__myl_MulSumAddRel_myl230_3", "timeMs" : 4.06394, "averageMs" : 0.00728304, "medianMs" : 0.007104, "percentage" : 0.5928 }
+, { "name" : "__myl_MulAddResMulSumAddRel_myl230_4", "timeMs" : 4.14237, "averageMs" : 0.0074236, "medianMs" : 0.007456, "percentage" : 0.604241 }
+, { "name" : "__myl_ResMulSumAddRel_myl230_5", "timeMs" : 4.07846, "averageMs" : 0.00730907, "medianMs" : 0.007136, "percentage" : 0.594919 }
+, { "name" : "__myl_ConResMeaSubMulSum_myl230_6", "timeMs" : 3.90618, "averageMs" : 0.00700032, "medianMs" : 0.006816, "percentage" : 0.569789 }
+, { "name" : "__myl_DivResAddSqrDivMulAddResMulAddTanNegExpAddDivMulResLtGtrEqlOrAndCasSliSliResMulSubMulAddMulEtc_myl230_7", "timeMs" : 12.6309, "averageMs" : 0.0226361, "medianMs" : 0.022528, "percentage" : 1.84245 }
+, { "name" : "__myl_ResMeaSubMulSum_myl230_8", "timeMs" : 3.40483, "averageMs" : 0.00610185, "medianMs" : 0.006016, "percentage" : 0.496658 }
+, { "name" : "__myl_DivResAddSqrDivMulAddResMulAddTanResNegExpAddDivMulResMulLtEqlGtrOrAndCasSliSliAddSubAddSubEtc_myl230_9", "timeMs" : 5.75066, "averageMs" : 0.0103058, "medianMs" : 0.009664, "percentage" : 0.83884 }
+]

@@ -1,0 +1,182 @@
+{
+ "model": "tribranch18__kan",
+ "backbone": "full",
+ "head": "KAN",
+ "variant": "int8auto_cA",
+ "backend": "tensorrt",
+ "runtime": "tensorrt 10.3.0",
+ "providers": null,
+ "input_names_fed": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "aux_outputs": [],
+ "n_eval": 900,
+ "accuracy": 0.9344444444444444,
+ "macro_f1": 0.9346738942521979,
+ "vs_keras": {
+  "max_abs": 0.013346552848815918,
+  "mean_abs": 0.0001292517288001599,
+  "argmax_agree": 1.0,
+  "n_argmax_diff": 0
+ },
+ "latency_e2e_us": {
+  "n": 2000,
+  "mean": 2778.2189510000003,
+  "std": 15.862552984409241,
+  "min": 2755.487,
+  "p50": 2775.263,
+  "p90": 2788.5782,
+  "p95": 2802.9302000000002,
+  "p99": 2840.24129,
+  "max": 2951.651
+ },
+ "latency_gpu_us": {
+  "n": 2000,
+  "mean": 2636.6366049051285,
+  "std": 9.563419536243655,
+  "min": 2621.9840049743652,
+  "p50": 2635.4238986968994,
+  "p90": 2641.123151779175,
+  "p95": 2645.798408985138,
+  "p99": 2675.8810472488403,
+  "max": 2768.160104751587
+ },
+ "latency_first_us": 86893.997,
+ "latency_accpass_us": {
+  "n": 899,
+  "mean": 2787.0419788654062,
+  "std": 46.937544212068744,
+  "min": 2758.462,
+  "p50": 2777.311,
+  "p90": 2800.5045999999998,
+  "p95": 2825.9904,
+  "p99": 3096.74714,
+  "max": 3210.248
+ },
+ "load_s": 0.20024273596936837,
+ "n_warmup": 1079,
+ "power_idle": {
+  "n_samples": 450,
+  "duration_s": 9.008173575042747,
+  "vdd_in_w": 5.856413866666666,
+  "vdd_in_w_std": 0.03146407705502338,
+  "cpu_gpu_cv_w": 0.88428928,
+  "soc_w": 2.229829688888888,
+  "gpu_load_pct": 0.0
+ },
+ "power_active": {
+  "n_samples": 950,
+  "duration_s": 19.001518168020993,
+  "vdd_in_w": 8.260556934736844,
+  "vdd_in_w_std": 0.03986318994035732,
+  "cpu_gpu_cv_w": 2.5984386021052632,
+  "soc_w": 2.437055191578947,
+  "gpu_load_pct": 90.44515789473684
+ },
+ "active_s": 20.001518168020993,
+ "n_active": 7194,
+ "throughput_ips": 359.6726978206072,
+ "energy": {
+  "vdd_in_total_mj": 22.96687233918693,
+  "vdd_in_dynamic_mj": 6.684252328958491,
+  "cpu_gpu_cv_total_mj": 7.224453281692452,
+  "cpu_gpu_cv_dynamic_mj": 4.765858883623755
+ },
+ "memory": {
+  "avail_baseline_kb": 5735100,
+  "avail_loaded_kb": 5635184,
+  "avail_min_kb": 5467988.0,
+  "footprint_peak_mb": 260.8515625,
+  "footprint_loaded_mb": 97.57421875,
+  "vmhwm_mb": 432.70703125,
+  "vmrss_mb": 432.70703125
+ },
+ "engine_mb": 4.8229,
+ "engine_device_mem_mb": 1.24928,
+ "onnx_mb": 2.705777,
+ "snapshot_start": {
+  "gpu_freq_mhz": 612.0,
+  "gpu_max_mhz": 612.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1497.6,
+   "cpu1": 1497.6,
+   "cpu2": 1497.6,
+   "cpu3": 1497.6,
+   "cpu4": 1497.6,
+   "cpu5": 1497.6
+  },
+  "temp_c": {
+   "cpu-thermal": 36.437,
+   "gpu-thermal": 35.687,
+   "soc0-thermal": 36.281,
+   "soc1-thermal": 36.656,
+   "soc2-thermal": 35.718,
+   "tj-thermal": 36.656
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3297960,
+   "MemAvailable": 5785012,
+   "Buffers": 95564,
+   "Cached": 2555400
+  }
+ },
+ "snapshot_end": {
+  "gpu_freq_mhz": 612.0,
+  "gpu_max_mhz": 612.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1497.6,
+   "cpu1": 1497.6,
+   "cpu2": 1497.6,
+   "cpu3": 1497.6,
+   "cpu4": 1497.6,
+   "cpu5": 1497.6
+  },
+  "temp_c": {
+   "cpu-thermal": 36.468,
+   "gpu-thermal": 36.375,
+   "soc0-thermal": 36.812,
+   "soc1-thermal": 37.0,
+   "soc2-thermal": 36.5,
+   "tj-thermal": 37.0
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3002364,
+   "MemAvailable": 5489552,
+   "Buffers": 95604,
+   "Cached": 2555476
+  }
+ },
+ "marks_s": {
+  "start": 0.0,
+  "baseline": 1.5255,
+  "load_start": 1.5257,
+  "load_end": 1.726,
+  "acc_start": 1.7262,
+  "acc_end": 4.3273,
+  "lat_start": 7.3294,
+  "lat_end": 12.8989,
+  "idle_start": 12.8989,
+  "idle_end": 22.9071,
+  "act_start": 22.9071,
+  "act_end": 42.9086
+ },
+ "protocol": {
+  "model": "tribranch18__kan",
+  "variant": "int8auto_cA",
+  "engines": "/home/jetson-nano-super/LASCAS-2027/engines/b1",
+  "out": "/home/jetson-nano-super/LASCAS-2027/results/c2_15w/rep01/tribranch18__kan__int8auto_cA",
+  "warmup_s": 3.0,
+  "lat_iters": 2000,
+  "lat_max_s": 40.0,
+  "idle_s": 10.0,
+  "active_s": 20.0,
+  "sample_hz": 50.0,
+  "trim_s": 1.0
+ }
+}

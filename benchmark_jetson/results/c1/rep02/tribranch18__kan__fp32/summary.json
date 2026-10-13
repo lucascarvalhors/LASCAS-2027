@@ -1,0 +1,181 @@
+{
+ "model": "tribranch18__kan",
+ "backbone": "full",
+ "head": "KAN",
+ "variant": "fp32",
+ "backend": "tensorrt",
+ "runtime": "tensorrt 10.3.0",
+ "providers": null,
+ "input_names_fed": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "n_eval": 900,
+ "accuracy": 0.9344444444444444,
+ "macro_f1": 0.9346738942521979,
+ "vs_keras": {
+  "max_abs": 0.013225793838500977,
+  "mean_abs": 0.00012718378704179218,
+  "argmax_agree": 1.0,
+  "n_argmax_diff": 0
+ },
+ "latency_e2e_us": {
+  "n": 2000,
+  "mean": 1386.9301165,
+  "std": 11.979142977240164,
+  "min": 1366.597,
+  "p50": 1384.998,
+  "p90": 1395.7852,
+  "p95": 1405.54205,
+  "p99": 1426.9199600000002,
+  "max": 1653.613
+ },
+ "latency_gpu_us": {
+  "n": 2000,
+  "mean": 1267.351599931717,
+  "std": 8.95590865668501,
+  "min": 1255.2319765090942,
+  "p50": 1266.0800218582153,
+  "p90": 1272.6720571517944,
+  "p95": 1275.689548254013,
+  "p99": 1304.520343542099,
+  "max": 1485.9520196914673
+ },
+ "latency_first_us": 13288.524,
+ "latency_accpass_us": {
+  "n": 899,
+  "mean": 1391.1950378197998,
+  "std": 30.41550024117008,
+  "min": 1368.325,
+  "p50": 1385.19,
+  "p90": 1402.7772,
+  "p95": 1417.8045,
+  "p99": 1555.03882,
+  "max": 1760.401
+ },
+ "load_s": 0.18776132602943107,
+ "n_warmup": 2160,
+ "power_idle": {
+  "n_samples": 450,
+  "duration_s": 9.008137697004713,
+  "vdd_in_w": 6.526017706666666,
+  "vdd_in_w_std": 0.13330530506660507,
+  "cpu_gpu_cv_w": 1.4872415288888892,
+  "soc_w": 2.259541333333333,
+  "gpu_load_pct": 0.0
+ },
+ "power_active": {
+  "n_samples": 950,
+  "duration_s": 19.000062994018663,
+  "vdd_in_w": 11.136312926315785,
+  "vdd_in_w_std": 0.047520536580534685,
+  "cpu_gpu_cv_w": 4.9189509389473685,
+  "soc_w": 2.70240128,
+  "gpu_load_pct": 83.74347368421053
+ },
+ "active_s": 20.000062994018663,
+ "n_active": 14413,
+ "throughput_ips": 720.6477301751718,
+ "energy": {
+  "vdd_in_total_mj": 15.453199198461112,
+  "vdd_in_dynamic_mj": 6.397432513286998,
+  "cpu_gpu_cv_total_mj": 6.825735699953835,
+  "cpu_gpu_cv_dynamic_mj": 4.761979072943607
+ },
+ "memory": {
+  "avail_baseline_kb": 5756660,
+  "avail_loaded_kb": 5656616,
+  "avail_min_kb": 5627884.0,
+  "footprint_peak_mb": 125.7578125,
+  "footprint_loaded_mb": 97.69921875,
+  "vmhwm_mb": 289.62890625,
+  "vmrss_mb": 289.62890625
+ },
+ "engine_mb": 3.843652,
+ "engine_device_mem_mb": 1.314816,
+ "onnx_mb": 2.705777,
+ "snapshot_start": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 39.156,
+   "gpu-thermal": 38.25,
+   "soc0-thermal": 38.406,
+   "soc1-thermal": 38.906,
+   "soc2-thermal": 38.343,
+   "tj-thermal": 39.156
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3575900,
+   "MemAvailable": 5807396,
+   "Buffers": 80804,
+   "Cached": 2311988
+  }
+ },
+ "snapshot_end": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 39.593,
+   "gpu-thermal": 39.312,
+   "soc0-thermal": 39.343,
+   "soc1-thermal": 39.781,
+   "soc2-thermal": 39.312,
+   "tj-thermal": 39.593
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3414788,
+   "MemAvailable": 5646412,
+   "Buffers": 80844,
+   "Cached": 2312064
+  }
+ },
+ "marks_s": {
+  "start": 0.0,
+  "baseline": 1.5238,
+  "load_start": 1.524,
+  "load_end": 1.7118,
+  "acc_start": 1.712,
+  "acc_end": 2.983,
+  "lat_start": 5.9834,
+  "lat_end": 8.7682,
+  "idle_start": 8.7682,
+  "idle_end": 18.7764,
+  "act_start": 18.7764,
+  "act_end": 38.7764
+ },
+ "protocol": {
+  "model": "tribranch18__kan",
+  "variant": "fp32",
+  "engines": "/home/jetson-nano-super/LASCAS-2027/engines/b1",
+  "out": "/home/jetson-nano-super/LASCAS-2027/results/c1/rep02/tribranch18__kan__fp32",
+  "warmup_s": 3.0,
+  "lat_iters": 2000,
+  "lat_max_s": 40.0,
+  "idle_s": 10.0,
+  "active_s": 20.0,
+  "sample_hz": 50.0,
+  "trim_s": 1.0
+ }
+}

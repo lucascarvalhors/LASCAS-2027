@@ -1,0 +1,174 @@
+{
+ "model": "kan_pure_tribranch_18cls",
+ "backbone": "none",
+ "head": "KAN",
+ "variant": "ort_cuda",
+ "backend": "onnxruntime-cuda",
+ "runtime": "onnxruntime 1.24.0",
+ "providers": [
+  "CUDAExecutionProvider",
+  "CPUExecutionProvider"
+ ],
+ "input_names_fed": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "n_eval": 900,
+ "accuracy": 0.8844444444444445,
+ "macro_f1": 0.8843052810647168,
+ "vs_keras": {
+  "max_abs": 8.344650268554688e-06,
+  "mean_abs": 5.146120617419113e-07,
+  "argmax_agree": 1.0,
+  "n_argmax_diff": 0
+ },
+ "latency_e2e_us": {
+  "n": 2000,
+  "mean": 2785.171369,
+  "std": 239.97111767162966,
+  "min": 2577.729,
+  "p50": 2727.3334999999997,
+  "p90": 2817.5855,
+  "p95": 3331.7576499999996,
+  "p99": 3962.88979,
+  "max": 4331.502
+ },
+ "latency_gpu_us": null,
+ "latency_first_us": 241734.431,
+ "latency_accpass_us": {
+  "n": 899,
+  "mean": 2816.85289432703,
+  "std": 292.7983497276951,
+  "min": 2583.265,
+  "p50": 2723.205,
+  "p90": 3156.9762,
+  "p95": 3605.7550999999994,
+  "p99": 4025.67384,
+  "max": 4121.993
+ },
+ "load_s": 0.2272211029776372,
+ "n_warmup": 1049,
+ "power_idle": {
+  "n_samples": 451,
+  "duration_s": 9.009214953985065,
+  "vdd_in_w": 6.5169497117516615,
+  "vdd_in_w_std": 0.12254218098487107,
+  "cpu_gpu_cv_w": 1.4681118935698445,
+  "soc_w": 2.277075725055432,
+  "gpu_load_pct": 0.0
+ },
+ "power_active": {
+  "n_samples": 950,
+  "duration_s": 19.00098734901985,
+  "vdd_in_w": 7.652520690526316,
+  "vdd_in_w_std": 0.09237766020830505,
+  "cpu_gpu_cv_w": 2.2813614484210523,
+  "soc_w": 2.3094879663157895,
+  "gpu_load_pct": 28.297894736842107
+ },
+ "active_s": 20.00098734901985,
+ "n_active": 7244,
+ "throughput_ips": 362.1821199919409,
+ "energy": {
+  "vdd_in_total_mj": 21.12893008273461,
+  "vdd_in_dynamic_mj": 3.135359025453611,
+  "cpu_gpu_cv_total_mj": 6.298934493154483,
+  "cpu_gpu_cv_dynamic_mj": 2.2454160765012467
+ },
+ "memory": {
+  "avail_baseline_kb": 5760448,
+  "avail_loaded_kb": 5612992,
+  "avail_min_kb": 5354648.0,
+  "footprint_peak_mb": 396.2890625,
+  "footprint_loaded_mb": 144.0,
+  "vmhwm_mb": 613.01171875,
+  "vmrss_mb": 613.01171875
+ },
+ "engine_mb": null,
+ "engine_device_mem_mb": null,
+ "onnx_mb": 0.330399,
+ "snapshot_start": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 38.843,
+   "gpu-thermal": 38.0,
+   "soc0-thermal": 38.25,
+   "soc1-thermal": 38.531,
+   "soc2-thermal": 38.031,
+   "tj-thermal": 38.562
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3543124,
+   "MemAvailable": 5806192,
+   "Buffers": 82800,
+   "Cached": 2340800
+  }
+ },
+ "snapshot_end": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 37.781,
+   "gpu-thermal": 37.187,
+   "soc0-thermal": 37.593,
+   "soc1-thermal": 38.0,
+   "soc2-thermal": 37.406,
+   "tj-thermal": 38.093
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3116808,
+   "MemAvailable": 5380000,
+   "Buffers": 82840,
+   "Cached": 2340872
+  }
+ },
+ "marks_s": {
+  "start": 0.0,
+  "baseline": 1.5302,
+  "load_start": 1.5304,
+  "load_end": 1.7576,
+  "acc_start": 1.7578,
+  "acc_end": 4.5407,
+  "lat_start": 7.5414,
+  "lat_end": 13.1258,
+  "idle_start": 13.1258,
+  "idle_end": 23.135,
+  "act_start": 23.135,
+  "act_end": 43.136
+ },
+ "protocol": {
+  "model": "kan_pure_tribranch_18cls",
+  "variant": "ort_cuda",
+  "engines": "/home/jetson-nano-super/LASCAS-2027/engines/b1",
+  "out": "/home/jetson-nano-super/LASCAS-2027/results/c1/rep02/kan_pure_tribranch_18cls__ort_cuda",
+  "warmup_s": 3.0,
+  "lat_iters": 2000,
+  "lat_max_s": 40.0,
+  "idle_s": 10.0,
+  "active_s": 20.0,
+  "sample_hz": 50.0,
+  "trim_s": 1.0
+ }
+}

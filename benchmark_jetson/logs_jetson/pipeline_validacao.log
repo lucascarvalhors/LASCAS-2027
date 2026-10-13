@@ -1,0 +1,104 @@
+[2026-10-13 00:19:43] esperando o processo 1742119 terminar
+[2026-10-13 05:28:15] build b2 (sem timing cache)
+folds: A=450 B=450 (seed 2027)
+[05:28:15] build tribranch18__kan / fp32
+    ok: 43.9 s, 3.90 MB, camadas por dtype={'fp32': 260, 'none': 8}, conv/gemm={'n': 43, 'int8_in': 0, 'fp16_in': 0}
+[05:29:02] build tribranch18__kan / fp16
+    ok: 62.95 s, 2.56 MB, camadas por dtype={'fp16': 310, 'none': 8, 'fp32': 2}, conv/gemm={'n': 43, 'int8_in': 0, 'fp16_in': 43}
+[05:30:07] build tribranch18__kan / int8_cA
+    ok: 397.04 s, 2.81 MB, camadas por dtype={'fp32': 344, 'int8': 98, 'none': 2}, conv/gemm={'n': 64, 'int8_in': 64, 'fp16_in': 0}
+[05:36:46] build tribranch18__kan / int8_cB
+    ok: 260.13 s, 2.81 MB, camadas por dtype={'int8': 103, 'fp32': 341, 'none': 2}, conv/gemm={'n': 64, 'int8_in': 64, 'fp16_in': 0}
+[05:41:08] build kan_pure_tribranch_18cls / fp32
+    ok: 3.55 s, 0.52 MB, camadas por dtype={'fp32': 21, 'none': 1}, conv/gemm={'n': 2, 'int8_in': 0, 'fp16_in': 0}
+[05:41:14] build kan_pure_tribranch_18cls / fp16
+    ok: 6.07 s, 0.40 MB, camadas por dtype={'fp32': 2, 'fp16': 24, 'none': 1}, conv/gemm={'n': 2, 'int8_in': 0, 'fp16_in': 2}
+[05:41:22] build kan_pure_tribranch_18cls / int8_cA
+    ok: 89.55 s, 0.82 MB, camadas por dtype={'int8': 36, 'fp32': 94, 'none': 4}, conv/gemm={'n': 13, 'int8_in': 13, 'fp16_in': 0}
+[05:42:54] build kan_pure_tribranch_18cls / int8_cB
+    ok: 89.22 s, 0.84 MB, camadas por dtype={'int8': 37, 'fp32': 99, 'none': 4}, conv/gemm={'n': 13, 'int8_in': 13, 'fp16_in': 0}
+[05:44:25] build tribranch18__mlp / fp32
+    ok: 31.81 s, 3.81 MB, camadas por dtype={'fp32': 261, 'none': 8}, conv/gemm={'n': 43, 'int8_in': 0, 'fp16_in': 0}
+[05:44:59] build tribranch18__mlp / fp16
+    ok: 48.83 s, 2.39 MB, camadas por dtype={'fp16': 316, 'none': 8, 'fp32': 2}, conv/gemm={'n': 43, 'int8_in': 0, 'fp16_in': 43}
+[05:45:50] build tribranch18__mlp / int8_cA
+    ok: 216.6 s, 2.54 MB, camadas por dtype={'int8': 97, 'fp32': 316}, conv/gemm={'n': 62, 'int8_in': 62, 'fp16_in': 0}
+[05:49:29] build tribranch18__mlp / int8_cB
+    ok: 217.43 s, 2.60 MB, camadas por dtype={'int8': 100, 'fp32': 320}, conv/gemm={'n': 62, 'int8_in': 62, 'fp16_in': 0}
+[05:53:09] build mlp_pure_tribranch_18cls / fp32
+    ok: 1.97 s, 1.15 MB, camadas por dtype={'fp32': 17, 'none': 1}, conv/gemm={'n': 2, 'int8_in': 0, 'fp16_in': 0}
+[05:53:13] build mlp_pure_tribranch_18cls / fp16
+    ok: 4.09 s, 0.63 MB, camadas por dtype={'fp32': 3, 'fp16': 19, 'none': 1}, conv/gemm={'n': 2, 'int8_in': 0, 'fp16_in': 2}
+[05:53:19] build mlp_pure_tribranch_18cls / int8_cA
+    ok: 21.74 s, 0.61 MB, camadas por dtype={'fp32': 24, 'int8': 14}, conv/gemm={'n': 9, 'int8_in': 9, 'fp16_in': 0}
+[05:53:43] build mlp_pure_tribranch_18cls / int8_cB
+    ok: 21.84 s, 0.60 MB, camadas por dtype={'int8': 16, 'fp32': 21}, conv/gemm={'n': 9, 'int8_in': 9, 'fp16_in': 0}
+[05:54:07] build mobilenetv3_light_kan_tribranch_18cls / fp32
+    ok: 29.92 s, 1.92 MB, camadas por dtype={'fp32': 260, 'none': 8}, conv/gemm={'n': 43, 'int8_in': 0, 'fp16_in': 0}
+[05:54:39] build mobilenetv3_light_kan_tribranch_18cls / fp16
+    ok: 50.69 s, 1.61 MB, camadas por dtype={'fp16': 301, 'none': 8, 'fp32': 2}, conv/gemm={'n': 43, 'int8_in': 0, 'fp16_in': 43}
+[05:55:32] build mobilenetv3_light_kan_tribranch_18cls / int8_cA
+    ok: 251.26 s, 2.22 MB, camadas por dtype={'fp32': 350, 'int8': 95, 'none': 2}, conv/gemm={'n': 64, 'int8_in': 64, 'fp16_in': 0}
+[05:59:46] build mobilenetv3_light_kan_tribranch_18cls / int8_cB
+    ok: 251.1 s, 2.24 MB, camadas por dtype={'fp32': 356, 'int8': 95, 'none': 2}, conv/gemm={'n': 64, 'int8_in': 64, 'fp16_in': 0}
+[06:03:59] build mobilenetv3_light_mlp_tribranch_18cls / fp32
+    ok: 28.96 s, 1.92 MB, camadas por dtype={'fp32': 257, 'none': 8}, conv/gemm={'n': 43, 'int8_in': 0, 'fp16_in': 0}
+[06:04:30] build mobilenetv3_light_mlp_tribranch_18cls / fp16
+    ok: 49.38 s, 1.53 MB, camadas por dtype={'fp16': 309, 'none': 8, 'fp32': 2}, conv/gemm={'n': 43, 'int8_in': 0, 'fp16_in': 43}
+[06:05:22] build mobilenetv3_light_mlp_tribranch_18cls / int8_cA
+    ok: 210.27 s, 2.09 MB, camadas por dtype={'int8': 93, 'fp32': 327}, conv/gemm={'n': 62, 'int8_in': 62, 'fp16_in': 0}
+[06:08:54] build mobilenetv3_light_mlp_tribranch_18cls / int8_cB
+    ok: 209.67 s, 2.03 MB, camadas por dtype={'int8': 93, 'fp32': 325}, conv/gemm={'n': 62, 'int8_in': 62, 'fp16_in': 0}
+FIM: 24 engines ok, 0 falhas
+[2026-10-13 06:12:26] iniciando campanha c3 (engines b2, 2 reps)
+[2026-10-13 06:12:27] início: c3 | engines=/home/jetson-nano-super/LASCAS-2027/engines/b2 | reps=2 | protocolo={'warmup_s': 3.0, 'lat_iters': 2000, 'lat_max_s': 40.0, 'idle_s': 10.0, 'active_s': 20.0, 'trtexec_iters': 2000, 'trtexec_warmup_ms': 2000, 'profile_iters': 300} | env={'clocks_locked': True, 'clocks': 'GPU 1020/1020 MHz, CPU [1728.0] (máx 1728)', 'nvpmodel': 'MAXN_SUPER', 'telescope_services': {'telescope-console': 'inactive', 'telescope-studio': 'inactive', 'telescope-panel': 'inactive', 'telescope-mdns': 'inactive', 'telescope-indi': 'inactive'}, 'loadavg_1min': 1.04}
+[2026-10-13 06:13:12] [1/48] rep1 tribranch18__mlp fp32: rc=0 45s ETA 36 min | tribranch18__mlp fp32: acc=0.9433 F1=0.9433 lat_e2e mean=1369.8us p99=1413.5us | 729 inf/s | P_idle=6.46W P_act=11.02W E=15.109mJ (din 6.246) | mem=144MB | trtexec GPU mean=1.2040 ms
+[2026-10-13 06:13:54] [2/48] rep1 kan_pure_tribranch_18cls fp32: rc=0 39s ETA 32 min | kan_pure_tribranch_18cls fp32: acc=0.8844 F1=0.8843 lat_e2e mean=219.7us p99=244.0us | 4567 inf/s | P_idle=6.46W P_act=8.32W E=1.821mJ (din 0.407) | mem=136MB | trtexec GPU mean=0.1134 ms
+[2026-10-13 06:14:48] [3/48] rep1 tribranch18__mlp int8_cA: rc=0 50s ETA 34 min | tribranch18__mlp int8_cA: acc=0.9200 F1=0.9199 lat_e2e mean=2329.8us p99=2372.9us | 428 inf/s | P_idle=6.53W P_act=9.54W E=22.273mJ (din 7.029) | mem=290MB | trtexec GPU mean=2.1188 ms
+[2026-10-13 06:15:37] [4/48] rep1 mobilenetv3_light_kan_tribranch_18cls fp16: rc=0 46s ETA 33 min | mobilenetv3_light_kan_tribranch_18cls fp16: acc=0.9211 F1=0.9220 lat_e2e mean=1445.5us p99=1505.1us | 692 inf/s | P_idle=6.46W P_act=8.79W E=12.703mJ (din 3.368) | mem=245MB | trtexec GPU mean=1.3151 ms
+[2026-10-13 06:16:25] [5/48] rep1 tribranch18__kan fp32: rc=0 45s ETA 32 min | tribranch18__kan fp32: acc=0.9344 F1=0.9347 lat_e2e mean=1387.1us p99=1502.7us | 722 inf/s | P_idle=6.46W P_act=10.85W E=15.029mJ (din 6.075) | mem=147MB | trtexec GPU mean=1.2314 ms
+[2026-10-13 06:17:19] [6/48] rep1 tribranch18__kan int8_cB: rc=0 51s ETA 32 min | tribranch18__kan int8_cB: acc=0.9322 F1=0.9324 lat_e2e mean=2389.5us p99=2872.7us | 420 inf/s | P_idle=6.47W P_act=9.74W E=23.187mJ (din 7.779) | mem=276MB | trtexec GPU mean=2.2295 ms
+[2026-10-13 06:18:10] [7/48] rep1 mobilenetv3_light_mlp_tribranch_18cls int8_cA: rc=0 48s ETA 32 min | mobilenetv3_light_mlp_tribranch_18cls int8_cA: acc=0.8856 F1=0.8842 lat_e2e mean=1818.8us p99=1876.7us | 550 inf/s | P_idle=6.47W P_act=8.89W E=16.152mJ (din 4.395) | mem=261MB | trtexec GPU mean=1.6185 ms
+[2026-10-13 06:18:52] [8/48] rep1 mlp_pure_tribranch_18cls fp32: rc=0 39s ETA 30 min | mlp_pure_tribranch_18cls fp32: acc=0.8656 F1=0.8654 lat_e2e mean=204.4us p99=232.8us | 4931 inf/s | P_idle=6.50W P_act=8.13W E=1.649mJ (din 0.331) | mem=131MB | trtexec GPU mean=0.0828 ms
+[2026-10-13 06:19:41] [9/48] rep1 mobilenetv3_light_mlp_tribranch_18cls fp16: rc=0 46s ETA 30 min | mobilenetv3_light_mlp_tribranch_18cls fp16: acc=0.9000 F1=0.8997 lat_e2e mean=1459.0us p99=1520.9us | 684 inf/s | P_idle=6.45W P_act=8.73W E=12.754mJ (din 3.325) | mem=232MB | trtexec GPU mean=1.2746 ms
+[2026-10-13 06:20:33] [10/48] rep1 mobilenetv3_light_kan_tribranch_18cls int8_cA: rc=0 49s ETA 29 min | mobilenetv3_light_kan_tribranch_18cls int8_cA: acc=0.8511 F1=0.8459 lat_e2e mean=1925.2us p99=1994.4us | 519 inf/s | P_idle=6.46W P_act=8.77W E=16.918mJ (din 4.457) | mem=281MB | trtexec GPU mean=1.7725 ms
+[2026-10-13 06:21:26] [11/48] rep1 tribranch18__mlp int8_cB: rc=0 50s ETA 29 min | tribranch18__mlp int8_cB: acc=0.9244 F1=0.9236 lat_e2e mean=2337.3us p99=2382.4us | 426 inf/s | P_idle=6.46W P_act=9.53W E=22.385mJ (din 7.218) | mem=269MB | trtexec GPU mean=2.1265 ms
+[2026-10-13 06:22:16] [12/48] rep1 tribranch18__kan fp16: rc=0 46s ETA 28 min | tribranch18__kan fp16: acc=0.9356 F1=0.9358 lat_e2e mean=1508.5us p99=1558.5us | 663 inf/s | P_idle=6.46W P_act=9.71W E=14.656mJ (din 4.902) | mem=211MB | trtexec GPU mean=1.3617 ms
+[2026-10-13 06:23:07] [13/48] rep1 mobilenetv3_light_kan_tribranch_18cls int8_cB: rc=0 49s ETA 27 min | mobilenetv3_light_kan_tribranch_18cls int8_cB: acc=0.9000 F1=0.9006 lat_e2e mean=1930.3us p99=1983.2us | 520 inf/s | P_idle=6.46W P_act=8.74W E=16.818mJ (din 4.391) | mem=271MB | trtexec GPU mean=1.7398 ms
+[2026-10-13 06:23:50] [14/48] rep1 kan_pure_tribranch_18cls fp16: rc=0 40s ETA 26 min | kan_pure_tribranch_18cls fp16: acc=0.8844 F1=0.8843 lat_e2e mean=274.6us p99=314.9us | 3680 inf/s | P_idle=6.54W P_act=8.22W E=2.235mJ (din 0.456) | mem=124MB | trtexec GPU mean=0.1663 ms
+[2026-10-13 06:24:33] [15/48] rep1 mlp_pure_tribranch_18cls int8_cB: rc=0 40s ETA 25 min | mlp_pure_tribranch_18cls int8_cB: acc=0.8433 F1=0.8406 lat_e2e mean=304.6us p99=336.6us | 3308 inf/s | P_idle=6.44W P_act=7.87W E=2.379mJ (din 0.431) | mem=264MB | trtexec GPU mean=0.1638 ms
+[2026-10-13 06:25:19] [16/48] rep1 mobilenetv3_light_mlp_tribranch_18cls fp32: rc=0 44s ETA 24 min | mobilenetv3_light_mlp_tribranch_18cls fp32: acc=0.9000 F1=0.8997 lat_e2e mean=1073.1us p99=1112.1us | 933 inf/s | P_idle=6.45W P_act=9.31W E=9.983mJ (din 3.072) | mem=124MB | trtexec GPU mean=0.9068 ms
+[2026-10-13 06:26:04] [17/48] rep1 kan_pure_tribranch_18cls int8_cB: rc=0 42s ETA 23 min | kan_pure_tribranch_18cls int8_cB: acc=0.7278 F1=0.7221 lat_e2e mean=620.1us p99=656.7us | 1617 inf/s | P_idle=6.44W P_act=7.75W E=4.789mJ (din 0.806) | mem=247MB | trtexec GPU mean=0.4633 ms
+[2026-10-13 06:26:46] [18/48] rep1 mlp_pure_tribranch_18cls fp16: rc=0 39s ETA 22 min | mlp_pure_tribranch_18cls fp16: acc=0.8667 F1=0.8665 lat_e2e mean=260.5us p99=289.1us | 3834 inf/s | P_idle=6.47W P_act=8.03W E=2.095mJ (din 0.409) | mem=121MB | trtexec GPU mean=0.1292 ms
+[2026-10-13 06:27:29] [19/48] rep1 mlp_pure_tribranch_18cls int8_cA: rc=0 40s ETA 22 min | mlp_pure_tribranch_18cls int8_cA: acc=0.8556 F1=0.8547 lat_e2e mean=320.4us p99=361.3us | 3152 inf/s | P_idle=6.45W P_act=7.81W E=2.477mJ (din 0.431) | mem=255MB | trtexec GPU mean=0.1721 ms
+[2026-10-13 06:28:23] [20/48] rep1 tribranch18__kan int8_cA: rc=0 51s ETA 21 min | tribranch18__kan int8_cA: acc=0.9411 F1=0.9412 lat_e2e mean=2450.7us p99=2881.4us | 409 inf/s | P_idle=6.45W P_act=9.48W E=23.159mJ (din 7.403) | mem=248MB | trtexec GPU mean=2.2462 ms
+[2026-10-13 06:29:08] [21/48] rep1 kan_pure_tribranch_18cls int8_cA: rc=0 42s ETA 20 min | kan_pure_tribranch_18cls int8_cA: acc=0.8922 F1=0.8918 lat_e2e mean=611.4us p99=650.3us | 1639 inf/s | P_idle=6.45W P_act=7.75W E=4.727mJ (din 0.796) | mem=247MB | trtexec GPU mean=0.4528 ms
+[2026-10-13 06:29:55] [22/48] rep1 mobilenetv3_light_kan_tribranch_18cls fp32: rc=0 44s ETA 19 min | mobilenetv3_light_kan_tribranch_18cls fp32: acc=0.9178 F1=0.9188 lat_e2e mean=1104.5us p99=1473.3us | 906 inf/s | P_idle=6.56W P_act=9.33W E=10.305mJ (din 3.064) | mem=132MB | trtexec GPU mean=0.9139 ms
+[2026-10-13 06:30:46] [23/48] rep1 mobilenetv3_light_mlp_tribranch_18cls int8_cB: rc=0 48s ETA 19 min | mobilenetv3_light_mlp_tribranch_18cls int8_cB: acc=0.8867 F1=0.8858 lat_e2e mean=1827.6us p99=1875.3us | 546 inf/s | P_idle=6.77W P_act=9.32W E=17.081mJ (din 4.679) | mem=397MB | trtexec GPU mean=1.5984 ms
+[2026-10-13 06:31:35] [24/48] rep1 tribranch18__mlp fp16: rc=0 46s ETA 18 min | tribranch18__mlp fp16: acc=0.9433 F1=0.9433 lat_e2e mean=1486.2us p99=1540.1us | 671 inf/s | P_idle=6.47W P_act=9.66W E=14.394mJ (din 4.759) | mem=217MB | trtexec GPU mean=1.3322 ms
+[2026-10-13 06:32:18] [25/48] rep2 kan_pure_tribranch_18cls int8_cB: rc=0 40s ETA 17 min | kan_pure_tribranch_18cls int8_cB: acc=0.7278 F1=0.7221 lat_e2e mean=614.3us p99=651.8us | 1634 inf/s | P_idle=6.45W P_act=7.78W E=4.761mJ (din 0.815) | mem=241MB | trtexec GPU mean=0.4575 ms
+[2026-10-13 06:33:11] [26/48] rep2 tribranch18__kan int8_cB: rc=0 49s ETA 16 min | tribranch18__kan int8_cB: acc=0.9322 F1=0.9324 lat_e2e mean=2419.3us p99=2464.9us | 413 inf/s | P_idle=6.45W P_act=9.52W E=23.028mJ (din 7.410) | mem=264MB | trtexec GPU mean=2.2308 ms
+[2026-10-13 06:33:52] [27/48] rep2 mlp_pure_tribranch_18cls fp16: rc=0 39s ETA 16 min | mlp_pure_tribranch_18cls fp16: acc=0.8667 F1=0.8665 lat_e2e mean=259.9us p99=287.7us | 3864 inf/s | P_idle=6.52W P_act=8.02W E=2.076mJ (din 0.388) | mem=117MB | trtexec GPU mean=0.1331 ms
+[2026-10-13 06:34:36] [28/48] rep2 kan_pure_tribranch_18cls int8_cA: rc=0 40s ETA 15 min | kan_pure_tribranch_18cls int8_cA: acc=0.8922 F1=0.8918 lat_e2e mean=607.1us p99=645.6us | 1649 inf/s | P_idle=6.44W P_act=7.80W E=4.730mJ (din 0.824) | mem=259MB | trtexec GPU mean=0.4498 ms
+[2026-10-13 06:35:25] [29/48] rep2 mobilenetv3_light_mlp_tribranch_18cls int8_cA: rc=0 46s ETA 14 min | mobilenetv3_light_mlp_tribranch_18cls int8_cA: acc=0.8856 F1=0.8842 lat_e2e mean=1815.5us p99=1873.7us | 551 inf/s | P_idle=6.45W P_act=8.81W E=16.003mJ (din 4.298) | mem=247MB | trtexec GPU mean=1.6284 ms
+[2026-10-13 06:36:13] [30/48] rep2 tribranch18__kan fp16: rc=0 45s ETA 13 min | tribranch18__kan fp16: acc=0.9356 F1=0.9358 lat_e2e mean=1551.6us p99=1598.0us | 644 inf/s | P_idle=6.45W P_act=9.67W E=15.009mJ (din 4.998) | mem=204MB | trtexec GPU mean=1.3676 ms
+[2026-10-13 06:37:02] [31/48] rep2 mobilenetv3_light_mlp_tribranch_18cls int8_cB: rc=0 46s ETA 13 min | mobilenetv3_light_mlp_tribranch_18cls int8_cB: acc=0.8867 F1=0.8858 lat_e2e mean=1806.0us p99=1847.3us | 552 inf/s | P_idle=6.54W P_act=8.82W E=15.973mJ (din 4.131) | mem=257MB | trtexec GPU mean=1.6139 ms
+[2026-10-13 06:37:50] [32/48] rep2 tribranch18__mlp fp16: rc=0 45s ETA 12 min | tribranch18__mlp fp16: acc=0.9433 F1=0.9433 lat_e2e mean=1475.8us p99=1515.8us | 678 inf/s | P_idle=6.45W P_act=9.71W E=14.329mJ (din 4.806) | mem=222MB | trtexec GPU mean=1.3471 ms
+[2026-10-13 06:38:32] [33/48] rep2 kan_pure_tribranch_18cls fp16: rc=0 39s ETA 11 min | kan_pure_tribranch_18cls fp16: acc=0.8844 F1=0.8843 lat_e2e mean=274.7us p99=305.4us | 3670 inf/s | P_idle=6.45W P_act=8.25W E=2.248mJ (din 0.491) | mem=116MB | trtexec GPU mean=0.1653 ms
+[2026-10-13 06:39:17] [34/48] rep2 mobilenetv3_light_kan_tribranch_18cls fp32: rc=0 43s ETA 10 min | mobilenetv3_light_kan_tribranch_18cls fp32: acc=0.9178 F1=0.9188 lat_e2e mean=1079.8us p99=1126.5us | 923 inf/s | P_idle=6.45W P_act=9.32W E=10.096mJ (din 3.109) | mem=111MB | trtexec GPU mean=0.9122 ms
+[2026-10-13 06:40:05] [35/48] rep2 mobilenetv3_light_kan_tribranch_18cls fp16: rc=0 45s ETA 10 min | mobilenetv3_light_kan_tribranch_18cls fp16: acc=0.9211 F1=0.9220 lat_e2e mean=1460.3us p99=1642.4us | 690 inf/s | P_idle=6.49W P_act=8.73W E=12.650mJ (din 3.247) | mem=215MB | trtexec GPU mean=1.3072 ms
+[2026-10-13 06:40:52] [36/48] rep2 mobilenetv3_light_mlp_tribranch_18cls fp16: rc=0 45s ETA 9 min | mobilenetv3_light_mlp_tribranch_18cls fp16: acc=0.9000 F1=0.8997 lat_e2e mean=1469.5us p99=1551.5us | 686 inf/s | P_idle=6.44W P_act=8.70W E=12.693mJ (din 3.296) | mem=212MB | trtexec GPU mean=1.2680 ms
+[2026-10-13 06:41:42] [37/48] rep2 mobilenetv3_light_kan_tribranch_18cls int8_cB: rc=0 47s ETA 8 min | mobilenetv3_light_kan_tribranch_18cls int8_cB: acc=0.9000 F1=0.9006 lat_e2e mean=1923.5us p99=1965.9us | 520 inf/s | P_idle=6.44W P_act=8.78W E=16.883mJ (din 4.486) | mem=264MB | trtexec GPU mean=1.7535 ms
+[2026-10-13 06:42:34] [38/48] rep2 tribranch18__kan int8_cA: rc=0 49s ETA 7 min | tribranch18__kan int8_cA: acc=0.9411 F1=0.9412 lat_e2e mean=2440.3us p99=2496.1us | 410 inf/s | P_idle=6.54W P_act=9.54W E=23.266mJ (din 7.311) | mem=264MB | trtexec GPU mean=2.2475 ms
+[2026-10-13 06:43:16] [39/48] rep2 mlp_pure_tribranch_18cls int8_cA: rc=0 39s ETA 7 min | mlp_pure_tribranch_18cls int8_cA: acc=0.8556 F1=0.8547 lat_e2e mean=312.3us p99=344.3us | 3227 inf/s | P_idle=6.45W P_act=7.81W E=2.419mJ (din 0.421) | mem=240MB | trtexec GPU mean=0.1720 ms
+[2026-10-13 06:44:03] [40/48] rep2 tribranch18__mlp fp32: rc=0 44s ETA 6 min | tribranch18__mlp fp32: acc=0.9433 F1=0.9433 lat_e2e mean=1363.0us p99=1397.7us | 733 inf/s | P_idle=6.55W P_act=10.74W E=14.646mJ (din 5.715) | mem=123MB | trtexec GPU mean=1.1999 ms
+[2026-10-13 06:44:49] [41/48] rep2 mobilenetv3_light_mlp_tribranch_18cls fp32: rc=0 43s ETA 5 min | mobilenetv3_light_mlp_tribranch_18cls fp32: acc=0.9000 F1=0.8997 lat_e2e mean=1123.1us p99=1550.5us | 919 inf/s | P_idle=6.46W P_act=9.33W E=10.146mJ (din 3.116) | mem=131MB | trtexec GPU mean=0.8973 ms
+[2026-10-13 06:45:36] [42/48] rep2 tribranch18__kan fp32: rc=0 44s ETA 4 min | tribranch18__kan fp32: acc=0.9344 F1=0.9347 lat_e2e mean=1391.6us p99=1455.6us | 718 inf/s | P_idle=6.46W P_act=11.11W E=15.469mJ (din 6.470) | mem=108MB | trtexec GPU mean=1.2278 ms
+[2026-10-13 06:46:28] [43/48] rep2 tribranch18__mlp int8_cA: rc=0 49s ETA 4 min | tribranch18__mlp int8_cA: acc=0.9200 F1=0.9199 lat_e2e mean=2345.8us p99=2459.9us | 427 inf/s | P_idle=6.46W P_act=9.52W E=22.317mJ (din 7.184) | mem=254MB | trtexec GPU mean=2.1056 ms
+[2026-10-13 06:47:09] [44/48] rep2 kan_pure_tribranch_18cls fp32: rc=0 38s ETA 3 min | kan_pure_tribranch_18cls fp32: acc=0.8844 F1=0.8843 lat_e2e mean=215.3us p99=242.8us | 4627 inf/s | P_idle=6.45W P_act=8.32W E=1.798mJ (din 0.404) | mem=100MB | trtexec GPU mean=0.1123 ms
+[2026-10-13 06:47:51] [45/48] rep2 mlp_pure_tribranch_18cls fp32: rc=0 38s ETA 2 min | mlp_pure_tribranch_18cls fp32: acc=0.8656 F1=0.8654 lat_e2e mean=202.4us p99=241.7us | 4962 inf/s | P_idle=6.44W P_act=8.17W E=1.646mJ (din 0.347) | mem=103MB | trtexec GPU mean=0.0831 ms
+[2026-10-13 06:48:42] [46/48] rep2 tribranch18__mlp int8_cB: rc=0 49s ETA 1 min | tribranch18__mlp int8_cB: acc=0.9244 F1=0.9236 lat_e2e mean=2342.3us p99=2394.1us | 427 inf/s | P_idle=6.45W P_act=9.52W E=22.312mJ (din 7.200) | mem=270MB | trtexec GPU mean=2.1259 ms
+[2026-10-13 06:49:32] [47/48] rep2 mobilenetv3_light_kan_tribranch_18cls int8_cA: rc=0 47s ETA 1 min | mobilenetv3_light_kan_tribranch_18cls int8_cA: acc=0.8511 F1=0.8459 lat_e2e mean=1915.1us p99=1983.7us | 522 inf/s | P_idle=6.45W P_act=8.75W E=16.743mJ (din 4.396) | mem=247MB | trtexec GPU mean=1.7339 ms
+[2026-10-13 06:50:14] [48/48] rep2 mlp_pure_tribranch_18cls int8_cB: rc=0 39s ETA 0 min | mlp_pure_tribranch_18cls int8_cB: acc=0.8433 F1=0.8406 lat_e2e mean=295.7us p99=326.3us | 3398 inf/s | P_idle=6.44W P_act=7.83W E=2.303mJ (din 0.407) | mem=259MB | trtexec GPU mean=0.1624 ms
+[2026-10-13 06:50:17] FIM: 48 linhas em summary_runs.csv, 0 falhas, 37.8 min
+[2026-10-13 06:50:17] pipeline de validação concluído

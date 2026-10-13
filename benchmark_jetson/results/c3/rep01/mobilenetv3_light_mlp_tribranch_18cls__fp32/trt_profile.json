@@ -1,0 +1,268 @@
+[
+  { "count" : 561 }
+, { "name" : "tri_light_mlp/stem_conv/Conv1D/ExpandDims + tri_light_mlp/stem_conv/Conv1D__3679", "timeMs" : 14.8469, "averageMs" : 0.026465, "medianMs" : 0.018976, "percentage" : 2.07115 }
+, { "name" : "tri_light_mlp/stem_conv/Conv1D", "timeMs" : 11.1986, "averageMs" : 0.0199619, "medianMs" : 0.019776, "percentage" : 1.56222 }
+, { "name" : "const_fold_opt__5245", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/stem_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/stem_conv/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/stem_bn/batchnorm/mul_1), PWN(tri_light_mlp/stem_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221, PWN(tri_light_mlp/stem_hs/add)), PWN(tri_light_mlp/stem_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0 + ONNXTRT_Broadcast_54, PWN(tri_light_mlp/stem_hs/mul))), PWN(tri_light_mlp/stem_hs/truediv)))", "timeMs" : 3.73699, "averageMs" : 0.00666131, "medianMs" : 0.006432, "percentage" : 0.521313 }
+, { "name" : "Transpose__4256", "timeMs" : 10.4217, "averageMs" : 0.0185771, "medianMs" : 0.011616, "percentage" : 1.45384 }
+, { "name" : "tri_light_mlp/b1_expand/Conv1D/ExpandDims + tri_light_mlp/b1_expand/Conv1D__3705", "timeMs" : 6.13904, "averageMs" : 0.010943, "medianMs" : 0.010848, "percentage" : 0.856401 }
+, { "name" : "tri_light_mlp/b1_expand/Conv1D", "timeMs" : 7.77158, "averageMs" : 0.0138531, "medianMs" : 0.01376, "percentage" : 1.08414 }
+, { "name" : "const_fold_opt__5273", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b1_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b1_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b1_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b1_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_1, PWN(tri_light_mlp/b1_expand_hs/add)), PWN(tri_light_mlp/b1_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_1 + ONNXTRT_Broadcast_71, PWN(tri_light_mlp/b1_expand_hs/mul))), PWN(tri_light_mlp/b1_expand_hs/truediv)))", "timeMs" : 5.01629, "averageMs" : 0.00894169, "medianMs" : 0.0088, "percentage" : 0.699776 }
+, { "name" : "tri_light_mlp/b1_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b1_dw/depthwise", "timeMs" : 7.01068, "averageMs" : 0.0124968, "medianMs" : 0.012352, "percentage" : 0.977995 }
+, { "name" : "const_fold_opt__5122", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b1_dw_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b1_dw/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b1_dw_bn/batchnorm/mul_1), PWN(tri_light_mlp/b1_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_2, PWN(tri_light_mlp/b1_dw_hs/add)), PWN(tri_light_mlp/b1_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_2 + ONNXTRT_Broadcast_88, PWN(tri_light_mlp/b1_dw_hs/mul))), PWN(tri_light_mlp/b1_dw_hs/truediv)))", "timeMs" : 5.07917, "averageMs" : 0.00905377, "medianMs" : 0.00912, "percentage" : 0.708547 }
+, { "name" : "tri_light_mlp/b1_project/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b1_project/Conv1D", "timeMs" : 7.50499, "averageMs" : 0.0133779, "medianMs" : 0.013312, "percentage" : 1.04695 }
+, { "name" : "const_fold_opt__5228", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b1_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b1_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_mlp/b1_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b1_project_bn/batchnorm/add_1))", "timeMs" : 4.44365, "averageMs" : 0.00792094, "medianMs" : 0.007872, "percentage" : 0.619892 }
+, { "name" : "Transpose__4291", "timeMs" : 5.1648, "averageMs" : 0.00920642, "medianMs" : 0.008928, "percentage" : 0.720493 }
+, { "name" : "PWN(tri_light_mlp/b1_residual/add)", "timeMs" : 4.19843, "averageMs" : 0.00748383, "medianMs" : 0.00752, "percentage" : 0.585684 }
+, { "name" : "tri_light_mlp/b2_expand/Conv1D/ExpandDims + tri_light_mlp/b2_expand/Conv1D__3736", "timeMs" : 5.96621, "averageMs" : 0.010635, "medianMs" : 0.01072, "percentage" : 0.83229 }
+, { "name" : "tri_light_mlp/b2_expand/Conv1D", "timeMs" : 8.22381, "averageMs" : 0.0146592, "medianMs" : 0.014528, "percentage" : 1.14723 }
+, { "name" : "const_fold_opt__5291", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b2_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b2_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b2_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b2_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_3, PWN(tri_light_mlp/b2_expand_hs/add)), PWN(tri_light_mlp/b2_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_3 + ONNXTRT_Broadcast_120, PWN(tri_light_mlp/b2_expand_hs/mul))), PWN(tri_light_mlp/b2_expand_hs/truediv)))", "timeMs" : 5.57299, "averageMs" : 0.00993404, "medianMs" : 0.009984, "percentage" : 0.777437 }
+, { "name" : "tri_light_mlp/b2_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b2_dw/depthwise", "timeMs" : 6.53408, "averageMs" : 0.0116472, "medianMs" : 0.011392, "percentage" : 0.911509 }
+, { "name" : "const_fold_opt__5251", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b2_dw_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b2_dw/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b2_dw_bn/batchnorm/mul_1), PWN(tri_light_mlp/b2_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_4, PWN(tri_light_mlp/b2_dw_hs/add)), PWN(tri_light_mlp/b2_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_4 + ONNXTRT_Broadcast_137, PWN(tri_light_mlp/b2_dw_hs/mul))), PWN(tri_light_mlp/b2_dw_hs/truediv)))", "timeMs" : 4.57578, "averageMs" : 0.00815646, "medianMs" : 0.008032, "percentage" : 0.638324 }
+, { "name" : "tri_light_mlp/b2_project/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b2_project/Conv1D", "timeMs" : 7.59892, "averageMs" : 0.0135453, "medianMs" : 0.013408, "percentage" : 1.06005 }
+, { "name" : "const_fold_opt__5309", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b2_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b2_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_mlp/b2_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b2_project_bn/batchnorm/add_1))", "timeMs" : 4.0103, "averageMs" : 0.00714849, "medianMs" : 0.006976, "percentage" : 0.55944 }
+, { "name" : "tri_light_mlp/b3_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b3_expand/Conv1D", "timeMs" : 6.48506, "averageMs" : 0.0115598, "medianMs" : 0.0112, "percentage" : 0.90467 }
+, { "name" : "const_fold_opt__5124", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b3_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b3_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b3_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b3_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_5, PWN(tri_light_mlp/b3_expand_hs/add)), PWN(tri_light_mlp/b3_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_5 + ONNXTRT_Broadcast_169, PWN(tri_light_mlp/b3_expand_hs/mul))), PWN(tri_light_mlp/b3_expand_hs/truediv)))", "timeMs" : 4.36774, "averageMs" : 0.00778564, "medianMs" : 0.00768, "percentage" : 0.609303 }
+, { "name" : "tri_light_mlp/b3_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b3_dw/depthwise", "timeMs" : 4.79936, "averageMs" : 0.00855501, "medianMs" : 0.008448, "percentage" : 0.669514 }
+, { "name" : "const_fold_opt__5317", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b3_dw_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b3_dw/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b3_dw_bn/batchnorm/mul_1), PWN(tri_light_mlp/b3_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_6, PWN(tri_light_mlp/b3_dw_hs/add)), PWN(tri_light_mlp/b3_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_6 + ONNXTRT_Broadcast_186, PWN(tri_light_mlp/b3_dw_hs/mul))), PWN(tri_light_mlp/b3_dw_hs/truediv)))", "timeMs" : 4.64624, "averageMs" : 0.00828207, "medianMs" : 0.007968, "percentage" : 0.648154 }
+, { "name" : "tri_light_mlp/b3_project/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b3_project/Conv1D", "timeMs" : 7.58048, "averageMs" : 0.0135124, "medianMs" : 0.013728, "percentage" : 1.05748 }
+, { "name" : "const_fold_opt__5246", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b3_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b3_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b3_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b3_project_bn/batchnorm/add_1)), PWN(tri_light_mlp/b3_residual/add))", "timeMs" : 4.18243, "averageMs" : 0.00745531, "medianMs" : 0.007328, "percentage" : 0.583452 }
+, { "name" : "tri_light_mlp/b4_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b4_expand/Conv1D", "timeMs" : 6.29654, "averageMs" : 0.0112238, "medianMs" : 0.010944, "percentage" : 0.878372 }
+, { "name" : "const_fold_opt__5184", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b4_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b4_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b4_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b4_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_7, PWN(tri_light_mlp/b4_expand_hs/add)), PWN(tri_light_mlp/b4_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_7 + ONNXTRT_Broadcast_218, PWN(tri_light_mlp/b4_expand_hs/mul))), PWN(tri_light_mlp/b4_expand_hs/truediv)))", "timeMs" : 4.44093, "averageMs" : 0.00791609, "medianMs" : 0.007872, "percentage" : 0.619512 }
+, { "name" : "tri_light_mlp/b4_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b4_dw/depthwise", "timeMs" : 6.85251, "averageMs" : 0.0122148, "medianMs" : 0.01232, "percentage" : 0.95593 }
+, { "name" : "dummy_shape_call__mye3721_0_myl71_0", "timeMs" : 1.67709, "averageMs" : 0.00298946, "medianMs" : 0.003008, "percentage" : 0.233955 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl71_1", "timeMs" : 5.75076, "averageMs" : 0.0102509, "medianMs" : 0.010176, "percentage" : 0.802235 }
+, { "name" : "__myl_MulSumAddRel_myl71_2", "timeMs" : 4.30589, "averageMs" : 0.00767538, "medianMs" : 0.007584, "percentage" : 0.600674 }
+, { "name" : "__myl_ResMulSumAddAdd_myl71_3", "timeMs" : 4.26532, "averageMs" : 0.00760306, "medianMs" : 0.007488, "percentage" : 0.595015 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl71_4", "timeMs" : 3.96701, "averageMs" : 0.00707132, "medianMs" : 0.0072, "percentage" : 0.553401 }
+, { "name" : "tri_light_mlp/b4_project/Conv1D", "timeMs" : 9.81145, "averageMs" : 0.0174892, "medianMs" : 0.017312, "percentage" : 1.3687 }
+, { "name" : "const_fold_opt__5247", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b4_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b4_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_mlp/b4_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b4_project_bn/batchnorm/add_1))", "timeMs" : 4.61767, "averageMs" : 0.00823113, "medianMs" : 0.008064, "percentage" : 0.644168 }
+, { "name" : "tri_light_mlp/b5_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b5_expand/Conv1D", "timeMs" : 8.04454, "averageMs" : 0.0143396, "medianMs" : 0.014208, "percentage" : 1.12222 }
+, { "name" : "const_fold_opt__5311", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b5_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b5_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b5_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b5_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_8, PWN(tri_light_mlp/b5_expand_hs/add)), PWN(tri_light_mlp/b5_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_8 + ONNXTRT_Broadcast_276, PWN(tri_light_mlp/b5_expand_hs/mul))), PWN(tri_light_mlp/b5_expand_hs/truediv)))", "timeMs" : 4.07898, "averageMs" : 0.00727091, "medianMs" : 0.007072, "percentage" : 0.56902 }
+, { "name" : "tri_light_mlp/b5_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b5_dw/depthwise", "timeMs" : 5.82461, "averageMs" : 0.0103825, "medianMs" : 0.010304, "percentage" : 0.812537 }
+, { "name" : "dummy_shape_call__mye3721_0_myl85_0", "timeMs" : 1.33213, "averageMs" : 0.00237456, "medianMs" : 0.002208, "percentage" : 0.185833 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl85_1", "timeMs" : 5.92326, "averageMs" : 0.0105584, "medianMs" : 0.010528, "percentage" : 0.826299 }
+, { "name" : "__myl_MulSumAddRel_myl85_2", "timeMs" : 4.00438, "averageMs" : 0.00713794, "medianMs" : 0.006976, "percentage" : 0.558614 }
+, { "name" : "__myl_ResMulSumAddAdd_myl85_3", "timeMs" : 3.88295, "averageMs" : 0.00692147, "medianMs" : 0.007008, "percentage" : 0.541674 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl85_4", "timeMs" : 4.11341, "averageMs" : 0.00733228, "medianMs" : 0.007264, "percentage" : 0.573824 }
+, { "name" : "tri_light_mlp/b5_project/Conv1D", "timeMs" : 9.53491, "averageMs" : 0.0169963, "medianMs" : 0.016896, "percentage" : 1.33013 }
+, { "name" : "const_fold_opt__5243", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b5_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b5_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_mlp/b5_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b5_project_bn/batchnorm/add_1))", "timeMs" : 4.45194, "averageMs" : 0.00793572, "medianMs" : 0.007936, "percentage" : 0.621048 }
+, { "name" : "tri_light_mlp/b6_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b6_expand/Conv1D", "timeMs" : 10.949, "averageMs" : 0.019517, "medianMs" : 0.019296, "percentage" : 1.5274 }
+, { "name" : "const_fold_opt__5289", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b6_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b6_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b6_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b6_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_9, PWN(tri_light_mlp/b6_expand_hs/add)), PWN(tri_light_mlp/b6_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_9 + ONNXTRT_Broadcast_334, PWN(tri_light_mlp/b6_expand_hs/mul))), PWN(tri_light_mlp/b6_expand_hs/truediv)))", "timeMs" : 4.77392, "averageMs" : 0.00850966, "medianMs" : 0.008416, "percentage" : 0.665965 }
+, { "name" : "tri_light_mlp/b6_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b6_dw/depthwise", "timeMs" : 6.05443, "averageMs" : 0.0107922, "medianMs" : 0.010624, "percentage" : 0.844597 }
+, { "name" : "const_fold_opt__5225", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b6_dw_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b6_dw/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b6_dw_bn/batchnorm/mul_1), PWN(tri_light_mlp/b6_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_10, PWN(tri_light_mlp/b6_dw_hs/add)), PWN(tri_light_mlp/b6_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_10 + ONNXTRT_Broadcast_351, PWN(tri_light_mlp/b6_dw_hs/mul))), PWN(tri_light_mlp/b6_dw_hs/truediv)))", "timeMs" : 4.18262, "averageMs" : 0.00745566, "medianMs" : 0.007392, "percentage" : 0.583479 }
+, { "name" : "tri_light_mlp/b6_project/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b6_project/Conv1D", "timeMs" : 8.4169, "averageMs" : 0.0150034, "medianMs" : 0.014784, "percentage" : 1.17416 }
+, { "name" : "const_fold_opt__5305", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b6_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b6_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_mlp/b6_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b6_project_bn/batchnorm/add_1))", "timeMs" : 3.78694, "averageMs" : 0.00675034, "medianMs" : 0.006784, "percentage" : 0.528281 }
+, { "name" : "tri_light_mlp/b7_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b7_expand/Conv1D", "timeMs" : 7.37104, "averageMs" : 0.0131391, "medianMs" : 0.013024, "percentage" : 1.02827 }
+, { "name" : "const_fold_opt__5299", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b7_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b7_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b7_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b7_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_11, PWN(tri_light_mlp/b7_expand_hs/add)), PWN(tri_light_mlp/b7_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_11 + ONNXTRT_Broadcast_383, PWN(tri_light_mlp/b7_expand_hs/mul))), PWN(tri_light_mlp/b7_expand_hs/truediv)))", "timeMs" : 3.93363, "averageMs" : 0.00701182, "medianMs" : 0.006976, "percentage" : 0.548745 }
+, { "name" : "tri_light_mlp/b7_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b7_dw/depthwise", "timeMs" : 4.66272, "averageMs" : 0.00831144, "medianMs" : 0.008128, "percentage" : 0.650453 }
+, { "name" : "const_fold_opt__5220", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b7_dw_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b7_dw/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b7_dw_bn/batchnorm/mul_1), PWN(tri_light_mlp/b7_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_12, PWN(tri_light_mlp/b7_dw_hs/add)), PWN(tri_light_mlp/b7_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_12 + ONNXTRT_Broadcast_400, PWN(tri_light_mlp/b7_dw_hs/mul))), PWN(tri_light_mlp/b7_dw_hs/truediv)))", "timeMs" : 4.00362, "averageMs" : 0.00713657, "medianMs" : 0.006912, "percentage" : 0.558507 }
+, { "name" : "tri_light_mlp/b7_project/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b7_project/Conv1D", "timeMs" : 7.03238, "averageMs" : 0.0125354, "medianMs" : 0.012096, "percentage" : 0.981023 }
+, { "name" : "const_fold_opt__5260", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b7_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b7_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b7_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b7_project_bn/batchnorm/add_1)), PWN(tri_light_mlp/b7_residual/add))", "timeMs" : 4.01971, "averageMs" : 0.00716526, "medianMs" : 0.006944, "percentage" : 0.560753 }
+, { "name" : "tri_light_mlp/b8_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b8_expand/Conv1D", "timeMs" : 6.97226, "averageMs" : 0.0124283, "medianMs" : 0.012128, "percentage" : 0.972635 }
+, { "name" : "const_fold_opt__5231", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b8_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b8_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b8_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b8_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_13, PWN(tri_light_mlp/b8_expand_hs/add)), PWN(tri_light_mlp/b8_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_13 + ONNXTRT_Broadcast_432, PWN(tri_light_mlp/b8_expand_hs/mul))), PWN(tri_light_mlp/b8_expand_hs/truediv)))", "timeMs" : 3.9088, "averageMs" : 0.00696756, "medianMs" : 0.006848, "percentage" : 0.545281 }
+, { "name" : "tri_light_mlp/b8_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b8_dw/depthwise", "timeMs" : 5.1377, "averageMs" : 0.0091581, "medianMs" : 0.008672, "percentage" : 0.716712 }
+, { "name" : "const_fold_opt__5267", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b8_dw_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b8_dw/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b8_dw_bn/batchnorm/mul_1), PWN(tri_light_mlp/b8_dw_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_14, PWN(tri_light_mlp/b8_dw_hs/add)), PWN(tri_light_mlp/b8_dw_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_14 + ONNXTRT_Broadcast_449, PWN(tri_light_mlp/b8_dw_hs/mul))), PWN(tri_light_mlp/b8_dw_hs/truediv)))", "timeMs" : 4.63264, "averageMs" : 0.00825783, "medianMs" : 0.008096, "percentage" : 0.646257 }
+, { "name" : "tri_light_mlp/b8_project/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b8_project/Conv1D", "timeMs" : 7.8192, "averageMs" : 0.013938, "medianMs" : 0.014112, "percentage" : 1.09078 }
+, { "name" : "const_fold_opt__5222", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b8_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b8_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b8_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b8_project_bn/batchnorm/add_1)), PWN(tri_light_mlp/b8_residual/add))", "timeMs" : 3.60032, "averageMs" : 0.00641768, "medianMs" : 0.006304, "percentage" : 0.502247 }
+, { "name" : "tri_light_mlp/b9_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b9_expand/Conv1D", "timeMs" : 7.42243, "averageMs" : 0.0132307, "medianMs" : 0.013312, "percentage" : 1.03543 }
+, { "name" : "const_fold_opt__5121", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b9_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b9_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b9_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b9_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_15, PWN(tri_light_mlp/b9_expand_hs/add)), PWN(tri_light_mlp/b9_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_15 + ONNXTRT_Broadcast_481, PWN(tri_light_mlp/b9_expand_hs/mul))), PWN(tri_light_mlp/b9_expand_hs/truediv)))", "timeMs" : 4.06557, "averageMs" : 0.007247, "medianMs" : 0.007136, "percentage" : 0.56715 }
+, { "name" : "tri_light_mlp/b9_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b9_dw/depthwise", "timeMs" : 4.94416, "averageMs" : 0.00881312, "medianMs" : 0.008576, "percentage" : 0.689714 }
+, { "name" : "dummy_shape_call__mye3721_0_myl153_0", "timeMs" : 1.33235, "averageMs" : 0.00237496, "medianMs" : 0.002336, "percentage" : 0.185864 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl153_1", "timeMs" : 5.93865, "averageMs" : 0.0105858, "medianMs" : 0.01056, "percentage" : 0.828446 }
+, { "name" : "__myl_MulSumAddRel_myl153_2", "timeMs" : 4.04704, "averageMs" : 0.00721397, "medianMs" : 0.007104, "percentage" : 0.564565 }
+, { "name" : "__myl_ResMulSumAddAdd_myl153_3", "timeMs" : 4.04112, "averageMs" : 0.00720342, "medianMs" : 0.007168, "percentage" : 0.563739 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl153_4", "timeMs" : 4.35556, "averageMs" : 0.00776391, "medianMs" : 0.007808, "percentage" : 0.607603 }
+, { "name" : "tri_light_mlp/b9_project/Conv1D", "timeMs" : 12.0438, "averageMs" : 0.0214684, "medianMs" : 0.021504, "percentage" : 1.68012 }
+, { "name" : "const_fold_opt__5153", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b9_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b9_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_mlp/b9_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b9_project_bn/batchnorm/add_1))", "timeMs" : 4.00387, "averageMs" : 0.00713703, "medianMs" : 0.007072, "percentage" : 0.558543 }
+, { "name" : "tri_light_mlp/b10_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b10_expand/Conv1D", "timeMs" : 7.23811, "averageMs" : 0.0129022, "medianMs" : 0.0128, "percentage" : 1.00972 }
+, { "name" : "const_fold_opt__5292", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b10_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b10_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b10_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b10_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_16, PWN(tri_light_mlp/b10_expand_hs/add)), PWN(tri_light_mlp/b10_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_16 + ONNXTRT_Broadcast_539, PWN(tri_light_mlp/b10_expand_hs/mul))), PWN(tri_light_mlp/b10_expand_hs/truediv)))", "timeMs" : 4.56099, "averageMs" : 0.00813011, "medianMs" : 0.008, "percentage" : 0.636262 }
+, { "name" : "tri_light_mlp/b10_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b10_dw/depthwise", "timeMs" : 6.17994, "averageMs" : 0.0110159, "medianMs" : 0.010784, "percentage" : 0.862106 }
+, { "name" : "dummy_shape_call__mye3721_0_myl167_0", "timeMs" : 1.30362, "averageMs" : 0.00232374, "medianMs" : 0.002176, "percentage" : 0.181855 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl167_1", "timeMs" : 6.52608, "averageMs" : 0.0116329, "medianMs" : 0.01152, "percentage" : 0.910392 }
+, { "name" : "__myl_MulSumAddRel_myl167_2", "timeMs" : 3.84112, "averageMs" : 0.00684692, "medianMs" : 0.00672, "percentage" : 0.535839 }
+, { "name" : "__myl_ResMulSumAddAdd_myl167_3", "timeMs" : 3.76758, "averageMs" : 0.00671583, "medianMs" : 0.006592, "percentage" : 0.52558 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl167_4", "timeMs" : 4.12826, "averageMs" : 0.00735874, "medianMs" : 0.007136, "percentage" : 0.575895 }
+, { "name" : "tri_light_mlp/b10_project/Conv1D", "timeMs" : 12.8055, "averageMs" : 0.0228262, "medianMs" : 0.022656, "percentage" : 1.78638 }
+, { "name" : "const_fold_opt__5235", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b10_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b10_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b10_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b10_project_bn/batchnorm/add_1)), PWN(tri_light_mlp/b10_residual/add))", "timeMs" : 3.76147, "averageMs" : 0.00670494, "medianMs" : 0.00656, "percentage" : 0.524728 }
+, { "name" : "tri_light_mlp/b11_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b11_expand/Conv1D", "timeMs" : 7.32653, "averageMs" : 0.0130598, "medianMs" : 0.0128, "percentage" : 1.02206 }
+, { "name" : "const_fold_opt__5238", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b11_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b11_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b11_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b11_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_17, PWN(tri_light_mlp/b11_expand_hs/add)), PWN(tri_light_mlp/b11_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_17 + ONNXTRT_Broadcast_597, PWN(tri_light_mlp/b11_expand_hs/mul))), PWN(tri_light_mlp/b11_expand_hs/truediv)))", "timeMs" : 4.41574, "averageMs" : 0.0078712, "medianMs" : 0.007808, "percentage" : 0.615999 }
+, { "name" : "tri_light_mlp/b11_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b11_dw/depthwise", "timeMs" : 6.07664, "averageMs" : 0.0108318, "medianMs" : 0.010688, "percentage" : 0.847695 }
+, { "name" : "dummy_shape_call__mye3721_0_myl181_0", "timeMs" : 1.26973, "averageMs" : 0.00226333, "medianMs" : 0.002176, "percentage" : 0.177128 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl181_1", "timeMs" : 5.79024, "averageMs" : 0.0103213, "medianMs" : 0.010304, "percentage" : 0.807742 }
+, { "name" : "__myl_MulSumAddRel_myl181_2", "timeMs" : 4.27974, "averageMs" : 0.00762878, "medianMs" : 0.00752, "percentage" : 0.597027 }
+, { "name" : "__myl_ResMulSumAddAdd_myl181_3", "timeMs" : 4.06538, "averageMs" : 0.00724666, "medianMs" : 0.007072, "percentage" : 0.567123 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl181_4", "timeMs" : 3.88906, "averageMs" : 0.00693237, "medianMs" : 0.006752, "percentage" : 0.542526 }
+, { "name" : "tri_light_mlp/b11_project/Conv1D", "timeMs" : 16.1307, "averageMs" : 0.0287535, "medianMs" : 0.028672, "percentage" : 2.25025 }
+, { "name" : "const_fold_opt__5259", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b11_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b11_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_mlp/b11_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b11_project_bn/batchnorm/add_1))", "timeMs" : 4.02368, "averageMs" : 0.00717234, "medianMs" : 0.0072, "percentage" : 0.561307 }
+, { "name" : "tri_light_mlp/b12_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b12_expand/Conv1D", "timeMs" : 7.10099, "averageMs" : 0.0126577, "medianMs" : 0.012576, "percentage" : 0.990593 }
+, { "name" : "const_fold_opt__5298", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b12_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b12_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b12_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b12_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_18, PWN(tri_light_mlp/b12_expand_hs/add)), PWN(tri_light_mlp/b12_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_18 + ONNXTRT_Broadcast_655, PWN(tri_light_mlp/b12_expand_hs/mul))), PWN(tri_light_mlp/b12_expand_hs/truediv)))", "timeMs" : 3.82349, "averageMs" : 0.00681549, "medianMs" : 0.006688, "percentage" : 0.533379 }
+, { "name" : "tri_light_mlp/b12_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b12_dw/depthwise", "timeMs" : 5.48169, "averageMs" : 0.00977129, "medianMs" : 0.009664, "percentage" : 0.7647 }
+, { "name" : "dummy_shape_call__mye3721_0_myl195_0", "timeMs" : 0.733216, "averageMs" : 0.00130698, "medianMs" : 0.001056, "percentage" : 0.102284 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl195_1", "timeMs" : 5.06151, "averageMs" : 0.00902229, "medianMs" : 0.009248, "percentage" : 0.706084 }
+, { "name" : "__myl_MulSumAddRel_myl195_2", "timeMs" : 4.4744, "averageMs" : 0.00797576, "medianMs" : 0.007808, "percentage" : 0.624182 }
+, { "name" : "__myl_ResMulSumAddAdd_myl195_3", "timeMs" : 4.03411, "averageMs" : 0.00719093, "medianMs" : 0.007136, "percentage" : 0.562762 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl195_4", "timeMs" : 3.83853, "averageMs" : 0.0068423, "medianMs" : 0.006752, "percentage" : 0.535478 }
+, { "name" : "tri_light_mlp/b12_project/Conv1D", "timeMs" : 12.4128, "averageMs" : 0.0221263, "medianMs" : 0.021952, "percentage" : 1.7316 }
+, { "name" : "const_fold_opt__5189", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b12_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b12_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_light_mlp/b12_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b12_project_bn/batchnorm/add_1))", "timeMs" : 3.94819, "averageMs" : 0.00703778, "medianMs" : 0.006848, "percentage" : 0.550776 }
+, { "name" : "tri_light_mlp/b13_expand/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b13_expand/Conv1D", "timeMs" : 8.8312, "averageMs" : 0.0157419, "medianMs" : 0.015584, "percentage" : 1.23196 }
+, { "name" : "const_fold_opt__5196", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b13_expand_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b13_expand/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b13_expand_bn/batchnorm/mul_1), PWN(tri_light_mlp/b13_expand_bn/batchnorm/add_1)), PWN(PWN(PWN(PWN(const_fold_opt__5221_clone_19, PWN(tri_light_mlp/b13_expand_hs/add)), PWN(tri_light_mlp/b13_expand_hs/Relu6)), PWN(ConstantFolding/tri_light_mlp/b1_dw_hs/truediv_recip:0_clone_19 + ONNXTRT_Broadcast_713, PWN(tri_light_mlp/b13_expand_hs/mul))), PWN(tri_light_mlp/b13_expand_hs/truediv)))", "timeMs" : 4.2393, "averageMs" : 0.00755668, "medianMs" : 0.007488, "percentage" : 0.591385 }
+, { "name" : "tri_light_mlp/b13_dw/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b13_dw/depthwise", "timeMs" : 6.75779, "averageMs" : 0.012046, "medianMs" : 0.012032, "percentage" : 0.942717 }
+, { "name" : "dummy_shape_call__mye3721_0_myl209_0", "timeMs" : 0.802911, "averageMs" : 0.00143121, "medianMs" : 0.001312, "percentage" : 0.112007 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulTraMea_myl209_1", "timeMs" : 5.65177, "averageMs" : 0.0100745, "medianMs" : 0.009952, "percentage" : 0.788426 }
+, { "name" : "__myl_MulSumAddRel_myl209_2", "timeMs" : 4.72067, "averageMs" : 0.00841475, "medianMs" : 0.00832, "percentage" : 0.658537 }
+, { "name" : "__myl_ResMulSumAddAdd_myl209_3", "timeMs" : 4.40352, "averageMs" : 0.00784942, "medianMs" : 0.00768, "percentage" : 0.614294 }
+, { "name" : "__myl_MinMaxMulResMulResTra_myl209_4", "timeMs" : 3.93459, "averageMs" : 0.00701353, "medianMs" : 0.006944, "percentage" : 0.548878 }
+, { "name" : "tri_light_mlp/ord_c1/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/ord_c1/Conv1D", "timeMs" : 9.45082, "averageMs" : 0.0168464, "medianMs" : 0.016672, "percentage" : 1.3184 }
+, { "name" : "const_fold_opt__5302", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/ord_bn1/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "const_fold_opt__5300", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/ord_c1/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/ord_c1/BiasAdd + tri_light_mlp/ord_c1/Relu), PWN(tri_light_mlp/ord_bn1/batchnorm/mul_1)), PWN(tri_light_mlp/ord_bn1/batchnorm/add_1))", "timeMs" : 5.19408, "averageMs" : 0.00925861, "medianMs" : 0.009184, "percentage" : 0.724578 }
+, { "name" : "tri_light_mlp/ord_c2/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/ord_c2/Conv1D", "timeMs" : 10.086, "averageMs" : 0.0179786, "medianMs" : 0.01792, "percentage" : 1.407 }
+, { "name" : "tri_light_mlp/b13_project/Conv1D", "timeMs" : 15.4244, "averageMs" : 0.0274945, "medianMs" : 0.027488, "percentage" : 2.15172 }
+, { "name" : "const_fold_opt__5275", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b13_project_bn/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/b13_project/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_light_mlp/b13_project_bn/batchnorm/mul_1), PWN(tri_light_mlp/b13_project_bn/batchnorm/add_1)), PWN(tri_light_mlp/b13_residual/add))", "timeMs" : 3.86419, "averageMs" : 0.00688804, "medianMs" : 0.006848, "percentage" : 0.539057 }
+, { "name" : "tri_light_mlp/last_conv/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_light_mlp/last_conv/Conv1D", "timeMs" : 8.02807, "averageMs" : 0.0143103, "medianMs" : 0.01424, "percentage" : 1.11992 }
+, { "name" : "dummy_shape_call__mye3105_0_myl226_0", "timeMs" : 0.826464, "averageMs" : 0.0014732, "medianMs" : 0.001536, "percentage" : 0.115292 }
+, { "name" : "__myl_AddRelMea_myl226_1", "timeMs" : 3.89606, "averageMs" : 0.00694486, "medianMs" : 0.006816, "percentage" : 0.543504 }
+, { "name" : "__myl_MulSum_myl226_2", "timeMs" : 3.92509, "averageMs" : 0.00699659, "medianMs" : 0.007008, "percentage" : 0.547553 }
+, { "name" : "__myl_AddRel_myl226_3", "timeMs" : 3.24496, "averageMs" : 0.00578424, "medianMs" : 0.005696, "percentage" : 0.452674 }
+, { "name" : "__myl_MulAddResMulSumAddRel_myl226_4", "timeMs" : 4.61888, "averageMs" : 0.0082333, "medianMs" : 0.008096, "percentage" : 0.644337 }
+, { "name" : "__myl_ResMulSum_myl226_5", "timeMs" : 4.0471, "averageMs" : 0.00721409, "medianMs" : 0.007168, "percentage" : 0.564574 }
+, { "name" : "__myl_AddRel_myl226_6", "timeMs" : 3.22099, "averageMs" : 0.00574152, "medianMs" : 0.005632, "percentage" : 0.449331 }
+, { "name" : "__myl_MulAddAddMinMaxMulMulMea_myl226_7", "timeMs" : 3.91782, "averageMs" : 0.00698364, "medianMs" : 0.007008, "percentage" : 0.546539 }
+, { "name" : "__myl_Res_myl226_8", "timeMs" : 3.08688, "averageMs" : 0.00550246, "medianMs" : 0.00544, "percentage" : 0.430622 }
+, { "name" : "__myl_ResMulSumAddRel_myl226_9", "timeMs" : 4.83536, "averageMs" : 0.00861918, "medianMs" : 0.008448, "percentage" : 0.674536 }
+, { "name" : "__myl_ResMulSumAdd_myl226_10", "timeMs" : 3.83911, "averageMs" : 0.00684333, "medianMs" : 0.006816, "percentage" : 0.535558 }
+]

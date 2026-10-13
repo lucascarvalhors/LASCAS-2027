@@ -1,0 +1,941 @@
+{
+ "Layers": [
+  {
+   "Name": "tri_none_mlp/ord_c1/Conv1D/ExpandDims",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "orders",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c1/Conv1D/ExpandDims]"
+  },
+  {
+   "Name": "Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/ord_c1/Conv1D",
+   "LayerType": "Reformat",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "Reformatted Input Tensor 0 to tri_none_mlp/ord_c1/Conv1D",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      1,
+      21
+     ],
+     "Format/Datatype": "Channel major FP16 format where channel % 8 == 0"
+    }
+   ],
+   "ParameterType": "Reformat",
+   "Origin": "REFORMAT",
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "tri_none_mlp/ord_c1/Conv1D",
+   "LayerType": "CaskConvolution",
+   "Inputs": [
+    {
+     "Name": "Reformatted Input Tensor 0 to tri_none_mlp/ord_c1/Conv1D",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      1,
+      21
+     ],
+     "Format/Datatype": "Channel major FP16 format where channel % 8 == 0"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Channel major FP16 format where channel % 8 == 0"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    3
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    1
+   ],
+   "PostPadding": [
+    0,
+    1
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 32,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Half",
+    "Count": 576
+   },
+   "Bias": {
+    "Type": "Half",
+    "Count": 0
+   },
+   "HasBias": 0,
+   "HasReLU": 0,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "NONE",
+   "TacticName": "sm80_xmma_fprop_implicit_gemm_indexed_wo_smem_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize128x32x64_stage1_warpsize4x1x1_g1_tensor16x8x16_alignc4",
+   "TacticValue": "0x9785ceb86b4122d6",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c1/Conv1D]"
+  },
+  {
+   "Name": "const_fold_opt__7899",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 36) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP16 format"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 32
+   },
+   "dimensions": [
+    1,
+    32,
+    1
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "tri_none_mlp/ord_bn1/batchnorm/mul:0",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 34) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP16 format"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 32
+   },
+   "dimensions": [
+    1,
+    32,
+    1
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "const_fold_opt__7898",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 31) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP16 format"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 32
+   },
+   "dimensions": [
+    1,
+    32,
+    1
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "tri_none_mlp/ord_c1/Conv1D/Squeeze",
+   "LayerType": "Shuffle",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Channel major FP16 format where channel % 8 == 0"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D/Squeeze:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP16 format"
+    }
+   ],
+   "ParameterType": "Shuffle",
+   "FirstTranspose": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "Reshape": [
+    1,
+    32,
+    21
+   ],
+   "SecondTranspose": [
+    0,
+    1,
+    2
+   ],
+   "ZeroIsPlaceholder": 0,
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c1/Conv1D/Squeeze]"
+  },
+  {
+   "Name": "PWN(PWN(PWN(tri_none_mlp/ord_c1/BiasAdd + tri_none_mlp/ord_c1/Relu), PWN(tri_none_mlp/ord_bn1/batchnorm/mul_1)), PWN(tri_none_mlp/ord_bn1/batchnorm/add_1))",
+   "LayerType": "PointWiseV2",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D/Squeeze:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP16 format"
+    },
+    {
+     "Name": "(Unnamed Layer* 31) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP16 format"
+    },
+    {
+     "Name": "(Unnamed Layer* 34) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP16 format"
+    },
+    {
+     "Name": "(Unnamed Layer* 36) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP16 format"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_bn1/batchnorm/add_1:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP16 format"
+    }
+   ],
+   "ParameterType": "PointWise",
+   "ParameterSubType": "PointWiseExpression",
+   "NbInputArgs": 4,
+   "InputArgs": [
+    "arg0",
+    "arg1",
+    "arg2",
+    "arg3"
+   ],
+   "NbOutputVars": 1,
+   "OutputVars": [
+    "var3"
+   ],
+   "NbParams": 0,
+   "Params": [],
+   "NbLiterals": 1,
+   "Literals": [
+    "0.000000e+00f"
+   ],
+   "NbOperations": 4,
+   "Operations": [
+    "auto const var0 = pwgen::iPlus(arg0, arg1);",
+    "auto const var1 = pwgen::iMax(var0, literal0);",
+    "auto const var2 = pwgen::iMul(var1, arg2);",
+    "auto const var3 = pwgen::iPlus(var2, arg3);"
+   ],
+   "TacticValue": "0x000000000000001c",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c1/BiasAdd]\u001e[ONNX Layer: tri_none_mlp/ord_c1/Relu]\u001e[ONNX Layer: tri_none_mlp/ord_bn1/batchnorm/mul_1]\u001e[ONNX Layer: tri_none_mlp/ord_bn1/batchnorm/add_1]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_c2/Conv1D/ExpandDims",
+   "LayerType": "Shuffle",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_bn1/batchnorm/add_1:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP16 format"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Channel major FP16 format where channel % 8 == 0"
+    }
+   ],
+   "ParameterType": "Shuffle",
+   "FirstTranspose": [
+    0,
+    1,
+    2
+   ],
+   "Reshape": [
+    1,
+    32,
+    1,
+    21
+   ],
+   "SecondTranspose": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "ZeroIsPlaceholder": 0,
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c2/Conv1D/ExpandDims]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_c2/Conv1D",
+   "LayerType": "CaskConvolution",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Channel major FP16 format where channel % 8 == 0"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      1,
+      21
+     ],
+     "Format/Datatype": "Channel major FP16 format where channel % 8 == 0"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    3
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    1
+   ],
+   "PostPadding": [
+    0,
+    1
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 48,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Half",
+    "Count": 4608
+   },
+   "Bias": {
+    "Type": "Half",
+    "Count": 0
+   },
+   "HasBias": 0,
+   "HasReLU": 0,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "NONE",
+   "TacticName": "sm80_xmma_fprop_implicit_gemm_indexed_wo_smem_f16f16_f16f16_f16_nhwckrsc_nhwc_tilesize128x16x32_stage1_warpsize4x1x1_g1_tensor16x8x16_alignc4",
+   "TacticValue": "0x7784aea08af37198",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c2/Conv1D]"
+  },
+  {
+   "Name": "Reformatting CopyNode for Input Tensor 0 to {ForeignNode[tri_none_mlp/sc_fc1/MatMul/ReadVariableOp:0...tri_none_mlp/mlp_logits/BiasAdd]}",
+   "LayerType": "Reformat",
+   "Inputs": [
+    {
+     "Name": "scalars",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "Reformatted Input Tensor 0 to {ForeignNode[tri_none_mlp/sc_fc1/MatMul/ReadVariableOp:0...tri_none_mlp/mlp_logits/BiasAdd]}",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Row major linear FP16 format"
+    }
+   ],
+   "ParameterType": "Reformat",
+   "Origin": "REFORMAT",
+   "TacticValue": "0x00000000000003e8",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "Reformatting CopyNode for Input Tensor 1 to {ForeignNode[tri_none_mlp/sc_fc1/MatMul/ReadVariableOp:0...tri_none_mlp/mlp_logits/BiasAdd]}",
+   "LayerType": "Reformat",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      1,
+      21
+     ],
+     "Format/Datatype": "Channel major FP16 format where channel % 8 == 0"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "Reformatted Input Tensor 1 to {ForeignNode[tri_none_mlp/sc_fc1/MatMul/ReadVariableOp:0...tri_none_mlp/mlp_logits/BiasAdd]}",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP16 format"
+    }
+   ],
+   "ParameterType": "Reformat",
+   "Origin": "REFORMAT",
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "dummy_shape_call__mye1508_0_myl12_0",
+   "LayerType": "shape_call",
+   "Inputs": [],
+   "Outputs": [],
+   "TacticName": "",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "__myl_AddRelMea_myl12_1",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "Reformatted Input Tensor 1 to {ForeignNode[tri_none_mlp/sc_fc1/MatMul/ReadVariableOp:0...tri_none_mlp/mlp_logits/BiasAdd]}",
+     "Dimensions": [
+      1,
+      48,
+      21
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "const_fold_opt__7896_constantHalf",
+     "Dimensions": [
+      1,
+      48,
+      1
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_gap/Mean_0'.1",
+     "Dimensions": [
+      1,
+      48,
+      1
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "TacticName": "__myl_AddRelMea_0x80de94b0abef1a331c3b212e65411f84",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c2/BiasAdd]\u001f[ONNX Layer: tri_none_mlp/ord_gap/Mean]\u001f[ONNX Layer: tri_none_mlp/ord_c2/Relu]"
+  },
+  {
+   "Name": "__myl_MulSumAddRel_myl12_2",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_fc/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_37_constantHalf",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "__mye1371_dconst",
+     "Dimensions": [
+      48,
+      64
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "tri_none_mlp/ord_gap/Mean_0'.1",
+     "Dimensions": [
+      48,
+      1
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/fusion/concat_0'.1",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "TacticName": "__myl_MulSumAddRel_0xa6c5cf40e3ecfc27e90b815878ecac2c",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_fc/MatMul]\u001f[ONNX Layer: tri_none_mlp/ord_fc/Relu]\u001f[ONNX Layer: tri_none_mlp/ord_fc/BiasAdd]"
+  },
+  {
+   "Name": "__myl_MulAddResMulSumAddRel_myl12_3",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/sc_fc1/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_3_constantHalf",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "__mye1386_dconst",
+     "Dimensions": [
+      36,
+      64
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "tri_none_mlp/sc_bn/batchnorm/sub_0 _ ONNXTRT_Broadcast_1_constantHalf",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "Reformatted Input Tensor 0 to {ForeignNode[tri_none_mlp/sc_fc1/MatMul/ReadVariableOp:0...tri_none_mlp/mlp_logits/BiasAdd]}",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "tri_none_mlp/sc_bn/batchnorm/mul_0 _ ONNXTRT_Broadcast_constantHalf",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "__myln_k_arg__bb1_5",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "TacticName": "__myl_MulAddResMulSumAddRel_0xfc4969c36b5a9df877d6aa480e01ad57",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/sc_bn/batchnorm/mul_1]\u001f[ONNX Layer: tri_none_mlp/sc_bn/batchnorm/add_1]\u001f[ONNX Layer: tri_none_mlp/sc_fc1/MatMul]\u001f[ONNX Layer: tri_none_mlp/sc_fc1/BiasAdd]\u001f[ONNX Layer: tri_none_mlp/sc_fc1/Relu]"
+  },
+  {
+   "Name": "__myl_ResMulSumAddRel_myl12_4",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/sc_fc2/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_5_constantHalf",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "__mye1401_dconst",
+     "Dimensions": [
+      64,
+      32
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_5",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/fusion/concat_0'.1",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "TacticName": "__myl_ResMulSumAddRel_0x1ea95a23f51ed0f7a998243e4e205a8e",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/sc_fc2/MatMul]\u001f[ONNX Layer: tri_none_mlp/sc_fc2/Relu]\u001f[ONNX Layer: tri_none_mlp/sc_fc2/BiasAdd]"
+  },
+  {
+   "Name": "__myl_ResMulSumAddRel_myl12_5",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "__mye1416_dconst",
+     "Dimensions": [
+      96,
+      317
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "tri_none_mlp/mlp_h0/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_39_constantHalf",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "tri_none_mlp/fusion/concat_0'.1",
+     "Dimensions": [
+      1,
+      96
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "__myln_k_arg__bb1_7",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "TacticName": "__myl_ResMulSumAddRel_0xe5392cbd7b6da6ecda7edc2925f896ca",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/mlp_h0/MatMul]\u001f[ONNX Layer: tri_none_mlp/mlp_h0/BiasAdd]\u001f[ONNX Layer: tri_none_mlp/mlp_h0/Relu]"
+  },
+  {
+   "Name": "__myl_ResMulSumAddRelResMulSumAddRel_myl12_6",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "__mye1446_dconst",
+     "Dimensions": [
+      317,
+      317
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "tri_none_mlp/mlp_h2/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_43_constantHalf",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "tri_none_mlp/mlp_h1/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_41_constantHalf",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "__mye1431_dconst",
+     "Dimensions": [
+      317,
+      317
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_7",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "__myln_k_arg__bb1_8",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "TacticName": "__myl_ResMulSumAddRelResMulSumAddRel_0xf1ee875271ce7e20b6e0ceeceab86f93",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/mlp_h1/MatMul]\u001f[ONNX Layer: tri_none_mlp/mlp_h1/BiasAdd]\u001f[ONNX Layer: tri_none_mlp/mlp_h1/Relu]\u001f[ONNX Layer: tri_none_mlp/mlp_h2/MatMul]\u001f[ONNX Layer: tri_none_mlp/mlp_h2/BiasAdd]\u001f[ONNX Layer: tri_none_mlp/mlp_h2/Relu]"
+  },
+  {
+   "Name": "__myl_ResMulSumAdd_myl12_7",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/mlp_logits/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_45_constantHalf",
+     "Dimensions": [
+      1,
+      18
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "__mye1461_dconst",
+     "Dimensions": [
+      317,
+      18
+     ],
+     "Format/Datatype": "Half"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_8",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "Reformatted Output Tensor 0 to {ForeignNode[tri_none_mlp/sc_fc1/MatMul/ReadVariableOp:0...tri_none_mlp/mlp_logits/BiasAdd]}",
+     "Dimensions": [
+      1,
+      18
+     ],
+     "Format/Datatype": "Half"
+    }
+   ],
+   "TacticName": "__myl_ResMulSumAdd_0x99df81f6c95cf0e60426c38cf7087969",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/mlp_logits/MatMul]\u001f[ONNX Layer: tri_none_mlp/mlp_logits/BiasAdd]"
+  },
+  {
+   "Name": "Reformatting CopyNode for Output Tensor 0 to {ForeignNode[tri_none_mlp/sc_fc1/MatMul/ReadVariableOp:0...tri_none_mlp/mlp_logits/BiasAdd]}",
+   "LayerType": "Reformat",
+   "Inputs": [
+    {
+     "Name": "Reformatted Output Tensor 0 to {ForeignNode[tri_none_mlp/sc_fc1/MatMul/ReadVariableOp:0...tri_none_mlp/mlp_logits/BiasAdd]}",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      18
+     ],
+     "Format/Datatype": "Row major linear FP16 format"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "mlp_logits",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      18
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Reformat",
+   "Origin": "REFORMAT",
+   "TacticValue": "0x00000000000003e8",
+   "StreamId": 0,
+   "Metadata": ""
+  }
+ ],
+ "Bindings": [
+  "time",
+  "orders",
+  "scalars",
+  "mlp_logits"
+ ]
+}

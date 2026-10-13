@@ -1,0 +1,181 @@
+{
+ "model": "mobilenetv3_light_mlp_tribranch_18cls",
+ "backbone": "light",
+ "head": "MLP",
+ "variant": "int8_cA",
+ "backend": "tensorrt",
+ "runtime": "tensorrt 10.3.0",
+ "providers": null,
+ "input_names_fed": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "n_eval": 900,
+ "accuracy": 0.8844444444444445,
+ "macro_f1": 0.8828760385608028,
+ "vs_keras": {
+  "max_abs": 3.1786669492721558,
+  "mean_abs": 0.10434830906352512,
+  "argmax_agree": 0.9566666666666667,
+  "n_argmax_diff": 39
+ },
+ "latency_e2e_us": {
+  "n": 2000,
+  "mean": 1817.9701365,
+  "std": 73.74480003914358,
+  "min": 1783.861,
+  "p50": 1811.221,
+  "p90": 1843.9933,
+  "p95": 1852.6956,
+  "p99": 1875.73884,
+  "max": 5004.596
+ },
+ "latency_gpu_us": {
+  "n": 2000,
+  "mean": 1712.6337609887123,
+  "std": 71.30621220667014,
+  "min": 1685.2480173110962,
+  "p50": 1706.496000289917,
+  "p90": 1736.2272500991821,
+  "p95": 1746.8495905399323,
+  "p99": 1765.504002571106,
+  "max": 4819.615840911865
+ },
+ "latency_first_us": 82223.197,
+ "latency_accpass_us": {
+  "n": 899,
+  "mean": 1824.1588754171303,
+  "std": 43.883833581902906,
+  "min": 1785.525,
+  "p50": 1813.206,
+  "p90": 1855.8052,
+  "p95": 1868.999,
+  "p99": 1939.78344,
+  "max": 2548.075
+ },
+ "load_s": 0.1825636979774572,
+ "n_warmup": 1651,
+ "power_idle": {
+  "n_samples": 451,
+  "duration_s": 9.007887956977356,
+  "vdd_in_w": 6.537425454545454,
+  "vdd_in_w_std": 0.14201398932251186,
+  "cpu_gpu_cv_w": 1.4863795654101994,
+  "soc_w": 2.277338252771618,
+  "gpu_load_pct": 0.0
+ },
+ "power_active": {
+  "n_samples": 950,
+  "duration_s": 19.000339043035638,
+  "vdd_in_w": 8.814071242105266,
+  "vdd_in_w_std": 0.019532517921453635,
+  "cpu_gpu_cv_w": 3.3419469473684207,
+  "soc_w": 2.3191397052631575,
+  "gpu_load_pct": 81.58894736842106
+ },
+ "active_s": 20.000339043035638,
+ "n_active": 10989,
+ "throughput_ips": 549.4406857980993,
+ "energy": {
+  "vdd_in_total_mj": 16.04189764233102,
+  "vdd_in_dynamic_mj": 4.143569718090373,
+  "cpu_gpu_cv_total_mj": 6.082452635472416,
+  "cpu_gpu_cv_dynamic_mj": 3.3771932620222436
+ },
+ "memory": {
+  "avail_baseline_kb": 5770896,
+  "avail_loaded_kb": 5636768,
+  "avail_min_kb": 5471508.0,
+  "footprint_peak_mb": 292.37109375,
+  "footprint_loaded_mb": 130.984375,
+  "vmhwm_mb": 435.609375,
+  "vmrss_mb": 435.609375
+ },
+ "engine_mb": 2.066044,
+ "engine_device_mem_mb": 0.624128,
+ "onnx_mb": 0.865104,
+ "snapshot_start": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 39.406,
+   "gpu-thermal": 38.218,
+   "soc0-thermal": 38.781,
+   "soc1-thermal": 39.062,
+   "soc2-thermal": 38.656,
+   "tj-thermal": 39.406
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3641672,
+   "MemAvailable": 5821924,
+   "Buffers": 77488,
+   "Cached": 2257100
+  }
+ },
+ "snapshot_end": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 38.5,
+   "gpu-thermal": 38.25,
+   "soc0-thermal": 38.375,
+   "soc1-thermal": 38.812,
+   "soc2-thermal": 38.375,
+   "tj-thermal": 38.812
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3304780,
+   "MemAvailable": 5485156,
+   "Buffers": 77536,
+   "Cached": 2257172
+  }
+ },
+ "marks_s": {
+  "start": 0.0,
+  "baseline": 1.5235,
+  "load_start": 1.5237,
+  "load_end": 1.7063,
+  "acc_start": 1.7065,
+  "acc_end": 3.436,
+  "lat_start": 6.4367,
+  "lat_end": 10.0836,
+  "idle_start": 10.0836,
+  "idle_end": 20.0915,
+  "act_start": 20.0915,
+  "act_end": 40.0918
+ },
+ "protocol": {
+  "model": "mobilenetv3_light_mlp_tribranch_18cls",
+  "variant": "int8_cA",
+  "engines": "/home/jetson-nano-super/LASCAS-2027/engines/b1",
+  "out": "/home/jetson-nano-super/LASCAS-2027/results/c1/rep01/mobilenetv3_light_mlp_tribranch_18cls__int8_cA",
+  "warmup_s": 3.0,
+  "lat_iters": 2000,
+  "lat_max_s": 40.0,
+  "idle_s": 10.0,
+  "active_s": 20.0,
+  "sample_hz": 50.0,
+  "trim_s": 1.0
+ }
+}

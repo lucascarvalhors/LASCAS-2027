@@ -1,0 +1,825 @@
+{
+ "trt": "10.3.0",
+ "versions": {
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "kernel": "5.15.185-tegra",
+  "l4t": "# R36 (release), REVISION: 5.0, GCID: 43688277, BOARD: generic, EABI: aarch64, DATE: Fri Jan 16 03:50:45 UTC 2026",
+  "board": "NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super",
+  "tensorrt": "10.3.0",
+  "onnxruntime": "1.24.0"
+ },
+ "snapshot": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 37.781,
+   "gpu-thermal": 37.593,
+   "soc0-thermal": 37.781,
+   "soc1-thermal": 38.218,
+   "soc2-thermal": 37.562,
+   "tj-thermal": 38.218
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 2050484,
+   "MemAvailable": 4228712,
+   "Buffers": 77380,
+   "Cached": 2255252
+  }
+ },
+ "results": [
+  {
+   "model": "tribranch18__kan",
+   "precision": "fp32",
+   "build_s": 43.88,
+   "engine_bytes": 3843652,
+   "device_memory_bytes": 1314816,
+   "out_dtype_counts": {
+    "fp32": 260,
+    "none": 8
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__kan",
+   "precision": "fp16",
+   "build_s": 6.31,
+   "engine_bytes": 2489252,
+   "device_memory_bytes": 625152,
+   "out_dtype_counts": {
+    "fp32": 3,
+    "fp16": 312,
+    "none": 8
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 43
+   }
+  },
+  {
+   "model": "tribranch18__kan",
+   "precision": "fp16auto",
+   "build_s": 66.87,
+   "engine_bytes": 3843668,
+   "device_memory_bytes": 1314816,
+   "out_dtype_counts": {
+    "fp32": 260,
+    "none": 8
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__kan",
+   "precision": "int8_cA",
+   "build_s": 369.79,
+   "engine_bytes": 2805964,
+   "device_memory_bytes": 1248768,
+   "out_dtype_counts": {
+    "fp32": 349,
+    "int8": 98,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 64,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__kan",
+   "precision": "int8_cB",
+   "build_s": 165.14,
+   "engine_bytes": 2805964,
+   "device_memory_bytes": 1248768,
+   "out_dtype_counts": {
+    "fp32": 349,
+    "int8": 98,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 64,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__kan",
+   "precision": "int8auto_cA",
+   "build_s": 180.45,
+   "engine_bytes": 4822900,
+   "device_memory_bytes": 1249280,
+   "out_dtype_counts": {
+    "fp32": 363,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__kan",
+   "precision": "int8mm_cA",
+   "build_s": 61.61,
+   "engine_bytes": 2804940,
+   "device_memory_bytes": 1248768,
+   "out_dtype_counts": {
+    "fp32": 349,
+    "int8": 98,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 64,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__kan",
+   "precision": "int8mm_cB",
+   "build_s": 55.44,
+   "engine_bytes": 2804940,
+   "device_memory_bytes": 1248768,
+   "out_dtype_counts": {
+    "fp32": 349,
+    "int8": 98,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 64,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "kan_pure_tribranch_18cls",
+   "precision": "fp32",
+   "build_s": 6.75,
+   "engine_bytes": 526372,
+   "device_memory_bytes": 7168,
+   "out_dtype_counts": {
+    "fp32": 21,
+    "none": 1
+   },
+   "compute_layers": {
+    "n": 2,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "kan_pure_tribranch_18cls",
+   "precision": "fp16",
+   "build_s": 10.17,
+   "engine_bytes": 397612,
+   "device_memory_bytes": 4608,
+   "out_dtype_counts": {
+    "fp32": 2,
+    "fp16": 24,
+    "none": 1
+   },
+   "compute_layers": {
+    "n": 2,
+    "int8_in": 0,
+    "fp16_in": 2
+   }
+  },
+  {
+   "model": "kan_pure_tribranch_18cls",
+   "precision": "fp16auto",
+   "build_s": 4.51,
+   "engine_bytes": 526372,
+   "device_memory_bytes": 7168,
+   "out_dtype_counts": {
+    "fp32": 21,
+    "none": 1
+   },
+   "compute_layers": {
+    "n": 2,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "kan_pure_tribranch_18cls",
+   "precision": "int8_cA",
+   "build_s": 168.39,
+   "engine_bytes": 868372,
+   "device_memory_bytes": 10752,
+   "out_dtype_counts": {
+    "fp32": 102,
+    "int8": 34,
+    "none": 4
+   },
+   "compute_layers": {
+    "n": 13,
+    "int8_in": 13,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "kan_pure_tribranch_18cls",
+   "precision": "int8_cB",
+   "build_s": 70.58,
+   "engine_bytes": 868372,
+   "device_memory_bytes": 10752,
+   "out_dtype_counts": {
+    "fp32": 102,
+    "int8": 34,
+    "none": 4
+   },
+   "compute_layers": {
+    "n": 13,
+    "int8_in": 13,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "kan_pure_tribranch_18cls",
+   "precision": "int8auto_cA",
+   "build_s": 77.18,
+   "engine_bytes": 1004628,
+   "device_memory_bytes": 10752,
+   "out_dtype_counts": {
+    "fp32": 108,
+    "none": 4
+   },
+   "compute_layers": {
+    "n": 13,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "kan_pure_tribranch_18cls",
+   "precision": "int8mm_cA",
+   "build_s": 23.76,
+   "engine_bytes": 867860,
+   "device_memory_bytes": 10752,
+   "out_dtype_counts": {
+    "fp32": 102,
+    "int8": 34,
+    "none": 4
+   },
+   "compute_layers": {
+    "n": 13,
+    "int8_in": 13,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "kan_pure_tribranch_18cls",
+   "precision": "int8mm_cB",
+   "build_s": 22.87,
+   "engine_bytes": 865812,
+   "device_memory_bytes": 10752,
+   "out_dtype_counts": {
+    "fp32": 102,
+    "int8": 34,
+    "none": 4
+   },
+   "compute_layers": {
+    "n": 13,
+    "int8_in": 13,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__mlp",
+   "precision": "fp32",
+   "build_s": 42.04,
+   "engine_bytes": 3789316,
+   "device_memory_bytes": 1314816,
+   "out_dtype_counts": {
+    "fp32": 257,
+    "none": 8
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__mlp",
+   "precision": "fp16",
+   "build_s": 58.18,
+   "engine_bytes": 2373012,
+   "device_memory_bytes": 625152,
+   "out_dtype_counts": {
+    "fp16": 314,
+    "none": 8,
+    "fp32": 2
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 43
+   }
+  },
+  {
+   "model": "tribranch18__mlp",
+   "precision": "fp16auto",
+   "build_s": 9.89,
+   "engine_bytes": 3789324,
+   "device_memory_bytes": 1314816,
+   "out_dtype_counts": {
+    "fp32": 257,
+    "none": 8
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__mlp",
+   "precision": "int8_cA",
+   "build_s": 270.06,
+   "engine_bytes": 2652900,
+   "device_memory_bytes": 1248768,
+   "out_dtype_counts": {
+    "int8": 98,
+    "fp32": 320
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 62,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__mlp",
+   "precision": "int8_cB",
+   "build_s": 127.38,
+   "engine_bytes": 2652900,
+   "device_memory_bytes": 1248768,
+   "out_dtype_counts": {
+    "int8": 98,
+    "fp32": 320
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 62,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__mlp",
+   "precision": "int8auto_cA",
+   "build_s": 150.49,
+   "engine_bytes": 4643876,
+   "device_memory_bytes": 1249792,
+   "out_dtype_counts": {
+    "fp32": 340
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__mlp",
+   "precision": "int8mm_cA",
+   "build_s": 46.75,
+   "engine_bytes": 2648804,
+   "device_memory_bytes": 1248768,
+   "out_dtype_counts": {
+    "int8": 98,
+    "fp32": 320
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 62,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__mlp",
+   "precision": "int8mm_cB",
+   "build_s": 45.4,
+   "engine_bytes": 2648804,
+   "device_memory_bytes": 1248768,
+   "out_dtype_counts": {
+    "int8": 98,
+    "fp32": 320
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 62,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "fp32",
+   "build_s": 1.88,
+   "engine_bytes": 1153604,
+   "device_memory_bytes": 7680,
+   "out_dtype_counts": {
+    "fp32": 16,
+    "none": 1
+   },
+   "compute_layers": {
+    "n": 2,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "fp16",
+   "build_s": 3.82,
+   "engine_bytes": 619716,
+   "device_memory_bytes": 4608,
+   "out_dtype_counts": {
+    "fp32": 2,
+    "fp16": 18,
+    "none": 1
+   },
+   "compute_layers": {
+    "n": 2,
+    "int8_in": 0,
+    "fp16_in": 2
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "fp16auto",
+   "build_s": 1.52,
+   "engine_bytes": 1153604,
+   "device_memory_bytes": 7680,
+   "out_dtype_counts": {
+    "fp32": 16,
+    "none": 1
+   },
+   "compute_layers": {
+    "n": 2,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "int8_cA",
+   "build_s": 21.12,
+   "engine_bytes": 599364,
+   "device_memory_bytes": 9216,
+   "out_dtype_counts": {
+    "fp32": 24,
+    "int8": 13
+   },
+   "compute_layers": {
+    "n": 9,
+    "int8_in": 9,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "int8_cB",
+   "build_s": 13.16,
+   "engine_bytes": 599364,
+   "device_memory_bytes": 9216,
+   "out_dtype_counts": {
+    "fp32": 24,
+    "int8": 13
+   },
+   "compute_layers": {
+    "n": 9,
+    "int8_in": 9,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "int8auto_cA",
+   "build_s": 25.44,
+   "engine_bytes": 1402108,
+   "device_memory_bytes": 9216,
+   "out_dtype_counts": {
+    "fp32": 26
+   },
+   "compute_layers": {
+    "n": 9,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "int8mm_cA",
+   "build_s": 4.23,
+   "engine_bytes": 599364,
+   "device_memory_bytes": 9216,
+   "out_dtype_counts": {
+    "fp32": 24,
+    "int8": 13
+   },
+   "compute_layers": {
+    "n": 9,
+    "int8_in": 9,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "int8mm_cB",
+   "build_s": 4.08,
+   "engine_bytes": 599364,
+   "device_memory_bytes": 9216,
+   "out_dtype_counts": {
+    "fp32": 24,
+    "int8": 13
+   },
+   "compute_layers": {
+    "n": 9,
+    "int8_in": 9,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "precision": "fp32",
+   "build_s": 29.55,
+   "engine_bytes": 2009508,
+   "device_memory_bytes": 688128,
+   "out_dtype_counts": {
+    "fp32": 260,
+    "none": 8
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "precision": "fp16",
+   "build_s": 48.95,
+   "engine_bytes": 1592124,
+   "device_memory_bytes": 311808,
+   "out_dtype_counts": {
+    "fp16": 307,
+    "none": 8,
+    "fp32": 2
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 43
+   }
+  },
+  {
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "precision": "fp16auto",
+   "build_s": 11.36,
+   "engine_bytes": 2009532,
+   "device_memory_bytes": 688128,
+   "out_dtype_counts": {
+    "fp32": 260,
+    "none": 8
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "precision": "int8_cA",
+   "build_s": 294.82,
+   "engine_bytes": 2262284,
+   "device_memory_bytes": 624128,
+   "out_dtype_counts": {
+    "int8": 107,
+    "fp32": 340,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 64,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "precision": "int8_cB",
+   "build_s": 155.6,
+   "engine_bytes": 2262284,
+   "device_memory_bytes": 624128,
+   "out_dtype_counts": {
+    "int8": 107,
+    "fp32": 340,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 64,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "precision": "int8auto_cA",
+   "build_s": 180.1,
+   "engine_bytes": 2998892,
+   "device_memory_bytes": 632320,
+   "out_dtype_counts": {
+    "fp32": 365,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "precision": "int8mm_cA",
+   "build_s": 53.63,
+   "engine_bytes": 2261260,
+   "device_memory_bytes": 624128,
+   "out_dtype_counts": {
+    "int8": 107,
+    "fp32": 340,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 64,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "precision": "int8mm_cB",
+   "build_s": 52.46,
+   "engine_bytes": 2261260,
+   "device_memory_bytes": 624128,
+   "out_dtype_counts": {
+    "int8": 107,
+    "fp32": 340,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 64,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "precision": "fp32",
+   "build_s": 29.42,
+   "engine_bytes": 1928124,
+   "device_memory_bytes": 688128,
+   "out_dtype_counts": {
+    "fp32": 261,
+    "none": 8
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "precision": "fp16",
+   "build_s": 47.91,
+   "engine_bytes": 1509700,
+   "device_memory_bytes": 311808,
+   "out_dtype_counts": {
+    "fp16": 304,
+    "none": 8,
+    "fp32": 2
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 43
+   }
+  },
+  {
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "precision": "fp16auto",
+   "build_s": 10.09,
+   "engine_bytes": 1928124,
+   "device_memory_bytes": 688128,
+   "out_dtype_counts": {
+    "fp32": 261,
+    "none": 8
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "precision": "int8_cA",
+   "build_s": 201.25,
+   "engine_bytes": 2066044,
+   "device_memory_bytes": 624128,
+   "out_dtype_counts": {
+    "fp32": 332,
+    "int8": 88
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 62,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "precision": "int8_cB",
+   "build_s": 124.97,
+   "engine_bytes": 2066044,
+   "device_memory_bytes": 624128,
+   "out_dtype_counts": {
+    "fp32": 332,
+    "int8": 88
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 62,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "precision": "int8auto_cA",
+   "build_s": 149.07,
+   "engine_bytes": 2827964,
+   "device_memory_bytes": 635392,
+   "out_dtype_counts": {
+    "fp32": 344
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "precision": "int8mm_cA",
+   "build_s": 42.7,
+   "engine_bytes": 2063996,
+   "device_memory_bytes": 624128,
+   "out_dtype_counts": {
+    "fp32": 332,
+    "int8": 88
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 62,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "precision": "int8mm_cB",
+   "build_s": 42.51,
+   "engine_bytes": 2063996,
+   "device_memory_bytes": 624128,
+   "out_dtype_counts": {
+    "fp32": 332,
+    "int8": 88
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 62,
+    "fp16_in": 0
+   }
+  }
+ ]
+}

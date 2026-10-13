@@ -1,0 +1,258 @@
+{
+ "campaign_id": "c1",
+ "engines": "/home/jetson-nano-super/LASCAS-2027/engines/b1",
+ "args": {
+  "campaign_id": "c1",
+  "engines": "b1",
+  "reps": 3,
+  "seed": 2027,
+  "models": [
+   "mlp_pure_tribranch_18cls"
+  ],
+  "variants": [
+   "fp32",
+   "fp16",
+   "fp16auto"
+  ],
+  "pilot": false,
+  "cooldown_s": 3.0,
+  "skip_trtexec": false,
+  "no_profile": false,
+  "force": false,
+  "power_mode": "MAXN_SUPER"
+ },
+ "protocol": {
+  "warmup_s": 3.0,
+  "lat_iters": 2000,
+  "lat_max_s": 40.0,
+  "idle_s": 10.0,
+  "active_s": 20.0,
+  "trtexec_iters": 2000,
+  "trtexec_warmup_ms": 2000,
+  "profile_iters": 300
+ },
+ "versions": {
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "kernel": "5.15.185-tegra",
+  "l4t": "# R36 (release), REVISION: 5.0, GCID: 43688277, BOARD: generic, EABI: aarch64, DATE: Fri Jan 16 03:50:45 UTC 2026",
+  "board": "NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super",
+  "tensorrt": "10.3.0",
+  "onnxruntime": "1.24.0"
+ },
+ "env_start": {
+  "clocks_locked": true,
+  "clocks": "GPU 1020/1020 MHz, CPU [1728.0] (m\u00e1x 1728)",
+  "nvpmodel": "MAXN_SUPER",
+  "telescope_services": {
+   "telescope-console": "inactive",
+   "telescope-studio": "inactive",
+   "telescope-panel": "inactive",
+   "telescope-mdns": "inactive",
+   "telescope-indi": "inactive"
+  },
+  "loadavg_1min": 0.3
+ },
+ "snapshot_start": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 36.375,
+   "gpu-thermal": 35.843,
+   "soc0-thermal": 35.968,
+   "soc1-thermal": 36.25,
+   "soc2-thermal": 35.75,
+   "tj-thermal": 36.375
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3453644,
+   "MemAvailable": 5803260,
+   "Buffers": 89576,
+   "Cached": 2426868
+  }
+ },
+ "configs": [
+  [
+   "mlp_pure_tribranch_18cls",
+   "fp32"
+  ],
+  [
+   "mlp_pure_tribranch_18cls",
+   "fp16"
+  ],
+  [
+   "mlp_pure_tribranch_18cls",
+   "fp16auto"
+  ]
+ ],
+ "orders": {
+  "1": [
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp16auto"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp16"
+   ]
+  ],
+  "2": [
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp16"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp16auto"
+   ]
+  ],
+  "3": [
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp16"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp16auto"
+   ]
+  ]
+ },
+ "runs": [
+  {
+   "rep": 1,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 39.1,
+   "loadavg_after": "0.57"
+  },
+  {
+   "rep": 1,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 39.1,
+   "loadavg_after": "0.72"
+  },
+  {
+   "rep": 1,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 39.5,
+   "loadavg_after": "0.82"
+  },
+  {
+   "rep": 2,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 38.7,
+   "loadavg_after": "0.83"
+  },
+  {
+   "rep": 2,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 38.4,
+   "loadavg_after": "0.83"
+  },
+  {
+   "rep": 2,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 38.3,
+   "loadavg_after": "0.92"
+  },
+  {
+   "rep": 3,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 38.7,
+   "loadavg_after": "0.99"
+  },
+  {
+   "rep": 3,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 38.4,
+   "loadavg_after": "1.20"
+  },
+  {
+   "rep": 3,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 38.4,
+   "loadavg_after": "0.96"
+  }
+ ],
+ "env_end": {
+  "clocks_locked": true,
+  "clocks": "GPU 1020/1020 MHz, CPU [1728.0] (m\u00e1x 1728)",
+  "nvpmodel": "MAXN_SUPER",
+  "telescope_services": {
+   "telescope-console": "inactive",
+   "telescope-studio": "inactive",
+   "telescope-panel": "inactive",
+   "telescope-mdns": "inactive",
+   "telescope-indi": "inactive"
+  },
+  "loadavg_1min": 0.88
+ },
+ "snapshot_end": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 37.218,
+   "gpu-thermal": 36.406,
+   "soc0-thermal": 37.0,
+   "soc1-thermal": 37.375,
+   "soc2-thermal": 36.625,
+   "tj-thermal": 37.406
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3438632,
+   "MemAvailable": 5796256,
+   "Buffers": 90048,
+   "Cached": 2434256
+  }
+ },
+ "total_min": 6.3
+}

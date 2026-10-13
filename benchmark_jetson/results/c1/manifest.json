@@ -1,0 +1,2707 @@
+{
+ "campaign_id": "c1",
+ "engines": "/home/jetson-nano-super/LASCAS-2027/engines/b1",
+ "args": {
+  "campaign_id": "c1",
+  "engines": "b1",
+  "reps": 3,
+  "seed": 2027,
+  "models": [
+   "tribranch18__mlp",
+   "tribranch18__kan",
+   "mobilenetv3_light_mlp_tribranch_18cls",
+   "mobilenetv3_light_kan_tribranch_18cls",
+   "mlp_pure_tribranch_18cls",
+   "kan_pure_tribranch_18cls"
+  ],
+  "variants": [
+   "fp32",
+   "fp16",
+   "fp16auto",
+   "int8_cA",
+   "int8_cB",
+   "int8auto_cA",
+   "int8mm_cA",
+   "int8mm_cB",
+   "ort_cpu",
+   "ort_cuda"
+  ],
+  "pilot": false,
+  "cooldown_s": 3.0,
+  "skip_trtexec": false,
+  "no_profile": false,
+  "force": false,
+  "power_mode": "MAXN_SUPER"
+ },
+ "protocol": {
+  "warmup_s": 3.0,
+  "lat_iters": 2000,
+  "lat_max_s": 40.0,
+  "idle_s": 10.0,
+  "active_s": 20.0,
+  "trtexec_iters": 2000,
+  "trtexec_warmup_ms": 2000,
+  "profile_iters": 300
+ },
+ "versions": {
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "kernel": "5.15.185-tegra",
+  "l4t": "# R36 (release), REVISION: 5.0, GCID: 43688277, BOARD: generic, EABI: aarch64, DATE: Fri Jan 16 03:50:45 UTC 2026",
+  "board": "NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super",
+  "tensorrt": "10.3.0",
+  "onnxruntime": "1.24.0"
+ },
+ "env_start": {
+  "clocks_locked": true,
+  "clocks": "GPU 1020/1020 MHz, CPU [1728.0] (m\u00e1x 1728)",
+  "nvpmodel": "MAXN_SUPER",
+  "telescope_services": {
+   "telescope-console": "inactive",
+   "telescope-studio": "inactive",
+   "telescope-panel": "inactive",
+   "telescope-mdns": "inactive",
+   "telescope-indi": "inactive"
+  },
+  "loadavg_1min": 1.0
+ },
+ "snapshot_start": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 38.343,
+   "gpu-thermal": 37.5,
+   "soc0-thermal": 37.812,
+   "soc1-thermal": 38.125,
+   "soc2-thermal": 37.687,
+   "tj-thermal": 38.343
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3656884,
+   "MemAvailable": 5835124,
+   "Buffers": 77384,
+   "Cached": 2255252
+  }
+ },
+ "configs": [
+  [
+   "tribranch18__mlp",
+   "fp32"
+  ],
+  [
+   "tribranch18__mlp",
+   "fp16"
+  ],
+  [
+   "tribranch18__mlp",
+   "fp16auto"
+  ],
+  [
+   "tribranch18__mlp",
+   "int8_cA"
+  ],
+  [
+   "tribranch18__mlp",
+   "int8_cB"
+  ],
+  [
+   "tribranch18__mlp",
+   "int8auto_cA"
+  ],
+  [
+   "tribranch18__mlp",
+   "int8mm_cA"
+  ],
+  [
+   "tribranch18__mlp",
+   "int8mm_cB"
+  ],
+  [
+   "tribranch18__mlp",
+   "ort_cpu"
+  ],
+  [
+   "tribranch18__mlp",
+   "ort_cuda"
+  ],
+  [
+   "tribranch18__kan",
+   "fp32"
+  ],
+  [
+   "tribranch18__kan",
+   "fp16"
+  ],
+  [
+   "tribranch18__kan",
+   "fp16auto"
+  ],
+  [
+   "tribranch18__kan",
+   "int8_cA"
+  ],
+  [
+   "tribranch18__kan",
+   "int8_cB"
+  ],
+  [
+   "tribranch18__kan",
+   "int8auto_cA"
+  ],
+  [
+   "tribranch18__kan",
+   "int8mm_cA"
+  ],
+  [
+   "tribranch18__kan",
+   "int8mm_cB"
+  ],
+  [
+   "tribranch18__kan",
+   "ort_cpu"
+  ],
+  [
+   "tribranch18__kan",
+   "ort_cuda"
+  ],
+  [
+   "mobilenetv3_light_mlp_tribranch_18cls",
+   "fp32"
+  ],
+  [
+   "mobilenetv3_light_mlp_tribranch_18cls",
+   "fp16"
+  ],
+  [
+   "mobilenetv3_light_mlp_tribranch_18cls",
+   "fp16auto"
+  ],
+  [
+   "mobilenetv3_light_mlp_tribranch_18cls",
+   "int8_cA"
+  ],
+  [
+   "mobilenetv3_light_mlp_tribranch_18cls",
+   "int8_cB"
+  ],
+  [
+   "mobilenetv3_light_mlp_tribranch_18cls",
+   "int8auto_cA"
+  ],
+  [
+   "mobilenetv3_light_mlp_tribranch_18cls",
+   "int8mm_cA"
+  ],
+  [
+   "mobilenetv3_light_mlp_tribranch_18cls",
+   "int8mm_cB"
+  ],
+  [
+   "mobilenetv3_light_mlp_tribranch_18cls",
+   "ort_cpu"
+  ],
+  [
+   "mobilenetv3_light_mlp_tribranch_18cls",
+   "ort_cuda"
+  ],
+  [
+   "mobilenetv3_light_kan_tribranch_18cls",
+   "fp32"
+  ],
+  [
+   "mobilenetv3_light_kan_tribranch_18cls",
+   "fp16"
+  ],
+  [
+   "mobilenetv3_light_kan_tribranch_18cls",
+   "fp16auto"
+  ],
+  [
+   "mobilenetv3_light_kan_tribranch_18cls",
+   "int8_cA"
+  ],
+  [
+   "mobilenetv3_light_kan_tribranch_18cls",
+   "int8_cB"
+  ],
+  [
+   "mobilenetv3_light_kan_tribranch_18cls",
+   "int8auto_cA"
+  ],
+  [
+   "mobilenetv3_light_kan_tribranch_18cls",
+   "int8mm_cA"
+  ],
+  [
+   "mobilenetv3_light_kan_tribranch_18cls",
+   "int8mm_cB"
+  ],
+  [
+   "mobilenetv3_light_kan_tribranch_18cls",
+   "ort_cpu"
+  ],
+  [
+   "mobilenetv3_light_kan_tribranch_18cls",
+   "ort_cuda"
+  ],
+  [
+   "mlp_pure_tribranch_18cls",
+   "fp32"
+  ],
+  [
+   "mlp_pure_tribranch_18cls",
+   "fp16"
+  ],
+  [
+   "mlp_pure_tribranch_18cls",
+   "fp16auto"
+  ],
+  [
+   "mlp_pure_tribranch_18cls",
+   "int8_cA"
+  ],
+  [
+   "mlp_pure_tribranch_18cls",
+   "int8_cB"
+  ],
+  [
+   "mlp_pure_tribranch_18cls",
+   "int8auto_cA"
+  ],
+  [
+   "mlp_pure_tribranch_18cls",
+   "int8mm_cA"
+  ],
+  [
+   "mlp_pure_tribranch_18cls",
+   "int8mm_cB"
+  ],
+  [
+   "mlp_pure_tribranch_18cls",
+   "ort_cpu"
+  ],
+  [
+   "mlp_pure_tribranch_18cls",
+   "ort_cuda"
+  ],
+  [
+   "kan_pure_tribranch_18cls",
+   "fp32"
+  ],
+  [
+   "kan_pure_tribranch_18cls",
+   "fp16"
+  ],
+  [
+   "kan_pure_tribranch_18cls",
+   "fp16auto"
+  ],
+  [
+   "kan_pure_tribranch_18cls",
+   "int8_cA"
+  ],
+  [
+   "kan_pure_tribranch_18cls",
+   "int8_cB"
+  ],
+  [
+   "kan_pure_tribranch_18cls",
+   "int8auto_cA"
+  ],
+  [
+   "kan_pure_tribranch_18cls",
+   "int8mm_cA"
+  ],
+  [
+   "kan_pure_tribranch_18cls",
+   "int8mm_cB"
+  ],
+  [
+   "kan_pure_tribranch_18cls",
+   "ort_cpu"
+  ],
+  [
+   "kan_pure_tribranch_18cls",
+   "ort_cuda"
+  ]
+ ],
+ "orders": {
+  "1": [
+   [
+    "tribranch18__kan",
+    "int8_cB"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8mm_cA"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8_cA"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8auto_cA"
+   ],
+   [
+    "tribranch18__kan",
+    "int8_cA"
+   ],
+   [
+    "tribranch18__mlp",
+    "ort_cpu"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8_cB"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8mm_cA"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8_cB"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "fp16auto"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "ort_cpu"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8mm_cA"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp16auto"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8mm_cA"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "fp16auto"
+   ],
+   [
+    "tribranch18__mlp",
+    "fp16auto"
+   ],
+   [
+    "tribranch18__kan",
+    "ort_cpu"
+   ],
+   [
+    "tribranch18__kan",
+    "int8mm_cA"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "ort_cuda"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8mm_cB"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8_cA"
+   ],
+   [
+    "tribranch18__mlp",
+    "fp32"
+   ],
+   [
+    "tribranch18__kan",
+    "int8mm_cB"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "fp16"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "ort_cuda"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "ort_cpu"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8_cB"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8_cA"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8auto_cA"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp16"
+   ],
+   [
+    "tribranch18__kan",
+    "int8auto_cA"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "fp16"
+   ],
+   [
+    "tribranch18__mlp",
+    "ort_cuda"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8mm_cB"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "fp16"
+   ],
+   [
+    "tribranch18__kan",
+    "fp32"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8mm_cB"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8_cA"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8mm_cB"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8auto_cA"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8auto_cA"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8_cA"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8mm_cB"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8mm_cA"
+   ],
+   [
+    "tribranch18__kan",
+    "ort_cuda"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8auto_cA"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "tribranch18__kan",
+    "fp16auto"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "fp16auto"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "ort_cuda"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "ort_cuda"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "ort_cpu"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "ort_cpu"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8_cB"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8_cB"
+   ],
+   [
+    "tribranch18__kan",
+    "fp16"
+   ],
+   [
+    "tribranch18__mlp",
+    "fp16"
+   ]
+  ],
+  "2": [
+   [
+    "kan_pure_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8mm_cA"
+   ],
+   [
+    "tribranch18__kan",
+    "int8mm_cB"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8mm_cB"
+   ],
+   [
+    "tribranch18__kan",
+    "fp32"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8_cA"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8_cA"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "ort_cuda"
+   ],
+   [
+    "tribranch18__mlp",
+    "fp16"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "ort_cuda"
+   ],
+   [
+    "tribranch18__kan",
+    "ort_cuda"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8auto_cA"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "fp16auto"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8mm_cB"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8mm_cB"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8_cB"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "ort_cpu"
+   ],
+   [
+    "tribranch18__mlp",
+    "ort_cuda"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "fp16auto"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8mm_cB"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "ort_cuda"
+   ],
+   [
+    "tribranch18__kan",
+    "fp16"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8mm_cA"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8mm_cB"
+   ],
+   [
+    "tribranch18__kan",
+    "fp16auto"
+   ],
+   [
+    "tribranch18__mlp",
+    "fp32"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "fp16"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8_cB"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp16"
+   ],
+   [
+    "tribranch18__kan",
+    "int8_cA"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8mm_cA"
+   ],
+   [
+    "tribranch18__mlp",
+    "fp16auto"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "ort_cpu"
+   ],
+   [
+    "tribranch18__mlp",
+    "ort_cpu"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8_cA"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp16auto"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8_cB"
+   ],
+   [
+    "tribranch18__kan",
+    "int8auto_cA"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "fp16"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8auto_cA"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "fp16auto"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8_cA"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8_cA"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "ort_cuda"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "ort_cpu"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8auto_cA"
+   ],
+   [
+    "tribranch18__kan",
+    "int8mm_cA"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8mm_cA"
+   ],
+   [
+    "tribranch18__kan",
+    "ort_cpu"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8auto_cA"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8_cB"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8_cB"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8mm_cA"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "ort_cpu"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8auto_cA"
+   ],
+   [
+    "tribranch18__kan",
+    "int8_cB"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "fp16"
+   ]
+  ],
+  "3": [
+   [
+    "kan_pure_tribranch_18cls",
+    "fp16auto"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "fp16"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8_cB"
+   ],
+   [
+    "tribranch18__kan",
+    "ort_cpu"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8mm_cA"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "ort_cpu"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8auto_cA"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8mm_cB"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "fp16auto"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8auto_cA"
+   ],
+   [
+    "tribranch18__mlp",
+    "fp32"
+   ],
+   [
+    "tribranch18__kan",
+    "fp32"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8mm_cA"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "ort_cuda"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8mm_cA"
+   ],
+   [
+    "tribranch18__mlp",
+    "ort_cpu"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8_cA"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "ort_cpu"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8_cB"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp16"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "ort_cuda"
+   ],
+   [
+    "tribranch18__kan",
+    "int8mm_cA"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8_cB"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8_cB"
+   ],
+   [
+    "tribranch18__kan",
+    "fp16auto"
+   ],
+   [
+    "tribranch18__kan",
+    "int8_cA"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "ort_cuda"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "ort_cuda"
+   ],
+   [
+    "tribranch18__mlp",
+    "ort_cuda"
+   ],
+   [
+    "tribranch18__kan",
+    "fp16"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "fp16auto"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8mm_cB"
+   ],
+   [
+    "tribranch18__kan",
+    "ort_cuda"
+   ],
+   [
+    "tribranch18__kan",
+    "int8_cB"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8auto_cA"
+   ],
+   [
+    "tribranch18__kan",
+    "int8mm_cB"
+   ],
+   [
+    "tribranch18__mlp",
+    "fp16"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8mm_cB"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8auto_cA"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8mm_cB"
+   ],
+   [
+    "tribranch18__kan",
+    "int8auto_cA"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8mm_cB"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "fp16auto"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "fp32"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "int8mm_cA"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "fp16"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8auto_cA"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "ort_cpu"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "int8_cA"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8_cB"
+   ],
+   [
+    "tribranch18__mlp",
+    "fp16auto"
+   ],
+   [
+    "mobilenetv3_light_mlp_tribranch_18cls",
+    "int8_cA"
+   ],
+   [
+    "mobilenetv3_light_kan_tribranch_18cls",
+    "fp16"
+   ],
+   [
+    "tribranch18__mlp",
+    "int8_cA"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8mm_cA"
+   ],
+   [
+    "kan_pure_tribranch_18cls",
+    "ort_cpu"
+   ],
+   [
+    "mlp_pure_tribranch_18cls",
+    "int8_cA"
+   ]
+  ]
+ },
+ "runs": [
+  {
+   "rep": 1,
+   "model": "tribranch18__kan",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 51.1,
+   "loadavg_after": "0.80"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__mlp",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 50.5,
+   "loadavg_after": "0.84"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 47.9,
+   "loadavg_after": "0.89"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 46.2,
+   "loadavg_after": "0.98"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__kan",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 51.0,
+   "loadavg_after": "0.94"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__mlp",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 55.9,
+   "loadavg_after": "2.98"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 44.1,
+   "loadavg_after": "1.87"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 48.0,
+   "loadavg_after": "1.40"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 48.7,
+   "loadavg_after": "1.21"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 48.8,
+   "loadavg_after": "0.96"
+  },
+  {
+   "rep": 1,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 39.2,
+   "loadavg_after": "1.05"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 44.7,
+   "loadavg_after": "3.07"
+  },
+  {
+   "rep": 1,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 39.7,
+   "loadavg_after": "2.04"
+  },
+  {
+   "rep": 1,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 41.6,
+   "loadavg_after": "1.19"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 44.0,
+   "loadavg_after": "1.00"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__mlp",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 45.3,
+   "loadavg_after": "1.00"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__kan",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 56.9,
+   "loadavg_after": "3.55"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__kan",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 51.0,
+   "loadavg_after": "1.95"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 43.9,
+   "loadavg_after": "1.40"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 53.7,
+   "loadavg_after": "1.25"
+  },
+  {
+   "rep": 1,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 39.7,
+   "loadavg_after": "1.14"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 48.7,
+   "loadavg_after": "1.05"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__mlp",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 45.4,
+   "loadavg_after": "0.71"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__kan",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 51.0,
+   "loadavg_after": "0.82"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 46.1,
+   "loadavg_after": "0.93"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 50.9,
+   "loadavg_after": "1.00"
+  },
+  {
+   "rep": 1,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 35.5,
+   "loadavg_after": "2.57"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__mlp",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 50.5,
+   "loadavg_after": "1.57"
+  },
+  {
+   "rep": 1,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 39.7,
+   "loadavg_after": "1.19"
+  },
+  {
+   "rep": 1,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 39.3,
+   "loadavg_after": "1.20"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__kan",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 48.0,
+   "loadavg_after": "1.03"
+  },
+  {
+   "rep": 1,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 39.5,
+   "loadavg_after": "0.93"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__mlp",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 51.6,
+   "loadavg_after": "1.02"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__mlp",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 50.4,
+   "loadavg_after": "0.93"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 46.0,
+   "loadavg_after": "0.95"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__kan",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 45.4,
+   "loadavg_after": "0.93"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 48.1,
+   "loadavg_after": "0.99"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__mlp",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 50.5,
+   "loadavg_after": "1.06"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 48.7,
+   "loadavg_after": "1.06"
+  },
+  {
+   "rep": 1,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 40.8,
+   "loadavg_after": "0.94"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 45.9,
+   "loadavg_after": "0.89"
+  },
+  {
+   "rep": 1,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 41.6,
+   "loadavg_after": "0.92"
+  },
+  {
+   "rep": 1,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 41.6,
+   "loadavg_after": "0.82"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 48.0,
+   "loadavg_after": "1.09"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__kan",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 55.1,
+   "loadavg_after": "1.02"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__mlp",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 47.8,
+   "loadavg_after": "0.86"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__kan",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 45.4,
+   "loadavg_after": "0.75"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 43.9,
+   "loadavg_after": "0.82"
+  },
+  {
+   "rep": 1,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 44.0,
+   "loadavg_after": "0.99"
+  },
+  {
+   "rep": 1,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 38.0,
+   "loadavg_after": "0.98"
+  },
+  {
+   "rep": 1,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 39.2,
+   "loadavg_after": "0.91"
+  },
+  {
+   "rep": 1,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 45.8,
+   "loadavg_after": "3.04"
+  },
+  {
+   "rep": 1,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 36.7,
+   "loadavg_after": "3.61"
+  },
+  {
+   "rep": 1,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 39.7,
+   "loadavg_after": "2.20"
+  },
+  {
+   "rep": 1,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 41.6,
+   "loadavg_after": "1.55"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__kan",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 46.5,
+   "loadavg_after": "1.20"
+  },
+  {
+   "rep": 1,
+   "model": "tribranch18__mlp",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 46.1,
+   "loadavg_after": "1.13"
+  },
+  {
+   "rep": 2,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 38.4,
+   "loadavg_after": "0.97"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 46.2,
+   "loadavg_after": "1.19"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__kan",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 49.2,
+   "loadavg_after": "0.91"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__mlp",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 48.8,
+   "loadavg_after": "0.88"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__kan",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 44.1,
+   "loadavg_after": "0.97"
+  },
+  {
+   "rep": 2,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 38.9,
+   "loadavg_after": "0.95"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 46.3,
+   "loadavg_after": "0.95"
+  },
+  {
+   "rep": 2,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 38.1,
+   "loadavg_after": "1.00"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__mlp",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 44.6,
+   "loadavg_after": "0.92"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 52.9,
+   "loadavg_after": "0.94"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__kan",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 54.8,
+   "loadavg_after": "1.06"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__mlp",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 46.4,
+   "loadavg_after": "0.92"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 42.6,
+   "loadavg_after": "1.05"
+  },
+  {
+   "rep": 2,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 38.9,
+   "loadavg_after": "0.94"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 46.2,
+   "loadavg_after": "0.94"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 46.3,
+   "loadavg_after": "0.90"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 44.6,
+   "loadavg_after": "3.11"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__mlp",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 51.8,
+   "loadavg_after": "1.78"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 42.6,
+   "loadavg_after": "1.35"
+  },
+  {
+   "rep": 2,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 40.5,
+   "loadavg_after": "1.15"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 50.9,
+   "loadavg_after": "1.01"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__kan",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 44.9,
+   "loadavg_after": "0.97"
+  },
+  {
+   "rep": 2,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 38.9,
+   "loadavg_after": "0.96"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 46.8,
+   "loadavg_after": "1.03"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__kan",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 44.1,
+   "loadavg_after": "0.88"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__mlp",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 44.0,
+   "loadavg_after": "1.07"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 44.5,
+   "loadavg_after": "0.99"
+  },
+  {
+   "rep": 2,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 40.5,
+   "loadavg_after": "1.01"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__kan",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 49.3,
+   "loadavg_after": "0.83"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 46.8,
+   "loadavg_after": "0.96"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__mlp",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 44.0,
+   "loadavg_after": "0.97"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 42.6,
+   "loadavg_after": "0.92"
+  },
+  {
+   "rep": 2,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 36.7,
+   "loadavg_after": "2.58"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__mlp",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 56.0,
+   "loadavg_after": "4.08"
+  },
+  {
+   "rep": 2,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 40.5,
+   "loadavg_after": "2.42"
+  },
+  {
+   "rep": 2,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 38.9,
+   "loadavg_after": "1.34"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__kan",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 46.6,
+   "loadavg_after": "1.12"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 44.4,
+   "loadavg_after": "0.97"
+  },
+  {
+   "rep": 2,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 38.5,
+   "loadavg_after": "0.90"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 42.6,
+   "loadavg_after": "0.79"
+  },
+  {
+   "rep": 2,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 38.4,
+   "loadavg_after": "0.92"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 46.8,
+   "loadavg_after": "0.88"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__mlp",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 48.8,
+   "loadavg_after": "0.89"
+  },
+  {
+   "rep": 2,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 43.8,
+   "loadavg_after": "1.05"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 45.5,
+   "loadavg_after": "3.19"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 44.6,
+   "loadavg_after": "1.88"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__kan",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 49.2,
+   "loadavg_after": "1.39"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__mlp",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 48.7,
+   "loadavg_after": "1.08"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__kan",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 57.2,
+   "loadavg_after": "3.40"
+  },
+  {
+   "rep": 2,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 39.8,
+   "loadavg_after": "2.25"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__mlp",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 48.8,
+   "loadavg_after": "1.07"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 46.9,
+   "loadavg_after": "1.13"
+  },
+  {
+   "rep": 2,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 40.5,
+   "loadavg_after": "1.09"
+  },
+  {
+   "rep": 2,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 35.5,
+   "loadavg_after": "2.61"
+  },
+  {
+   "rep": 2,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 44.8,
+   "loadavg_after": "1.69"
+  },
+  {
+   "rep": 2,
+   "model": "tribranch18__kan",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 49.3,
+   "loadavg_after": "1.20"
+  },
+  {
+   "rep": 2,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 38.7,
+   "loadavg_after": "1.06"
+  },
+  {
+   "rep": 3,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 38.4,
+   "loadavg_after": "0.95"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 44.5,
+   "loadavg_after": "1.00"
+  },
+  {
+   "rep": 3,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 40.5,
+   "loadavg_after": "0.91"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__kan",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 57.4,
+   "loadavg_after": "3.42"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__mlp",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 48.8,
+   "loadavg_after": "1.88"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 44.5,
+   "loadavg_after": "3.30"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 44.5,
+   "loadavg_after": "2.00"
+  },
+  {
+   "rep": 3,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 40.5,
+   "loadavg_after": "1.45"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 42.6,
+   "loadavg_after": "1.33"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 44.8,
+   "loadavg_after": "1.08"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__mlp",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 44.0,
+   "loadavg_after": "0.89"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__kan",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 44.1,
+   "loadavg_after": "0.87"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 46.3,
+   "loadavg_after": "0.81"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 53.1,
+   "loadavg_after": "0.91"
+  },
+  {
+   "rep": 3,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 40.5,
+   "loadavg_after": "0.88"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__mlp",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 55.7,
+   "loadavg_after": "3.37"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 46.9,
+   "loadavg_after": "2.02"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 45.7,
+   "loadavg_after": "3.48"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 46.9,
+   "loadavg_after": "2.00"
+  },
+  {
+   "rep": 3,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 43.7,
+   "loadavg_after": "1.14"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__kan",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 49.2,
+   "loadavg_after": "0.83"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 46.2,
+   "loadavg_after": "1.09"
+  },
+  {
+   "rep": 3,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 38.9,
+   "loadavg_after": "0.89"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__kan",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 44.1,
+   "loadavg_after": "0.90"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__kan",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 49.2,
+   "loadavg_after": "0.86"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 51.4,
+   "loadavg_after": "0.98"
+  },
+  {
+   "rep": 3,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 38.1,
+   "loadavg_after": "1.02"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__mlp",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 51.2,
+   "loadavg_after": "1.03"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__kan",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 44.9,
+   "loadavg_after": "0.99"
+  },
+  {
+   "rep": 3,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 38.9,
+   "loadavg_after": "0.95"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__kan",
+   "variant": "ort_cuda",
+   "rc": 0,
+   "seconds": 55.7,
+   "loadavg_after": "1.06"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__kan",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 49.2,
+   "loadavg_after": "0.98"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__mlp",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 46.4,
+   "loadavg_after": "0.77"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__kan",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 49.3,
+   "loadavg_after": "0.75"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__mlp",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 44.6,
+   "loadavg_after": "0.95"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 46.7,
+   "loadavg_after": "0.89"
+  },
+  {
+   "rep": 3,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 38.4,
+   "loadavg_after": "1.05"
+  },
+  {
+   "rep": 3,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 39.9,
+   "loadavg_after": "0.94"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 46.2,
+   "loadavg_after": "0.89"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__kan",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 46.6,
+   "loadavg_after": "0.65"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__mlp",
+   "variant": "int8mm_cB",
+   "rc": 0,
+   "seconds": 48.8,
+   "loadavg_after": "0.76"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 42.6,
+   "loadavg_after": "0.86"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 42.7,
+   "loadavg_after": "0.86"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 42.6,
+   "loadavg_after": "0.84"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 46.7,
+   "loadavg_after": "0.90"
+  },
+  {
+   "rep": 3,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 38.7,
+   "loadavg_after": "1.09"
+  },
+  {
+   "rep": 3,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8auto_cA",
+   "rc": 0,
+   "seconds": 38.5,
+   "loadavg_after": "0.90"
+  },
+  {
+   "rep": 3,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 35.5,
+   "loadavg_after": "2.65"
+  },
+  {
+   "rep": 3,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 40.5,
+   "loadavg_after": "1.85"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__mlp",
+   "variant": "int8_cB",
+   "rc": 0,
+   "seconds": 48.8,
+   "loadavg_after": "1.24"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__mlp",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 44.0,
+   "loadavg_after": "1.01"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 46.2,
+   "loadavg_after": "0.98"
+  },
+  {
+   "rep": 3,
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 44.5,
+   "loadavg_after": "0.95"
+  },
+  {
+   "rep": 3,
+   "model": "tribranch18__mlp",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 48.8,
+   "loadavg_after": "1.03"
+  },
+  {
+   "rep": 3,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8mm_cA",
+   "rc": 0,
+   "seconds": 38.9,
+   "loadavg_after": "1.27"
+  },
+  {
+   "rep": 3,
+   "model": "kan_pure_tribranch_18cls",
+   "variant": "ort_cpu",
+   "rc": 0,
+   "seconds": 36.7,
+   "loadavg_after": "2.79"
+  },
+  {
+   "rep": 3,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "int8_cA",
+   "rc": 0,
+   "seconds": 38.9,
+   "loadavg_after": "1.82"
+  },
+  {
+   "rep": 1,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 39.1,
+   "loadavg_after": "0.57",
+   "reexec": "fix_myelin"
+  },
+  {
+   "rep": 1,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 39.1,
+   "loadavg_after": "0.72",
+   "reexec": "fix_myelin"
+  },
+  {
+   "rep": 1,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 39.5,
+   "loadavg_after": "0.82",
+   "reexec": "fix_myelin"
+  },
+  {
+   "rep": 2,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 38.7,
+   "loadavg_after": "0.83",
+   "reexec": "fix_myelin"
+  },
+  {
+   "rep": 2,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 38.4,
+   "loadavg_after": "0.83",
+   "reexec": "fix_myelin"
+  },
+  {
+   "rep": 2,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 38.3,
+   "loadavg_after": "0.92",
+   "reexec": "fix_myelin"
+  },
+  {
+   "rep": 3,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp16",
+   "rc": 0,
+   "seconds": 38.7,
+   "loadavg_after": "0.99",
+   "reexec": "fix_myelin"
+  },
+  {
+   "rep": 3,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp32",
+   "rc": 0,
+   "seconds": 38.4,
+   "loadavg_after": "1.20",
+   "reexec": "fix_myelin"
+  },
+  {
+   "rep": 3,
+   "model": "mlp_pure_tribranch_18cls",
+   "variant": "fp16auto",
+   "rc": 0,
+   "seconds": 38.4,
+   "loadavg_after": "0.96",
+   "reexec": "fix_myelin"
+  }
+ ],
+ "env_end": {
+  "clocks_locked": true,
+  "clocks": "GPU 1020/1020 MHz, CPU [1728.0] (m\u00e1x 1728)",
+  "nvpmodel": "MAXN_SUPER",
+  "telescope_services": {
+   "telescope-console": "inactive",
+   "telescope-studio": "inactive",
+   "telescope-panel": "inactive",
+   "telescope-mdns": "inactive",
+   "telescope-indi": "inactive"
+  },
+  "loadavg_1min": 1.67
+ },
+ "snapshot_end": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 37.562,
+   "gpu-thermal": 37.062,
+   "soc0-thermal": 37.531,
+   "soc1-thermal": 37.875,
+   "soc2-thermal": 37.375,
+   "tj-thermal": 37.875
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3488852,
+   "MemAvailable": 5808848,
+   "Buffers": 86332,
+   "Cached": 2392812
+  }
+ },
+ "total_min": 143.5,
+ "reexec_fix_myelin": {
+  "motivo": "engines fp32/fp16/fp16auto do mlp_pure com defeito do Myelin (TRT 10.3); refeitas com sa\u00edda auxiliar h1 (build_engines.AUX_OUTPUTS). Resultados originais em _myelin_bug/",
+  "env_start": {
+   "clocks_locked": true,
+   "clocks": "GPU 1020/1020 MHz, CPU [1728.0] (m\u00e1x 1728)",
+   "nvpmodel": "MAXN_SUPER",
+   "telescope_services": {
+    "telescope-console": "inactive",
+    "telescope-studio": "inactive",
+    "telescope-panel": "inactive",
+    "telescope-mdns": "inactive",
+    "telescope-indi": "inactive"
+   },
+   "loadavg_1min": 0.3
+  },
+  "env_end": {
+   "clocks_locked": true,
+   "clocks": "GPU 1020/1020 MHz, CPU [1728.0] (m\u00e1x 1728)",
+   "nvpmodel": "MAXN_SUPER",
+   "telescope_services": {
+    "telescope-console": "inactive",
+    "telescope-studio": "inactive",
+    "telescope-panel": "inactive",
+    "telescope-mdns": "inactive",
+    "telescope-indi": "inactive"
+   },
+   "loadavg_1min": 0.88
+  },
+  "orders": {
+   "1": [
+    [
+     "mlp_pure_tribranch_18cls",
+     "fp32"
+    ],
+    [
+     "mlp_pure_tribranch_18cls",
+     "fp16auto"
+    ],
+    [
+     "mlp_pure_tribranch_18cls",
+     "fp16"
+    ]
+   ],
+   "2": [
+    [
+     "mlp_pure_tribranch_18cls",
+     "fp16"
+    ],
+    [
+     "mlp_pure_tribranch_18cls",
+     "fp32"
+    ],
+    [
+     "mlp_pure_tribranch_18cls",
+     "fp16auto"
+    ]
+   ],
+   "3": [
+    [
+     "mlp_pure_tribranch_18cls",
+     "fp16"
+    ],
+    [
+     "mlp_pure_tribranch_18cls",
+     "fp32"
+    ],
+    [
+     "mlp_pure_tribranch_18cls",
+     "fp16auto"
+    ]
+   ]
+  },
+  "total_min": 6.3,
+  "runs_substituidas": [
+   {
+    "rep": 1,
+    "model": "mlp_pure_tribranch_18cls",
+    "variant": "fp16auto",
+    "rc": 0,
+    "seconds": 39.1,
+    "loadavg_after": "1.58"
+   },
+   {
+    "rep": 1,
+    "model": "mlp_pure_tribranch_18cls",
+    "variant": "fp16",
+    "rc": 0,
+    "seconds": 39.4,
+    "loadavg_after": "1.00"
+   },
+   {
+    "rep": 1,
+    "model": "mlp_pure_tribranch_18cls",
+    "variant": "fp32",
+    "rc": 0,
+    "seconds": 39.1,
+    "loadavg_after": "0.85"
+   },
+   {
+    "rep": 2,
+    "model": "mlp_pure_tribranch_18cls",
+    "variant": "fp16",
+    "rc": 0,
+    "seconds": 38.6,
+    "loadavg_after": "0.86"
+   },
+   {
+    "rep": 2,
+    "model": "mlp_pure_tribranch_18cls",
+    "variant": "fp16auto",
+    "rc": 0,
+    "seconds": 38.3,
+    "loadavg_after": "1.76"
+   },
+   {
+    "rep": 2,
+    "model": "mlp_pure_tribranch_18cls",
+    "variant": "fp32",
+    "rc": 0,
+    "seconds": 38.3,
+    "loadavg_after": "1.61"
+   },
+   {
+    "rep": 3,
+    "model": "mlp_pure_tribranch_18cls",
+    "variant": "fp16",
+    "rc": 0,
+    "seconds": 38.6,
+    "loadavg_after": "1.49"
+   },
+   {
+    "rep": 3,
+    "model": "mlp_pure_tribranch_18cls",
+    "variant": "fp32",
+    "rc": 0,
+    "seconds": 38.3,
+    "loadavg_after": "0.88"
+   },
+   {
+    "rep": 3,
+    "model": "mlp_pure_tribranch_18cls",
+    "variant": "fp16auto",
+    "rc": 0,
+    "seconds": 38.3,
+    "loadavg_after": "0.96"
+   }
+  ]
+ }
+}

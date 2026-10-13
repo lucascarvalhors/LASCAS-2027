@@ -1,0 +1,174 @@
+{
+ "model": "mobilenetv3_light_mlp_tribranch_18cls",
+ "backbone": "light",
+ "head": "MLP",
+ "variant": "ort_cpu",
+ "backend": "onnxruntime-cpu",
+ "runtime": "onnxruntime 1.24.0",
+ "providers": [
+  "CPUExecutionProvider"
+ ],
+ "input_names_fed": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "aux_outputs": [],
+ "n_eval": 900,
+ "accuracy": 0.9,
+ "macro_f1": 0.8996856648735471,
+ "vs_keras": {
+  "max_abs": 0.011905908584594727,
+  "mean_abs": 0.00026834498257318764,
+  "argmax_agree": 1.0,
+  "n_argmax_diff": 0
+ },
+ "latency_e2e_us": {
+  "n": 2000,
+  "mean": 3742.7205915,
+  "std": 221.40996155293934,
+  "min": 3573.878,
+  "p50": 3682.8565,
+  "p90": 3865.3497,
+  "p95": 3946.4246,
+  "p99": 5224.03637,
+  "max": 6905.19
+ },
+ "latency_gpu_us": null,
+ "latency_first_us": 7844.604,
+ "latency_accpass_us": {
+  "n": 899,
+  "mean": 3734.968591768632,
+  "std": 181.937487108928,
+  "min": 3567.03,
+  "p50": 3681.337,
+  "p90": 3855.7599999999998,
+  "p95": 3922.3404,
+  "p99": 4527.90932,
+  "max": 5876.046
+ },
+ "load_s": 0.15632116503547877,
+ "n_warmup": 804,
+ "power_idle": {
+  "n_samples": 450,
+  "duration_s": 9.010035632993095,
+  "vdd_in_w": 5.876236515555554,
+  "vdd_in_w_std": 0.04685800721689571,
+  "cpu_gpu_cv_w": 0.8856841955555556,
+  "soc_w": 2.2577735111111106,
+  "gpu_load_pct": 0.0
+ },
+ "power_active": {
+  "n_samples": 950,
+  "duration_s": 19.00277298502624,
+  "vdd_in_w": 9.339382231578949,
+  "vdd_in_w_std": 0.05107962577521357,
+  "cpu_gpu_cv_w": 3.7748617431578944,
+  "soc_w": 2.3719993263157897,
+  "gpu_load_pct": 0.0
+ },
+ "active_s": 20.00277298502624,
+ "n_active": 5322,
+ "throughput_ips": 266.06311054892063,
+ "energy": {
+  "vdd_in_total_mj": 35.10213126618968,
+  "vdd_in_dynamic_mj": 13.016256589944026,
+  "cpu_gpu_cv_total_mj": 14.187843385615896,
+  "cpu_gpu_cv_dynamic_mj": 10.858993348012858
+ },
+ "memory": {
+  "avail_baseline_kb": 5739724,
+  "avail_loaded_kb": 5725044,
+  "avail_min_kb": 5713220.0,
+  "footprint_peak_mb": 25.8828125,
+  "footprint_loaded_mb": 14.3359375,
+  "vmhwm_mb": 101.67578125,
+  "vmrss_mb": 101.67578125
+ },
+ "engine_mb": null,
+ "engine_device_mem_mb": null,
+ "onnx_mb": 0.865104,
+ "snapshot_start": {
+  "gpu_freq_mhz": 612.0,
+  "gpu_max_mhz": 612.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1497.6,
+   "cpu1": 1497.6,
+   "cpu2": 1497.6,
+   "cpu3": 1497.6,
+   "cpu4": 1497.6,
+   "cpu5": 1497.6
+  },
+  "temp_c": {
+   "cpu-thermal": 36.75,
+   "gpu-thermal": 35.968,
+   "soc0-thermal": 36.406,
+   "soc1-thermal": 36.812,
+   "soc2-thermal": 36.125,
+   "tj-thermal": 36.812
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3315364,
+   "MemAvailable": 5785656,
+   "Buffers": 94484,
+   "Cached": 2540304
+  }
+ },
+ "snapshot_end": {
+  "gpu_freq_mhz": 612.0,
+  "gpu_max_mhz": 612.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1497.6,
+   "cpu1": 1497.6,
+   "cpu2": 1497.6,
+   "cpu3": 1497.6,
+   "cpu4": 1497.6,
+   "cpu5": 1497.6
+  },
+  "temp_c": {
+   "cpu-thermal": 37.5,
+   "gpu-thermal": 37.156,
+   "soc0-thermal": 37.281,
+   "soc1-thermal": 37.937,
+   "soc2-thermal": 37.312,
+   "tj-thermal": 37.937
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3248600,
+   "MemAvailable": 5718992,
+   "Buffers": 94508,
+   "Cached": 2540376
+  }
+ },
+ "marks_s": {
+  "start": 0.0,
+  "baseline": 1.5262,
+  "load_start": 1.5264,
+  "load_end": 1.6827,
+  "acc_start": 1.683,
+  "acc_end": 5.0578,
+  "lat_start": 8.059,
+  "lat_end": 15.5604,
+  "idle_start": 15.5605,
+  "idle_end": 25.5705,
+  "act_start": 25.5705,
+  "act_end": 45.5733
+ },
+ "protocol": {
+  "model": "mobilenetv3_light_mlp_tribranch_18cls",
+  "variant": "ort_cpu",
+  "engines": "/home/jetson-nano-super/LASCAS-2027/engines/b1",
+  "out": "/home/jetson-nano-super/LASCAS-2027/results/c2_15w/rep01/mobilenetv3_light_mlp_tribranch_18cls__ort_cpu",
+  "warmup_s": 3.0,
+  "lat_iters": 2000,
+  "lat_max_s": 40.0,
+  "idle_s": 10.0,
+  "active_s": 20.0,
+  "sample_hz": 50.0,
+  "trim_s": 1.0
+ }
+}

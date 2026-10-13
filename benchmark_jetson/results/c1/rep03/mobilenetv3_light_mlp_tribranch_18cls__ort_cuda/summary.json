@@ -1,0 +1,174 @@
+{
+ "model": "mobilenetv3_light_mlp_tribranch_18cls",
+ "backbone": "light",
+ "head": "MLP",
+ "variant": "ort_cuda",
+ "backend": "onnxruntime-cuda",
+ "runtime": "onnxruntime 1.24.0",
+ "providers": [
+  "CUDAExecutionProvider",
+  "CPUExecutionProvider"
+ ],
+ "input_names_fed": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "n_eval": 900,
+ "accuracy": 0.9,
+ "macro_f1": 0.8996856648735471,
+ "vs_keras": {
+  "max_abs": 0.011907339096069336,
+  "mean_abs": 0.00026834812728159223,
+  "argmax_agree": 1.0,
+  "n_argmax_diff": 0
+ },
+ "latency_e2e_us": {
+  "n": 2000,
+  "mean": 5329.114291,
+  "std": 116.27663516938593,
+  "min": 4973.172,
+  "p50": 5332.989,
+  "p90": 5458.672,
+  "p95": 5496.617,
+  "p99": 5587.73292,
+  "max": 7169.672
+ },
+ "latency_gpu_us": null,
+ "latency_first_us": 354609.969,
+ "latency_accpass_us": {
+  "n": 899,
+  "mean": 5417.95750166852,
+  "std": 309.1405752227633,
+  "min": 5007.158,
+  "p50": 5353.085,
+  "p90": 5550.8886,
+  "p95": 6030.039599999999,
+  "p99": 7027.01492,
+  "max": 7979.419
+ },
+ "load_s": 0.28772520303027704,
+ "n_warmup": 560,
+ "power_idle": {
+  "n_samples": 451,
+  "duration_s": 9.010025302995928,
+  "vdd_in_w": 6.456306660753878,
+  "vdd_in_w_std": 0.03261021551828158,
+  "cpu_gpu_cv_w": 1.4352300842572063,
+  "soc_w": 2.2522445764966736,
+  "gpu_load_pct": 0.0
+ },
+ "power_active": {
+  "n_samples": 950,
+  "duration_s": 19.004727829014882,
+  "vdd_in_w": 8.104533692631579,
+  "vdd_in_w_std": 0.014883752362126272,
+  "cpu_gpu_cv_w": 2.7056039073684217,
+  "soc_w": 2.3184639999999996,
+  "gpu_load_pct": 31.621263157894738
+ },
+ "active_s": 20.004727829014882,
+ "n_active": 3746,
+ "throughput_ips": 187.25573434529795,
+ "energy": {
+  "vdd_in_total_mj": 43.280563454932114,
+  "vdd_in_dynamic_mj": 8.802010991227561,
+  "cpu_gpu_cv_total_mj": 14.448710565943532,
+  "cpu_gpu_cv_dynamic_mj": 6.784165128789365
+ },
+ "memory": {
+  "avail_baseline_kb": 5758376,
+  "avail_loaded_kb": 5610508,
+  "avail_min_kb": 5323980.0,
+  "footprint_peak_mb": 424.21484375,
+  "footprint_loaded_mb": 144.40234375,
+  "vmhwm_mb": 641.47265625,
+  "vmrss_mb": 641.47265625
+ },
+ "engine_mb": null,
+ "engine_device_mem_mb": null,
+ "onnx_mb": 0.865104,
+ "snapshot_start": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 38.593,
+   "gpu-thermal": 38.281,
+   "soc0-thermal": 38.312,
+   "soc1-thermal": 38.687,
+   "soc2-thermal": 38.156,
+   "tj-thermal": 38.687
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3511780,
+   "MemAvailable": 5805936,
+   "Buffers": 84784,
+   "Cached": 2369136
+  }
+ },
+ "snapshot_end": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 37.75,
+   "gpu-thermal": 37.781,
+   "soc0-thermal": 37.843,
+   "soc1-thermal": 38.125,
+   "soc2-thermal": 37.593,
+   "tj-thermal": 38.156
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3046760,
+   "MemAvailable": 5340988,
+   "Buffers": 84824,
+   "Cached": 2369208
+  }
+ },
+ "marks_s": {
+  "start": 0.0,
+  "baseline": 1.5244,
+  "load_start": 1.5246,
+  "load_end": 1.8123,
+  "acc_start": 1.8125,
+  "acc_end": 7.0474,
+  "lat_start": 10.0493,
+  "lat_end": 20.7236,
+  "idle_start": 20.7236,
+  "idle_end": 30.7336,
+  "act_start": 30.7336,
+  "act_end": 50.7383
+ },
+ "protocol": {
+  "model": "mobilenetv3_light_mlp_tribranch_18cls",
+  "variant": "ort_cuda",
+  "engines": "/home/jetson-nano-super/LASCAS-2027/engines/b1",
+  "out": "/home/jetson-nano-super/LASCAS-2027/results/c1/rep03/mobilenetv3_light_mlp_tribranch_18cls__ort_cuda",
+  "warmup_s": 3.0,
+  "lat_iters": 2000,
+  "lat_max_s": 40.0,
+  "idle_s": 10.0,
+  "active_s": 20.0,
+  "sample_hz": 50.0,
+  "trim_s": 1.0
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "model": "mobilenetv3_light_kan_tribranch_18cls",
+ "precision": "fp16",
+ "trt": "10.3.0",
+ "build_s": 50.69,
+ "engine_bytes": 1608148,
+ "device_memory_bytes": 311808,
+ "io": [
+  {
+   "name": "time",
+   "mode": "INPUT",
+   "shape": [
+    1,
+    2048,
+    6
+   ],
+   "dtype": "FLOAT"
+  },
+  {
+   "name": "orders",
+   "mode": "INPUT",
+   "shape": [
+    1,
+    6,
+    21
+   ],
+   "dtype": "FLOAT"
+  },
+  {
+   "name": "scalars",
+   "mode": "INPUT",
+   "shape": [
+    1,
+    36
+   ],
+   "dtype": "FLOAT"
+  },
+  {
+   "name": "kan_logits",
+   "mode": "OUTPUT",
+   "shape": [
+    1,
+    18
+   ],
+   "dtype": "FLOAT"
+  }
+ ],
+ "network_inputs": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "flags": {
+  "tf32": false,
+  "fp16": true,
+  "int8": false,
+  "forced_layers": 542,
+  "workspace_mb": 1024,
+  "timing_cache": false,
+  "aux_outputs": []
+ },
+ "calib_fold": null,
+ "calib_algo": null,
+ "n_layers": 311,
+ "out_dtype_counts": {
+  "fp16": 301,
+  "none": 8,
+  "fp32": 2
+ },
+ "compute_layers": {
+  "n": 43,
+  "int8_in": 0,
+  "fp16_in": 43
+ },
+ "warnings": [],
+ "n_missing_scale_warnings": 0
+}
