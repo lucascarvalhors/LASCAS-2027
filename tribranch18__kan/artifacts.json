@@ -1,0 +1,57 @@
+{
+  "run_id": "tribranch18__kan",
+  "model": "tribranch18__kan",
+  "dataset": "mafaulda",
+  "rep": "tribranch",
+  "n_inputs": 3,
+  "input_order": [
+    "time",
+    "orders",
+    "scalars"
+  ],
+  "input_shapes": [
+    [
+      null,
+      2048,
+      6
+    ],
+    [
+      null,
+      6,
+      21
+    ],
+    [
+      null,
+      36
+    ]
+  ],
+  "classes": [
+    "HM_0.5mm",
+    "HM_1.0mm",
+    "HM_1.5mm",
+    "HM_2.0mm",
+    "IMB_10g",
+    "IMB_15g",
+    "IMB_20g",
+    "IMB_25g",
+    "IMB_30g",
+    "IMB_35g",
+    "IMB_6g",
+    "NOR",
+    "VM_0.51mm",
+    "VM_0.63mm",
+    "VM_1.27mm",
+    "VM_1.40mm",
+    "VM_1.78mm",
+    "VM_1.90mm"
+  ],
+  "n_eval": 900,
+  "per_class": 50,
+  "samples_per_class_min": 50,
+  "samples_per_class_max": 50,
+  "sample_seed": 1024,
+  "split_seed": 1024,
+  "suffix": "",
+  "params_keras": 660372,
+  "size_onnx_mb": 2.706
+}
