@@ -2,7 +2,7 @@
 
 Este guia explica como rodar os 6 modelos exportados (`.onnx`) na Jetson Nano e coletar **todos os dados exigidos pela seção 4.5 do Artigo C**: accuracy pós-deploy, latência, energia, memória e tamanho — usando os dados de calibração já extraídos do MAFAULDA (sem precisar de sensor conectado).
 
-> ⚠️ **Ponto metodológico do Artigo C (seção 4.5):** a accuracy tem que ser medida **na própria Jetson**, não só reaproveitada do servidor — a implementação de operadores pode diferir sutilmente, especialmente para o head KAN (splines). Por isso o passo 6 abaixo não é opcional.
+> ⚠️ **Ponto metodológico do Artigo C (seção 4.5):** a accuracy tem que ser medida **na própria Jetson**, não só reaproveitada do servidor — a implementação de operadores pode diferir sutilmente, especialmente para o head KAN (splines). Por isso o passo 8 abaixo não é opcional.
 
 ## 1. O que você vai receber
 
@@ -10,6 +10,7 @@ Uma pasta `export/` com 6 subpastas, uma por configuração (a matriz do Artigo 
 
 ```
 export/
+├── jetson_bench.py
 ├── tribranch18__mlp/                          # full backbone + MLP
 ├── tribranch18__kan/                          # full backbone + KAN
 ├── mobilenetv3_light_mlp_tribranch_18cls/     # light backbone + MLP
@@ -18,18 +19,23 @@ export/
 └── mlp_pure_tribranch_18cls/                  # sem backbone + MLP (controle)
 ```
 
-Cada subpasta contém:
+Cada subpasta de modelo contém:
 
 | Arquivo | Descrição |
 |---|---|
 | `model.onnx` | O modelo treinado (seed 0), exportado para ONNX, precisão **FP32** |
-| `calib_input0.npy` | 200 janelas do sinal temporal — ramo A (entrada 1) |
-| `calib_input1.npy` | As mesmas 200 janelas, espectro de ordem — ramo B (entrada 2) |
-| `calib_input2.npy` | As mesmas 200 janelas, escalares físicos — ramo C (entrada 3) |
-| `calib_labels.npy` | Rótulo verdadeiro de cada uma das 200 amostras (conjunto de teste) |
-| `artifacts.json` | Metadados do export (formas de entrada, classes, etc.) |
+| `calib_input0.npy` | 900 janelas do sinal temporal — ramo A (entrada 1), 50 por classe |
+| `calib_input1.npy` | As mesmas 900 janelas, espectro de ordem — ramo B (entrada 2) |
+| `calib_input2.npy` | As mesmas 900 janelas, escalares físicos — ramo C (entrada 3) |
+| `calib_labels.npy` | Rótulo verdadeiro de cada uma das 900 amostras |
+| `ref_logits.npy` | Logits do modelo Keras original (seed 0) nas mesmas 900 janelas, para comparação amostra a amostra |
+| `artifacts.json` | Metadados do export (formas de entrada, lista das 18 classes, nº de parâmetros, tamanho do ONNX) |
 
-> Esses `.npy` são as **mesmas 200 amostras de teste** usadas para calcular o macro-F1 reportado no Artigo B. Reproduzi-las na Jetson é o procedimento padrão de benchmark de edge-AI: mede-se a mesma coisa que se mediria com sensor ao vivo, com a vantagem de ser reprodutível por qualquer pessoa.
+> Esses `.npy` são uma amostra **estratificada** (50 janelas por classe, 900 no total) do mesmo conjunto de teste usado para calcular o macro-F1 do Artigo B — não são mais as primeiras 200 janelas do split, que por acidente caíam todas na classe 11. A estratificação usa `np.random.default_rng(seed=1024)` por classe, e `ref_logits.npy` guarda a predição do Keras exatamente nessas mesmas 900 janelas, permitindo comparar amostra a amostra com a saída da Jetson (ver passo 8).
+
+> **Nota sobre os controles `*_pure`:** `kan_pure_tribranch_18cls` e `mlp_pure_tribranch_18cls` recebem a entrada `time` apenas para manter a assinatura ONNX idêntica aos demais modelos — nenhum nó do grafo que leva à saída consome esse input de fato. É intencional: esses dois modelos isolam a contribuição dos ramos B (ordens) e C (escalares físicos) sem o backbone temporal, servindo de controle para "o que a CNN contribui" além da física já embutida nesses ramos.
+
+> **Nota sobre paridade de parâmetros no par `pure`:** a regra de equiparação de capacidade (`mlp_hidden_matching`) foi calibrada para um único hidden layer. No controle sem backbone (`n_layers=3`), aplicar a mesma regra três vezes gera um desbalanceamento de 4,15× no head (3,57× no total, favorecendo o MLP) — já reportado como limitação no Artigo B. A comparação de Macro-F1 entre `kan_pure` e `mlp_pure` deve ser lida com essa ressalva; nenhuma conclusão de superioridade de head pode ser isolada só a partir desse par.
 
 ## 2. Pré-requisitos na Jetson Nano
 
@@ -58,11 +64,10 @@ Anote no relatório final: `nvpmodel -m 0` + `jetson_clocks`, e a versão do Jet
 
 ## 4. Transferir os arquivos para a Jetson
 
-Do computador onde está a pasta `export/`, envie tudo de uma vez:
+Do computador onde está a pasta `export/`, envie tudo de uma vez (o `jetson_bench.py` já vai junto, dentro da própria pasta):
 
 ```bash
 scp -r export/ usuario@IP_DA_JETSON:/home/usuario/lascas_onnx/
-scp jetson_bench.py usuario@IP_DA_JETSON:/home/usuario/lascas_onnx/
 ```
 
 Troque `usuario` e `IP_DA_JETSON` pelas credenciais de acesso da placa.
@@ -71,7 +76,7 @@ Troque `usuario` e `IP_DA_JETSON` pelas credenciais de acesso da placa.
 
 ```bash
 cd /home/usuario/lascas_onnx/export/tribranch18__mlp
-python3 ../../jetson_bench.py \
+python3 ../jetson_bench.py \
   --engine onnxruntime \
   --model model.onnx \
   --calib-dir . \
@@ -102,7 +107,7 @@ TEGRA_PID=$!
 
 # Terminal 2 (ou logo em seguida) — roda o benchmark normalmente
 cd /home/usuario/lascas_onnx/export/tribranch18__mlp
-python3 ../../jetson_bench.py --engine onnxruntime --model model.onnx \
+python3 ../jetson_bench.py --engine onnxruntime --model model.onnx \
   --calib-dir . --runs 500 --precision fp32 --tag tribranch18__mlp
 
 # Para o log de energia
@@ -135,7 +140,7 @@ Esse é o **peak unified memory (MB)** pedido na tabela do Artigo C.
 
 ## 8. Accuracy pós-deploy NA JETSON (não reaproveitar do servidor)
 
-Rode a inferência completa sobre as 200 amostras de calibração e compare com `calib_labels.npy`, dentro de cada pasta de modelo:
+Rode a inferência completa sobre as 900 amostras de calibração estratificadas e compare com `calib_labels.npy` **e** com `ref_logits.npy`, dentro de cada pasta de modelo:
 
 ```python
 # accuracy_jetson.py — rodar dentro de cada pasta de modelo na Jetson
@@ -157,13 +162,20 @@ pred = logits.argmax(axis=1)
 
 print("macro-F1 (Jetson):", f1_score(y, pred, average="macro", zero_division=0))
 print("accuracy (Jetson):", accuracy_score(y, pred))
+
+# ── Comparação amostra a amostra com o servidor (Keras original, seed 0) ──
+ref = np.load("ref_logits.npy")
+dmax = np.abs(logits - ref).max()
+agree = (logits.argmax(axis=1) == ref.argmax(axis=1)).mean()
+print(f"Δlogit máximo (Jetson vs servidor): {dmax:.2e}")
+print(f"Concordância de argmax (Jetson vs servidor): {agree:.4f}")
 ```
 
 ```bash
 python3 accuracy_jetson.py
 ```
 
-Rode para os 6 modelos e compare com o macro-F1 já reportado no Artigo B — qualquer divergência relevante deve ser documentada (checklist do Artigo C: *"Operadores KAN (splines) verificados em INT8 — fallback documentado"*, e mais amplamente qualquer diferença de operador FP32 servidor vs Jetson).
+Rode para os 6 modelos e compare com o macro-F1 já reportado no Artigo B (Table I) — qualquer divergência relevante deve ser documentada (checklist do Artigo C: *"Operadores KAN (splines) verificados em INT8 — fallback documentado"*, e mais amplamente qualquer diferença de operador FP32 servidor vs Jetson). Para os modelos com backbone (full/light), uma divergência de `Δlogit` na ordem de 1e-2 é esperada e aceitável — vem do fold de BatchNorm durante a exportação ONNX, não de um erro de deploy — desde que `agree` (concordância de argmax) fique em 1,0000. Para os modelos `pure` (sem backbone), espera-se `Δlogit` bem menor, na ordem de 1e-5 a 1e-6.
 
 ## 9. Tamanho do modelo
 
@@ -179,21 +191,21 @@ ls -lh model.onnx
 
 Para cada um dos 6 modelos, reúna em uma linha:
 
-| Modelo | macro-F1 (Jetson) | Accuracy (Jetson) | Latência mean (ms) | Latência P95 (ms) | Latência P99 (ms) | Energia/inferência (mJ) | Peak RAM (MB) | Tamanho (MB) | FPS | FPS/W |
-|---|---|---|---|---|---|---|---|---|---|---|
-| tribranch18__mlp | | | | | | | | | | |
-| tribranch18__kan | | | | | | | | | | |
-| mobilenetv3_light_mlp_tribranch_18cls | | | | | | | | | | |
-| mobilenetv3_light_kan_tribranch_18cls | | | | | | | | | | |
-| kan_pure_tribranch_18cls | | | | | | | | | | |
-| mlp_pure_tribranch_18cls | | | | | | | | | | |
+| Modelo | macro-F1 (Jetson) | Accuracy (Jetson) | Δlogit max (vs servidor) | Argmax agree | Latência mean (ms) | Latência P95 (ms) | Latência P99 (ms) | Energia/inferência (mJ) | Peak RAM (MB) | Tamanho (MB) | FPS | FPS/W |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| tribranch18__mlp | | | | | | | | | | | | |
+| tribranch18__kan | | | | | | | | | | | | |
+| mobilenetv3_light_mlp_tribranch_18cls | | | | | | | | | | | | |
+| mobilenetv3_light_kan_tribranch_18cls | | | | | | | | | | | | |
+| kan_pure_tribranch_18cls | | | | | | | | | | | | |
+| mlp_pure_tribranch_18cls | | | | | | | | | | | | |
 
 Fórmulas derivadas:
 - **FPS** = 1000 / latência_mean_ms
 - **FPS/W** = FPS / (potência_média_mW / 1000)
 
 Essa tabela corresponde à **Fig. 1 do Artigo C** (seção 4.6) e alimenta diretamente:
-- **Fig. 2** — accuracy drop MLP vs KAN (comparar pares nas mesmas linhas de backbone)
+- **Fig. 2** — accuracy drop MLP vs KAN (comparar pares nas mesmas linhas de backbone; lembrar da ressalva de paridade de parâmetros no par `pure`, descrita na seção 1 deste README)
 - **Fig. 3** — scatter accuracy × latência, tamanho do ponto = memória
 - **Fig. 4** — ganho de eficiência entre precisões (quando FP16/INT8 forem adicionados)
 - **Fig. 5** — trade-off backbone full vs light (FPS suficiente para justificar a perda de F1?)
@@ -203,11 +215,13 @@ Essa tabela corresponde à **Fig. 1 do Artigo C** (seção 4.6) e alimenta diret
 ## Checklist de execução na Jetson (alinhado à seção 4.7 do Artigo C)
 
 - [ ] Power mode fixo (`nvpmodel -m 0` + `jetson_clocks`) documentado
-- [ ] Transferir `export/` (6 modelos) + `jetson_bench.py` para a Jetson
+- [ ] Transferir `export/` (6 modelos + `jetson_bench.py`) para a Jetson
 - [ ] Rodar latência (`--runs 500`) para os 6 modelos → mean/P95/P99
 - [ ] Rodar `tegrastats` em paralelo → energia/inferência (mJ) e peak RAM (MB)
 - [ ] Rodar `accuracy_jetson.py` para os 6 modelos → macro-F1/accuracy medidos na própria Jetson
+- [ ] Conferir `Δlogit` e concordância de argmax entre Jetson e `ref_logits.npy`, para cada modelo
 - [ ] Conferir tamanho de cada `model.onnx` (`ls -lh`)
 - [ ] Calcular FPS e FPS/W derivados
 - [ ] Consolidar tudo na tabela mestre (Fig. 1 do Artigo C)
-- [ ] Documentar qualquer divergência de accuracy Jetson vs servidor (especialmente nos modelos com head KAN)
+- [ ] Documentar qualquer divergência de accuracy/logit Jetson vs servidor (especialmente nos modelos com head KAN)
+- [ ] Ao escrever o Artigo C, referenciar a limitação de paridade de parâmetros do par `pure` (já citada no Artigo B) e a nota sobre a entrada `time` não utilizada pelos controles `pure`
