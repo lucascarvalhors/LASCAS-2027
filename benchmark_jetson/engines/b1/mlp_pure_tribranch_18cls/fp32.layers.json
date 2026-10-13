@@ -1,0 +1,800 @@
+{
+ "Layers": [
+  {
+   "Name": "tri_none_mlp/ord_c1/Conv1D/ExpandDims",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "orders",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c1/Conv1D/ExpandDims]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_c1/Conv1D",
+   "LayerType": "CaskConvolution",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    3
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    1
+   ],
+   "PostPadding": [
+    0,
+    1
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 32,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Float",
+    "Count": 576
+   },
+   "Bias": {
+    "Type": "Float",
+    "Count": 0
+   },
+   "HasBias": 0,
+   "HasReLU": 0,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "NONE",
+   "TacticName": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nchwkcrs_nchw_tilesize64x64x8_stage3_warpsize1x4x1_g1_ffma_aligna4_alignc4",
+   "TacticValue": "0xa31d27de74b895ff",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c1/Conv1D]"
+  },
+  {
+   "Name": "const_fold_opt__7899",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 36) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 32
+   },
+   "dimensions": [
+    1,
+    32,
+    1
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "tri_none_mlp/ord_bn1/batchnorm/mul:0",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 34) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 32
+   },
+   "dimensions": [
+    1,
+    32,
+    1
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "const_fold_opt__7898",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 31) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 32
+   },
+   "dimensions": [
+    1,
+    32,
+    1
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "tri_none_mlp/ord_c1/Conv1D/Squeeze",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D/Squeeze:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c1/Conv1D/Squeeze]"
+  },
+  {
+   "Name": "PWN(PWN(PWN(tri_none_mlp/ord_c1/BiasAdd + tri_none_mlp/ord_c1/Relu), PWN(tri_none_mlp/ord_bn1/batchnorm/mul_1)), PWN(tri_none_mlp/ord_bn1/batchnorm/add_1))",
+   "LayerType": "PointWiseV2",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D/Squeeze:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    },
+    {
+     "Name": "(Unnamed Layer* 31) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    },
+    {
+     "Name": "(Unnamed Layer* 34) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    },
+    {
+     "Name": "(Unnamed Layer* 36) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_bn1/batchnorm/add_1:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "PointWise",
+   "ParameterSubType": "PointWiseExpression",
+   "NbInputArgs": 4,
+   "InputArgs": [
+    "arg0",
+    "arg1",
+    "arg2",
+    "arg3"
+   ],
+   "NbOutputVars": 1,
+   "OutputVars": [
+    "var3"
+   ],
+   "NbParams": 0,
+   "Params": [],
+   "NbLiterals": 1,
+   "Literals": [
+    "0.000000e+00f"
+   ],
+   "NbOperations": 4,
+   "Operations": [
+    "auto const var0 = pwgen::iPlus(arg0, arg1);",
+    "auto const var1 = pwgen::iMax(var0, literal0);",
+    "auto const var2 = pwgen::iMul(var1, arg2);",
+    "auto const var3 = pwgen::iPlus(var2, arg3);"
+   ],
+   "TacticValue": "0x0000000000000009",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c1/BiasAdd]\u001e[ONNX Layer: tri_none_mlp/ord_c1/Relu]\u001e[ONNX Layer: tri_none_mlp/ord_bn1/batchnorm/mul_1]\u001e[ONNX Layer: tri_none_mlp/ord_bn1/batchnorm/add_1]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_c2/Conv1D/ExpandDims",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_bn1/batchnorm/add_1:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c2/Conv1D/ExpandDims]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_c2/Conv1D",
+   "LayerType": "CaskConvolution",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    3
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    1
+   ],
+   "PostPadding": [
+    0,
+    1
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 48,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Float",
+    "Count": 4608
+   },
+   "Bias": {
+    "Type": "Float",
+    "Count": 0
+   },
+   "HasBias": 0,
+   "HasReLU": 0,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "NONE",
+   "TacticName": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nchwkcrs_nchw_tilesize32x32x8_stage3_warpsize1x2x1_g1_ffma_aligna4_alignc4",
+   "TacticValue": "0xb0bf940d5e0f9f45",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c2/Conv1D]"
+  },
+  {
+   "Name": "dummy_shape_call__mye1525_0_myl9_0",
+   "LayerType": "shape_call",
+   "Inputs": [],
+   "Outputs": [],
+   "TacticName": "",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "__myl_AddRelMea_myl9_1",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D:0",
+     "Dimensions": [
+      1,
+      48,
+      21
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "const_fold_opt__7896_constantFloat",
+     "Dimensions": [
+      1,
+      48,
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_gap/Mean_0'.1",
+     "Dimensions": [
+      1,
+      48,
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_AddRelMea_0xf2c00175b1147e61cf7342b171e0fdc1",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c2/BiasAdd]\u001f[ONNX Layer: tri_none_mlp/ord_gap/Mean]\u001f[ONNX Layer: tri_none_mlp/ord_c2/Relu]"
+  },
+  {
+   "Name": "__myl_MulSumAddRel_myl9_2",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_fc/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_37_constantFloat",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye1387_dconst",
+     "Dimensions": [
+      48,
+      64
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_mlp/ord_gap/Mean_0'.1",
+     "Dimensions": [
+      48,
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/fusion/concat_0'.1",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_MulSumAddRel_0xf8c1210df2dfc04bef76d973147f0ef7",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_fc/MatMul]\u001f[ONNX Layer: tri_none_mlp/ord_fc/Relu]\u001f[ONNX Layer: tri_none_mlp/ord_fc/BiasAdd]"
+  },
+  {
+   "Name": "__myl_MulAddResMulSumAddRel_myl9_3",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/sc_fc1/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_3_constantFloat",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye1402_dconst",
+     "Dimensions": [
+      36,
+      64
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_mlp/sc_bn/batchnorm/sub_0 _ ONNXTRT_Broadcast_1_constantFloat",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "scalars",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_mlp/sc_bn/batchnorm/mul_0 _ ONNXTRT_Broadcast_constantFloat",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "__myln_k_arg__bb1_5",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_MulAddResMulSumAddRel_0x181954ae59d0dc4e9d5f984e035a14ca",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/sc_bn/batchnorm/mul_1]\u001f[ONNX Layer: tri_none_mlp/sc_bn/batchnorm/add_1]\u001f[ONNX Layer: tri_none_mlp/sc_fc1/MatMul]\u001f[ONNX Layer: tri_none_mlp/sc_fc1/Relu]\u001f[ONNX Layer: tri_none_mlp/sc_fc1/BiasAdd]"
+  },
+  {
+   "Name": "__myl_ResMulSumAddRel_myl9_4",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/sc_fc2/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_5_constantFloat",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye1417_dconst",
+     "Dimensions": [
+      64,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_5",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/fusion/concat_0'.1",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_ResMulSumAddRel_0xb7bff844c584024fe0a379a6224f555b",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/sc_fc2/MatMul]\u001f[ONNX Layer: tri_none_mlp/sc_fc2/Relu]\u001f[ONNX Layer: tri_none_mlp/sc_fc2/BiasAdd]"
+  },
+  {
+   "Name": "__myl_ResMulSumAddRel_myl9_5",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "__mye1432_dconst",
+     "Dimensions": [
+      96,
+      317
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_mlp/mlp_h0/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_39_constantFloat",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_mlp/fusion/concat_0'.1",
+     "Dimensions": [
+      1,
+      96
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "__myln_k_arg__bb1_7",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_ResMulSumAddRel_0xf07278274ac2c050b64eba90621f605d",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/mlp_h0/MatMul]\u001f[ONNX Layer: tri_none_mlp/mlp_h0/Relu]\u001f[ONNX Layer: tri_none_mlp/mlp_h0/BiasAdd]"
+  },
+  {
+   "Name": "__myl_ResMulSumAddRel_myl9_6",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/mlp_h1/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_41_constantFloat",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye1447_dconst",
+     "Dimensions": [
+      317,
+      317
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_7",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/mlp_h1/Relu:0",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_ResMulSumAddRel_0xf2fcb4dc3358a697d6ed06ce94016cd6",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/mlp_h1/MatMul]\u001f[ONNX Layer: tri_none_mlp/mlp_h1/Relu]\u001f[ONNX Layer: tri_none_mlp/mlp_h1/BiasAdd]"
+  },
+  {
+   "Name": "__myl_ResMulSumAddRel_myl9_7",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/mlp_h2/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_43_constantFloat",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye1462_dconst",
+     "Dimensions": [
+      317,
+      317
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_mlp/mlp_h1/Relu:0",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "__myln_k_arg__bb1_9",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_ResMulSumAddRel_0x54f57cb399ddfd1bb4caf6991084e4c0",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/mlp_h2/MatMul]\u001f[ONNX Layer: tri_none_mlp/mlp_h2/Relu]\u001f[ONNX Layer: tri_none_mlp/mlp_h2/BiasAdd]"
+  },
+  {
+   "Name": "__myl_ResMulSumAdd_myl9_8",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/mlp_logits/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_45_constantFloat",
+     "Dimensions": [
+      1,
+      18
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye1477_dconst",
+     "Dimensions": [
+      317,
+      18
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_9",
+     "Dimensions": [
+      1,
+      317
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "mlp_logits",
+     "Dimensions": [
+      1,
+      18
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_ResMulSumAdd_0x328ceb675cadaabd8c2cfff01e57d0fb",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/mlp_logits/MatMul]\u001f[ONNX Layer: tri_none_mlp/mlp_logits/BiasAdd]"
+  }
+ ],
+ "Bindings": [
+  "time",
+  "orders",
+  "scalars",
+  "mlp_logits",
+  "tri_none_mlp/mlp_h1/Relu:0"
+ ]
+}

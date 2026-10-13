@@ -1,0 +1,181 @@
+{
+ "model": "tribranch18__mlp",
+ "backbone": "full",
+ "head": "MLP",
+ "variant": "fp16",
+ "backend": "tensorrt",
+ "runtime": "tensorrt 10.3.0",
+ "providers": null,
+ "input_names_fed": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "n_eval": 900,
+ "accuracy": 0.9433333333333334,
+ "macro_f1": 0.9432992077016049,
+ "vs_keras": {
+  "max_abs": 0.1359248161315918,
+  "mean_abs": 0.0017031710409059154,
+  "argmax_agree": 1.0,
+  "n_argmax_diff": 0
+ },
+ "latency_e2e_us": {
+  "n": 2000,
+  "mean": 1478.3401034999997,
+  "std": 18.346697620950348,
+  "min": 1442.21,
+  "p50": 1474.2905,
+  "p90": 1501.5112000000001,
+  "p95": 1509.92875,
+  "p99": 1534.25201,
+  "max": 1591.397
+ },
+ "latency_gpu_us": {
+  "n": 2000,
+  "mean": 1375.6478728055954,
+  "std": 12.465104795202445,
+  "min": 1355.90398311615,
+  "p50": 1371.9680309295654,
+  "p90": 1392.6431894302368,
+  "p95": 1400.2911865711212,
+  "p99": 1419.4895541667938,
+  "max": 1454.624056816101
+ },
+ "latency_first_us": 49254.602,
+ "latency_accpass_us": {
+  "n": 899,
+  "mean": 1484.433726362625,
+  "std": 39.83420747921844,
+  "min": 1449.507,
+  "p50": 1478.979,
+  "p90": 1507.4022,
+  "p95": 1515.876,
+  "p99": 1561.6670799999997,
+  "max": 2112.146
+ },
+ "load_s": 0.18225498602259904,
+ "n_warmup": 2031,
+ "power_idle": {
+  "n_samples": 451,
+  "duration_s": 9.010040670982562,
+  "vdd_in_w": 6.506058359201772,
+  "vdd_in_w_std": 0.13134831736214425,
+  "cpu_gpu_cv_w": 1.4805513082039912,
+  "soc_w": 2.2471038580931255,
+  "gpu_load_pct": 0.0
+ },
+ "power_active": {
+  "n_samples": 950,
+  "duration_s": 19.00024486501934,
+  "vdd_in_w": 9.589672488421053,
+  "vdd_in_w_std": 0.030897933452500137,
+  "cpu_gpu_cv_w": 3.9928671663157895,
+  "soc_w": 2.3636750821052623,
+  "gpu_load_pct": 82.18978947368421
+ },
+ "active_s": 20.00024486501934,
+ "n_active": 13554,
+ "throughput_ips": 677.6917028504038,
+ "energy": {
+  "vdd_in_total_mj": 14.150494167313,
+  "vdd_in_dynamic_mj": 4.550172469648739,
+  "cpu_gpu_cv_total_mj": 5.891863733201394,
+  "cpu_gpu_cv_dynamic_mj": 3.7071663228941385
+ },
+ "memory": {
+  "avail_baseline_kb": 5753224,
+  "avail_loaded_kb": 5661020,
+  "avail_min_kb": 5538772.0,
+  "footprint_peak_mb": 209.42578125,
+  "footprint_loaded_mb": 90.04296875,
+  "vmhwm_mb": 380.28515625,
+  "vmrss_mb": 380.28515625
+ },
+ "engine_mb": 2.373012,
+ "engine_device_mem_mb": 0.625152,
+ "onnx_mb": 2.681335,
+ "snapshot_start": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 39.062,
+   "gpu-thermal": 38.156,
+   "soc0-thermal": 38.375,
+   "soc1-thermal": 38.625,
+   "soc2-thermal": 38.187,
+   "tj-thermal": 39.062
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3502796,
+   "MemAvailable": 5803736,
+   "Buffers": 85276,
+   "Cached": 2375284
+  }
+ },
+ "snapshot_end": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 38.468,
+   "gpu-thermal": 38.437,
+   "soc0-thermal": 38.375,
+   "soc1-thermal": 38.625,
+   "soc2-thermal": 38.375,
+   "tj-thermal": 38.625
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3256196,
+   "MemAvailable": 5557256,
+   "Buffers": 85324,
+   "Cached": 2375356
+  }
+ },
+ "marks_s": {
+  "start": 0.0,
+  "baseline": 1.5228,
+  "load_start": 1.523,
+  "load_end": 1.7052,
+  "acc_start": 1.7055,
+  "acc_end": 3.096,
+  "lat_start": 6.097,
+  "lat_end": 9.0644,
+  "idle_start": 9.0644,
+  "idle_end": 19.0744,
+  "act_start": 19.0744,
+  "act_end": 39.0747
+ },
+ "protocol": {
+  "model": "tribranch18__mlp",
+  "variant": "fp16",
+  "engines": "/home/jetson-nano-super/LASCAS-2027/engines/b1",
+  "out": "/home/jetson-nano-super/LASCAS-2027/results/c1/rep03/tribranch18__mlp__fp16",
+  "warmup_s": 3.0,
+  "lat_iters": 2000,
+  "lat_max_s": 40.0,
+  "idle_s": 10.0,
+  "active_s": 20.0,
+  "sample_hz": 50.0,
+  "trim_s": 1.0
+ }
+}

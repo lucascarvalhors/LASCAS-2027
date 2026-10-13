@@ -1,0 +1,91 @@
+{
+ "trt": "10.3.0",
+ "versions": {
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "kernel": "5.15.185-tegra",
+  "l4t": "# R36 (release), REVISION: 5.0, GCID: 43688277, BOARD: generic, EABI: aarch64, DATE: Fri Jan 16 03:50:45 UTC 2026",
+  "board": "NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super",
+  "tensorrt": "10.3.0",
+  "onnxruntime": "1.24.0"
+ },
+ "snapshot": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 36.125,
+   "gpu-thermal": 35.781,
+   "soc0-thermal": 36.031,
+   "soc1-thermal": 36.375,
+   "soc2-thermal": 35.718,
+   "tj-thermal": 36.375
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 2314732,
+   "MemAvailable": 4663892,
+   "Buffers": 89544,
+   "Cached": 2426460
+  }
+ },
+ "results": [
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "fp32",
+   "build_s": 0.6,
+   "engine_bytes": 1158508,
+   "device_memory_bytes": 7168,
+   "out_dtype_counts": {
+    "fp32": 17,
+    "none": 1
+   },
+   "compute_layers": {
+    "n": 2,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "fp16",
+   "build_s": 1.23,
+   "engine_bytes": 627836,
+   "device_memory_bytes": 4608,
+   "out_dtype_counts": {
+    "fp32": 3,
+    "fp16": 19,
+    "none": 1
+   },
+   "compute_layers": {
+    "n": 2,
+    "int8_in": 0,
+    "fp16_in": 2
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "fp16auto",
+   "build_s": 0.78,
+   "engine_bytes": 1158508,
+   "device_memory_bytes": 7168,
+   "out_dtype_counts": {
+    "fp32": 17,
+    "none": 1
+   },
+   "compute_layers": {
+    "n": 2,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "model": "tribranch18__kan",
+ "precision": "fp16auto",
+ "trt": "10.3.0",
+ "build_s": 66.87,
+ "engine_bytes": 3843668,
+ "device_memory_bytes": 1314816,
+ "io": [
+  {
+   "name": "time",
+   "mode": "INPUT",
+   "shape": [
+    1,
+    2048,
+    6
+   ],
+   "dtype": "FLOAT"
+  },
+  {
+   "name": "orders",
+   "mode": "INPUT",
+   "shape": [
+    1,
+    6,
+    21
+   ],
+   "dtype": "FLOAT"
+  },
+  {
+   "name": "scalars",
+   "mode": "INPUT",
+   "shape": [
+    1,
+    36
+   ],
+   "dtype": "FLOAT"
+  },
+  {
+   "name": "kan_logits",
+   "mode": "OUTPUT",
+   "shape": [
+    1,
+    18
+   ],
+   "dtype": "FLOAT"
+  }
+ ],
+ "network_inputs": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "flags": {
+  "tf32": false,
+  "fp16": true,
+  "int8": false,
+  "workspace_mb": 1024,
+  "timing_cache": true,
+  "forced_layers": 0
+ },
+ "calib_fold": null,
+ "n_layers": 268,
+ "out_dtype_counts": {
+  "fp32": 260,
+  "none": 8
+ },
+ "compute_layers": {
+  "n": 43,
+  "int8_in": 0,
+  "fp16_in": 0
+ },
+ "warnings": [],
+ "n_missing_scale_warnings": 0
+}

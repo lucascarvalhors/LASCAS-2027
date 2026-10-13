@@ -1,0 +1,40 @@
+[
+  { "count" : 1411 }
+, { "name" : "tri_none_mlp/sc_bn/batchnorm/mul:0 + ONNXTRT_Broadcast", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_none_mlp/sc_bn/batchnorm/sub:0 + ONNXTRT_Broadcast_1", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "const_fold_opt__7898", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_none_mlp/ord_bn1/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "const_fold_opt__7899", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "const_fold_opt__7896", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(tri_none_mlp/sc_bn/batchnorm/mul_1), PWN(tri_none_mlp/sc_bn/batchnorm/add_1))", "timeMs" : 20.0586, "averageMs" : 0.0142159, "medianMs" : 0.014016, "percentage" : 4.60951 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to reshape_before_tri_none_mlp/sc_fc1/MatMul", "timeMs" : 20.8168, "averageMs" : 0.0147532, "medianMs" : 0.01152, "percentage" : 4.78374 }
+, { "name" : "reshape_before_tri_none_mlp/sc_fc1/MatMul", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/sc_fc1/MatMul + tri_none_mlp/sc_fc1/BiasAdd + tri_none_mlp/sc_fc1/Relu", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_none_mlp/sc_fc1/MatMul + tri_none_mlp/sc_fc1/BiasAdd + tri_none_mlp/sc_fc1/Relu", "timeMs" : 23.8504, "averageMs" : 0.0169032, "medianMs" : 0.016576, "percentage" : 5.48088 }
+, { "name" : "tri_none_mlp/ord_c1/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/ord_c1/Conv1D", "timeMs" : 17.9435, "averageMs" : 0.0127169, "medianMs" : 0.0112, "percentage" : 4.12346 }
+, { "name" : "tri_none_mlp/ord_c1/Conv1D", "timeMs" : 69.2086, "averageMs" : 0.0490493, "medianMs" : 0.026592, "percentage" : 15.9043 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/sc_fc2/MatMul + tri_none_mlp/sc_fc2/BiasAdd + tri_none_mlp/sc_fc2/Relu", "timeMs" : 9.99283, "averageMs" : 0.00708209, "medianMs" : 0.006976, "percentage" : 2.29638 }
+, { "name" : "tri_none_mlp/sc_fc2/MatMul + tri_none_mlp/sc_fc2/BiasAdd + tri_none_mlp/sc_fc2/Relu", "timeMs" : 14.3007, "averageMs" : 0.0101352, "medianMs" : 0.01008, "percentage" : 3.28634 }
+, { "name" : "tri_none_mlp/ord_c1/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_none_mlp/ord_c1/BiasAdd + tri_none_mlp/ord_c1/Relu), PWN(tri_none_mlp/ord_bn1/batchnorm/mul_1)), PWN(tri_none_mlp/ord_bn1/batchnorm/add_1))", "timeMs" : 13.0301, "averageMs" : 0.00923466, "medianMs" : 0.009152, "percentage" : 2.99435 }
+, { "name" : "tri_none_mlp/ord_c2/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/ord_c2/Conv1D", "timeMs" : 11.8736, "averageMs" : 0.00841505, "medianMs" : 0.008192, "percentage" : 2.72859 }
+, { "name" : "tri_none_mlp/ord_c2/Conv1D", "timeMs" : 38.2011, "averageMs" : 0.0270738, "medianMs" : 0.02656, "percentage" : 8.7787 }
+, { "name" : "tri_none_mlp/ord_c2/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(tri_none_mlp/ord_c2/BiasAdd + tri_none_mlp/ord_c2/Relu)", "timeMs" : 11.9631, "averageMs" : 0.00847843, "medianMs" : 0.008416, "percentage" : 2.74914 }
+, { "name" : "tri_none_mlp/ord_gap/Mean", "timeMs" : 48.8465, "averageMs" : 0.0346184, "medianMs" : 0.009376, "percentage" : 11.225 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/ord_gap/Mean_Squeeze__7902 + reshape_before_tri_none_mlp/ord_fc/MatMul", "timeMs" : 15.3144, "averageMs" : 0.0108536, "medianMs" : 0.00768, "percentage" : 3.51929 }
+, { "name" : "tri_none_mlp/ord_gap/Mean_Squeeze__7902 + reshape_before_tri_none_mlp/ord_fc/MatMul", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/ord_fc/MatMul + tri_none_mlp/ord_fc/BiasAdd + tri_none_mlp/ord_fc/Relu", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_none_mlp/ord_fc/MatMul + tri_none_mlp/ord_fc/BiasAdd + tri_none_mlp/ord_fc/Relu", "timeMs" : 14.6055, "averageMs" : 0.0103511, "medianMs" : 0.010112, "percentage" : 3.35637 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/mlp_h0/MatMul + tri_none_mlp/mlp_h0/BiasAdd + tri_none_mlp/mlp_h0/Relu", "timeMs" : 10.5045, "averageMs" : 0.00744475, "medianMs" : 0.007296, "percentage" : 2.41397 }
+, { "name" : "tri_none_mlp/mlp_h0/MatMul + tri_none_mlp/mlp_h0/BiasAdd + tri_none_mlp/mlp_h0/Relu", "timeMs" : 15.1353, "averageMs" : 0.0107267, "medianMs" : 0.0104, "percentage" : 3.47813 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/mlp_h1/MatMul + tri_none_mlp/mlp_h1/BiasAdd + tri_none_mlp/mlp_h1/Relu", "timeMs" : 10.3054, "averageMs" : 0.0073036, "medianMs" : 0.007136, "percentage" : 2.3682 }
+, { "name" : "tri_none_mlp/mlp_h1/MatMul + tri_none_mlp/mlp_h1/BiasAdd + tri_none_mlp/mlp_h1/Relu", "timeMs" : 16.6653, "averageMs" : 0.011811, "medianMs" : 0.01152, "percentage" : 3.82972 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/mlp_h2/MatMul + tri_none_mlp/mlp_h2/BiasAdd + tri_none_mlp/mlp_h2/Relu", "timeMs" : 10.4536, "averageMs" : 0.00740863, "medianMs" : 0.007232, "percentage" : 2.40226 }
+, { "name" : "tri_none_mlp/mlp_h2/MatMul + tri_none_mlp/mlp_h2/BiasAdd + tri_none_mlp/mlp_h2/Relu", "timeMs" : 16.653, "averageMs" : 0.0118023, "medianMs" : 0.011552, "percentage" : 3.8269 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/mlp_logits/MatMul + tri_none_mlp/mlp_logits/BiasAdd", "timeMs" : 10.3185, "averageMs" : 0.0073129, "medianMs" : 0.007168, "percentage" : 2.37122 }
+, { "name" : "tri_none_mlp/mlp_logits/MatMul + tri_none_mlp/mlp_logits/BiasAdd", "timeMs" : 15.1151, "averageMs" : 0.0107124, "medianMs" : 0.010304, "percentage" : 3.4735 }
+, { "name" : "reshape_after_tri_none_mlp/mlp_logits/MatMul", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+]

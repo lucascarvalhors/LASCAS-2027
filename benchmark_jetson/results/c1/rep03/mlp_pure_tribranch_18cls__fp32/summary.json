@@ -1,0 +1,184 @@
+{
+ "model": "mlp_pure_tribranch_18cls",
+ "backbone": "none",
+ "head": "MLP",
+ "variant": "fp32",
+ "backend": "tensorrt",
+ "runtime": "tensorrt 10.3.0",
+ "providers": null,
+ "input_names_fed": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "aux_outputs": [
+  "tri_none_mlp/mlp_h1/Relu:0"
+ ],
+ "n_eval": 900,
+ "accuracy": 0.8655555555555555,
+ "macro_f1": 0.8653592187546567,
+ "vs_keras": {
+  "max_abs": 7.3909759521484375e-06,
+  "mean_abs": 2.208640683948258e-07,
+  "argmax_agree": 1.0,
+  "n_argmax_diff": 0
+ },
+ "latency_e2e_us": {
+  "n": 2000,
+  "mean": 200.54363149999998,
+  "std": 5.919987914697363,
+  "min": 188.324,
+  "p50": 199.8285,
+  "p90": 204.7761,
+  "p95": 211.62415000000001,
+  "p99": 227.10964,
+  "max": 242.982
+ },
+ "latency_gpu_us": {
+  "n": 2000,
+  "mean": 100.95523197203875,
+  "std": 3.823271141166898,
+  "min": 93.44000369310379,
+  "p50": 100.99200159311295,
+  "p90": 103.65119948983192,
+  "p95": 105.25119677186012,
+  "p99": 118.37791979312895,
+  "max": 130.20800054073334
+ },
+ "latency_first_us": 705.199,
+ "latency_accpass_us": {
+  "n": 899,
+  "mean": 206.46853392658508,
+  "std": 13.800531218662474,
+  "min": 188.772,
+  "p50": 202.244,
+  "p90": 229.25300000000001,
+  "p95": 239.6891,
+  "p99": 251.92501999999993,
+  "max": 292.934
+ },
+ "load_s": 0.15259660099400207,
+ "n_warmup": 14929,
+ "power_idle": {
+  "n_samples": 451,
+  "duration_s": 9.010043065994978,
+  "vdd_in_w": 6.523833046563192,
+  "vdd_in_w_std": 0.1957017579740939,
+  "cpu_gpu_cv_w": 1.4938606119733924,
+  "soc_w": 2.2444028026607534,
+  "gpu_load_pct": 0.0
+ },
+ "power_active": {
+  "n_samples": 950,
+  "duration_s": 19.000021587999072,
+  "vdd_in_w": 8.148610357894736,
+  "vdd_in_w_std": 0.10868850531326622,
+  "cpu_gpu_cv_w": 2.665793751578947,
+  "soc_w": 2.3272332126315787,
+  "gpu_load_pct": 35.510000000000005
+ },
+ "active_s": 20.000021587999072,
+ "n_active": 99413,
+ "throughput_ips": 4970.644634686412,
+ "energy": {
+  "vdd_in_total_mj": 1.6393467963957182,
+  "vdd_in_dynamic_mj": 0.3268745667299242,
+  "cpu_gpu_cv_total_mj": 0.5363074505420012,
+  "cpu_gpu_cv_dynamic_mj": 0.23577085584181767
+ },
+ "memory": {
+  "avail_baseline_kb": 5738136,
+  "avail_loaded_kb": 5649264,
+  "avail_min_kb": 5628848.0,
+  "footprint_peak_mb": 106.7265625,
+  "footprint_loaded_mb": 86.7890625,
+  "vmhwm_mb": 271.9296875,
+  "vmrss_mb": 271.9296875
+ },
+ "engine_mb": 1.158508,
+ "engine_device_mem_mb": 0.007168,
+ "onnx_mb": 1.010828,
+ "snapshot_start": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 36.968,
+   "gpu-thermal": 36.5,
+   "soc0-thermal": 36.812,
+   "soc1-thermal": 37.125,
+   "soc2-thermal": 36.656,
+   "tj-thermal": 37.125
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3430188,
+   "MemAvailable": 5786060,
+   "Buffers": 89944,
+   "Cached": 2432600
+  }
+ },
+ "snapshot_end": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 37.062,
+   "gpu-thermal": 36.562,
+   "soc0-thermal": 36.968,
+   "soc1-thermal": 37.312,
+   "soc2-thermal": 36.812,
+   "tj-thermal": 37.312
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3292944,
+   "MemAvailable": 5648940,
+   "Buffers": 89992,
+   "Cached": 2432680
+  }
+ },
+ "marks_s": {
+  "start": 0.0,
+  "baseline": 1.5286,
+  "load_start": 1.5288,
+  "load_end": 1.6814,
+  "acc_start": 1.6816,
+  "acc_end": 1.8739,
+  "lat_start": 4.8741,
+  "lat_end": 5.2841,
+  "idle_start": 5.2841,
+  "idle_end": 15.2941,
+  "act_start": 15.2941,
+  "act_end": 35.2942
+ },
+ "protocol": {
+  "model": "mlp_pure_tribranch_18cls",
+  "variant": "fp32",
+  "engines": "/home/jetson-nano-super/LASCAS-2027/engines/b1",
+  "out": "/home/jetson-nano-super/LASCAS-2027/results/c1/rep03/mlp_pure_tribranch_18cls__fp32",
+  "warmup_s": 3.0,
+  "lat_iters": 2000,
+  "lat_max_s": 40.0,
+  "idle_s": 10.0,
+  "active_s": 20.0,
+  "sample_hz": 50.0,
+  "trim_s": 1.0
+ }
+}

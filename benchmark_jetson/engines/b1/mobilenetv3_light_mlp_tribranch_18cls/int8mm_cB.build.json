@@ -1,0 +1,75 @@
+{
+ "model": "mobilenetv3_light_mlp_tribranch_18cls",
+ "precision": "int8mm_cB",
+ "trt": "10.3.0",
+ "build_s": 42.51,
+ "engine_bytes": 2063996,
+ "device_memory_bytes": 624128,
+ "io": [
+  {
+   "name": "time",
+   "mode": "INPUT",
+   "shape": [
+    1,
+    2048,
+    6
+   ],
+   "dtype": "FLOAT"
+  },
+  {
+   "name": "orders",
+   "mode": "INPUT",
+   "shape": [
+    1,
+    6,
+    21
+   ],
+   "dtype": "FLOAT"
+  },
+  {
+   "name": "scalars",
+   "mode": "INPUT",
+   "shape": [
+    1,
+    36
+   ],
+   "dtype": "FLOAT"
+  },
+  {
+   "name": "mlp_logits",
+   "mode": "OUTPUT",
+   "shape": [
+    1,
+    18
+   ],
+   "dtype": "FLOAT"
+  }
+ ],
+ "network_inputs": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "flags": {
+  "tf32": false,
+  "fp16": false,
+  "int8": true,
+  "forced_layers": 62,
+  "workspace_mb": 1024,
+  "timing_cache": true
+ },
+ "calib_fold": "B",
+ "calib_algo": "minmax",
+ "n_layers": 420,
+ "out_dtype_counts": {
+  "fp32": 332,
+  "int8": 88
+ },
+ "compute_layers": {
+  "n": 62,
+  "int8_in": 62,
+  "fp16_in": 0
+ },
+ "warnings": [],
+ "n_missing_scale_warnings": 0
+}

@@ -1,0 +1,109 @@
+&&&& RUNNING TensorRT.trtexec [TensorRT v100300] # /usr/src/tensorrt/bin/trtexec --loadEngine=/home/jetson-nano-super/LASCAS-2027/engines/b2/mlp_pure_tribranch_18cls/int8_cA.plan --iterations=300 --warmUp=500 --duration=0 --avgRuns=1 --dumpProfile --exportProfile=/home/jetson-nano-super/LASCAS-2027/results/c3/rep01/mlp_pure_tribranch_18cls__int8_cA/trt_profile.json
+[10/13/2026-06:27:28] [I] === Model Options ===
+[10/13/2026-06:27:28] [I] Format: *
+[10/13/2026-06:27:28] [I] Model: 
+[10/13/2026-06:27:28] [I] Output:
+[10/13/2026-06:27:28] [I] 
+[10/13/2026-06:27:28] [I] === System Options ===
+[10/13/2026-06:27:28] [I] Device: 0
+[10/13/2026-06:27:28] [I] DLACore: 
+[10/13/2026-06:27:28] [I] Plugins:
+[10/13/2026-06:27:28] [I] setPluginsToSerialize:
+[10/13/2026-06:27:28] [I] dynamicPlugins:
+[10/13/2026-06:27:28] [I] ignoreParsedPluginLibs: 0
+[10/13/2026-06:27:28] [I] 
+[10/13/2026-06:27:28] [I] === Inference Options ===
+[10/13/2026-06:27:28] [I] Batch: Explicit
+[10/13/2026-06:27:28] [I] Input inference shapes: model
+[10/13/2026-06:27:28] [I] Iterations: 300
+[10/13/2026-06:27:28] [I] Duration: 0s (+ 500ms warm up)
+[10/13/2026-06:27:28] [I] Sleep time: 0ms
+[10/13/2026-06:27:28] [I] Idle time: 0ms
+[10/13/2026-06:27:28] [I] Inference Streams: 1
+[10/13/2026-06:27:28] [I] ExposeDMA: Disabled
+[10/13/2026-06:27:28] [I] Data transfers: Enabled
+[10/13/2026-06:27:28] [I] Spin-wait: Disabled
+[10/13/2026-06:27:28] [I] Multithreading: Disabled
+[10/13/2026-06:27:28] [I] CUDA Graph: Disabled
+[10/13/2026-06:27:28] [I] Separate profiling: Disabled
+[10/13/2026-06:27:28] [I] Time Deserialize: Disabled
+[10/13/2026-06:27:28] [I] Time Refit: Disabled
+[10/13/2026-06:27:28] [I] NVTX verbosity: 0
+[10/13/2026-06:27:28] [I] Persistent Cache Ratio: 0
+[10/13/2026-06:27:28] [I] Optimization Profile Index: 0
+[10/13/2026-06:27:28] [I] Weight Streaming Budget: 100.000000%
+[10/13/2026-06:27:28] [I] Inputs:
+[10/13/2026-06:27:28] [I] Debug Tensor Save Destinations:
+[10/13/2026-06:27:28] [I] === Reporting Options ===
+[10/13/2026-06:27:28] [I] Verbose: Disabled
+[10/13/2026-06:27:28] [I] Averages: 1 inferences
+[10/13/2026-06:27:28] [I] Percentiles: 90,95,99
+[10/13/2026-06:27:28] [I] Dump refittable layers:Disabled
+[10/13/2026-06:27:28] [I] Dump output: Disabled
+[10/13/2026-06:27:28] [I] Profile: Enabled
+[10/13/2026-06:27:28] [I] Export timing to JSON file: 
+[10/13/2026-06:27:28] [I] Export output to JSON file: 
+[10/13/2026-06:27:28] [I] Export profile to JSON file: /home/jetson-nano-super/LASCAS-2027/results/c3/rep01/mlp_pure_tribranch_18cls__int8_cA/trt_profile.json
+[10/13/2026-06:27:28] [I] 
+[10/13/2026-06:27:28] [I] === Device Information ===
+[10/13/2026-06:27:28] [I] Available Devices: 
+[10/13/2026-06:27:28] [I]   Device 0: "Orin" UUID: GPU-2d66c43d-5676-569f-ae3c-f3cb9d640a52
+[10/13/2026-06:27:29] [I] Selected Device: Orin
+[10/13/2026-06:27:29] [I] Selected Device ID: 0
+[10/13/2026-06:27:29] [I] Selected Device UUID: GPU-2d66c43d-5676-569f-ae3c-f3cb9d640a52
+[10/13/2026-06:27:29] [I] Compute Capability: 8.7
+[10/13/2026-06:27:29] [I] SMs: 8
+[10/13/2026-06:27:29] [I] Device Global Memory: 7607 MiB
+[10/13/2026-06:27:29] [I] Shared Memory per SM: 164 KiB
+[10/13/2026-06:27:29] [I] Memory Bus Width: 128 bits (ECC disabled)
+[10/13/2026-06:27:29] [I] Application Compute Clock Rate: 1.02 GHz
+[10/13/2026-06:27:29] [I] Application Memory Clock Rate: 1.02 GHz
+[10/13/2026-06:27:29] [I] 
+[10/13/2026-06:27:29] [I] Note: The application clock rates do not reflect the actual clock rates that the GPU is currently running at.
+[10/13/2026-06:27:29] [I] 
+[10/13/2026-06:27:29] [I] TensorRT version: 10.3.0
+[10/13/2026-06:27:29] [I] Loading standard plugins
+[10/13/2026-06:27:29] [I] [TRT] Loaded engine size: 0 MiB
+[10/13/2026-06:27:29] [I] Engine deserialized in 0.0242019 sec.
+[10/13/2026-06:27:29] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +0, now: CPU 0, GPU 0 (MiB)
+[10/13/2026-06:27:29] [I] Setting persistentCacheLimit to 0 bytes.
+[10/13/2026-06:27:29] [I] Created execution context with device memory size: 0.00878906 MiB
+[10/13/2026-06:27:29] [I] Using random values for input time
+[10/13/2026-06:27:29] [I] Input binding for time with dimensions 1x2048x6 is created.
+[10/13/2026-06:27:29] [I] Using random values for input orders
+[10/13/2026-06:27:29] [I] Input binding for orders with dimensions 1x6x21 is created.
+[10/13/2026-06:27:29] [I] Using random values for input scalars
+[10/13/2026-06:27:29] [I] Input binding for scalars with dimensions 1x36 is created.
+[10/13/2026-06:27:29] [I] Output binding for mlp_logits with dimensions 1x18 is created.
+[10/13/2026-06:27:29] [I] Starting inference
+[10/13/2026-06:27:29] [I] The e2e network timing is not reported since it is inaccurate due to the extra synchronizations when the profiler is enabled.
+[10/13/2026-06:27:29] [I] To show e2e network timing report, add --separateProfileRun to profile layer timing in a separate run or remove --dumpProfile to disable the profiler.
+[10/13/2026-06:27:29] [I] 
+[10/13/2026-06:27:29] [I] === Profile (1484 iterations ) ===
+[10/13/2026-06:27:29] [I]    Time(ms)     Avg.(ms)   Median(ms)   Time(%)   Layer
+[10/13/2026-06:27:29] [I]       16.63       0.0112       0.0110       3.9   PWN(PWN(tri_none_mlp/sc_bn/batchnorm/mul_1), PWN(tri_none_mlp/sc_bn/batchnorm/add_1))
+[10/13/2026-06:27:29] [I]       20.14       0.0136       0.0108       4.7   Reformatting CopyNode for Input Tensor 0 to reshape_before_tri_none_mlp/sc_fc1/MatMul
+[10/13/2026-06:27:29] [I]       20.39       0.0137       0.0134       4.8   tri_none_mlp/sc_fc1/MatMul + tri_none_mlp/sc_fc1/BiasAdd + tri_none_mlp/sc_fc1/Relu
+[10/13/2026-06:27:29] [I]       18.46       0.0124       0.0111       4.3   Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/ord_c1/Conv1D
+[10/13/2026-06:27:29] [I]       57.96       0.0391       0.0194      13.6   tri_none_mlp/ord_c1/Conv1D
+[10/13/2026-06:27:29] [I]        7.96       0.0054       0.0052       1.9   Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/sc_fc2/MatMul + tri_none_mlp/sc_fc2/BiasAdd + tri_none_mlp/sc_fc2/Relu
+[10/13/2026-06:27:29] [I]       11.12       0.0075       0.0071       2.6   tri_none_mlp/sc_fc2/MatMul + tri_none_mlp/sc_fc2/BiasAdd + tri_none_mlp/sc_fc2/Relu
+[10/13/2026-06:27:29] [I]       13.70       0.0092       0.0090       3.2   PWN(PWN(PWN(tri_none_mlp/ord_c1/BiasAdd + tri_none_mlp/ord_c1/Relu), PWN(tri_none_mlp/ord_bn1/batchnorm/mul_1)), PWN(tri_none_mlp/ord_bn1/batchnorm/add_1))
+[10/13/2026-06:27:29] [I]       22.23       0.0150       0.0121       5.2   Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/ord_c2/Conv1D
+[10/13/2026-06:27:29] [I]       18.50       0.0125       0.0123       4.3   tri_none_mlp/ord_c2/Conv1D
+[10/13/2026-06:27:29] [I]       14.14       0.0095       0.0094       3.3   Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/ord_c2/Conv1D/Squeeze
+[10/13/2026-06:27:29] [I]       13.34       0.0090       0.0089       3.1   PWN(tri_none_mlp/ord_c2/BiasAdd + tri_none_mlp/ord_c2/Relu)
+[10/13/2026-06:27:29] [I]       42.85       0.0289       0.0077      10.1   tri_none_mlp/ord_gap/Mean
+[10/13/2026-06:27:29] [I]       18.26       0.0123       0.0096       4.3   Reformatting CopyNode for Output Tensor 0 to tri_none_mlp/ord_gap/Mean
+[10/13/2026-06:27:29] [I]       17.75       0.0120       0.0118       4.2   tri_none_mlp/ord_fc/MatMul + tri_none_mlp/ord_fc/BiasAdd + tri_none_mlp/ord_fc/Relu
+[10/13/2026-06:27:29] [I]       13.81       0.0093       0.0091       3.2   Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/mlp_h0/MatMul + tri_none_mlp/mlp_h0/BiasAdd + tri_none_mlp/mlp_h0/Relu
+[10/13/2026-06:27:29] [I]       16.32       0.0110       0.0109       3.8   tri_none_mlp/mlp_h0/MatMul + tri_none_mlp/mlp_h0/BiasAdd + tri_none_mlp/mlp_h0/Relu
+[10/13/2026-06:27:29] [I]       11.60       0.0078       0.0078       2.7   Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/mlp_h1/MatMul + tri_none_mlp/mlp_h1/BiasAdd + tri_none_mlp/mlp_h1/Relu
+[10/13/2026-06:27:29] [I]       17.00       0.0115       0.0113       4.0   tri_none_mlp/mlp_h1/MatMul + tri_none_mlp/mlp_h1/BiasAdd + tri_none_mlp/mlp_h1/Relu
+[10/13/2026-06:27:29] [I]       10.66       0.0072       0.0070       2.5   Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/mlp_h2/MatMul + tri_none_mlp/mlp_h2/BiasAdd + tri_none_mlp/mlp_h2/Relu
+[10/13/2026-06:27:29] [I]       17.18       0.0116       0.0115       4.0   tri_none_mlp/mlp_h2/MatMul + tri_none_mlp/mlp_h2/BiasAdd + tri_none_mlp/mlp_h2/Relu
+[10/13/2026-06:27:29] [I]        9.82       0.0066       0.0066       2.3   Reformatting CopyNode for Input Tensor 0 to tri_none_mlp/mlp_logits/MatMul + tri_none_mlp/mlp_logits/BiasAdd
+[10/13/2026-06:27:29] [I]       16.26       0.0110       0.0108       3.8   tri_none_mlp/mlp_logits/MatMul + tri_none_mlp/mlp_logits/BiasAdd
+[10/13/2026-06:27:29] [I]      426.06       0.2871       0.2333     100.0   Total
+[10/13/2026-06:27:29] [I] 
+&&&& PASSED TensorRT.trtexec [TensorRT v100300] # /usr/src/tensorrt/bin/trtexec --loadEngine=/home/jetson-nano-super/LASCAS-2027/engines/b2/mlp_pure_tribranch_18cls/int8_cA.plan --iterations=300 --warmUp=500 --duration=0 --avgRuns=1 --dumpProfile --exportProfile=/home/jetson-nano-super/LASCAS-2027/results/c3/rep01/mlp_pure_tribranch_18cls__int8_cA/trt_profile.json

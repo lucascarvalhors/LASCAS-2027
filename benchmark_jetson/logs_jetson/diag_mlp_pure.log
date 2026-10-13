@@ -1,0 +1,45 @@
+[0;93m2026-10-13 05:16:11.305199974 [W:onnxruntime:Default, device_discovery.cc:211 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:91 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"[m
+referência ORT CPU (sem otimizações de grafo)...
+  ORT vs Keras: |Δ|máx = 6.44e-06, acc = 0.8656
+
+1) engines da b1
+  ERR b1/fp32                                |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.0966 ms kgen=7 fusões_duplas=[]
+  ERR b1/fp16                                |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.1479 ms kgen=7 fusões_duplas=[]
+  ERR b1/fp16auto                            |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.0970 ms kgen=7 fusões_duplas=[]
+  OK  b1/int8auto_cA                         |Δ|máx= 4.29e-06 argmax=1.0000 acc=0.8656 gpu=0.1213 ms kgen=0 fusões_duplas=[]
+  b1/fp32 — repetição bit a bit idêntica: True
+  b1/fp32 — |Δ| com time=0: 0.0
+  b1/fp32 — |Δ| com time aleatório: 0.0
+  b1/fp32 — |Δ| ordem inversa: 0.0
+  b1/fp32 — |Δ| contexto novo por amostra (20): 0.0
+
+2) trtexec com as entradas da amostra 0
+  trtexec fp32: |Δ vs ORT| = 5.01e+00; |Δ vs nosso runner| = 4.94e-06 (rc=0)
+  trtexec int8auto_cA: |Δ vs ORT| = 4.40e-06; |Δ vs nosso runner| = 0.00e+00 (rc=0)
+
+3) rebuilds (sem timing cache)
+  ERR fp32                                   |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.0973 ms kgen=7 fusões_duplas=[]
+  ERR fp32 opt0                              |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.0984 ms kgen=7 fusões_duplas=[]
+  ERR fp32 opt1                              |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.0982 ms kgen=7 fusões_duplas=[]
+  ERR fp32 opt2                              |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.0993 ms kgen=7 fusões_duplas=[]
+  ERR fp32 opt4                              |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.0977 ms kgen=7 fusões_duplas=[]
+  ERR fp32 opt5                              |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.1133 ms kgen=9 fusões_duplas=[]
+  ERR fp32 sem entrada time                  |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.0989 ms kgen=7 fusões_duplas=[]
+  OK  fp32 marca todos intermediários        |Δ|máx= 5.96e-06 argmax=1.0000 acc=0.8656 gpu=0.1096 ms kgen=8 fusões_duplas=[] inter={'gap': '4.8e-07', 'ord_fc': '6.0e-07', 'sc_fc2': '3.8e-06', 'concat': '3.8e-06', 'h0': '2.9e-06', 'h1': '2.9e-06', 'h2': '1.7e-06'}
+  ERR fp32 marca gap                         |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.0996 ms kgen=7 fusões_duplas=[] inter={'gap': '4.8e-07'}
+  ERR fp32 marca ord_fc                      |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.1011 ms kgen=7 fusões_duplas=[] inter={'ord_fc': '6.0e-07'}
+  ERR fp32 marca sc_fc2                      |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.1003 ms kgen=7 fusões_duplas=[] inter={'sc_fc2': '3.8e-06'}
+  ERR fp32 marca concat                      |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.1001 ms kgen=7 fusões_duplas=[] inter={'concat': '3.8e-06'}
+  ERR fp32 marca h0                          |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.1018 ms kgen=7 fusões_duplas=[] inter={'h0': '2.9e-06'}
+  OK  fp32 marca h1                          |Δ|máx= 5.96e-06 argmax=1.0000 acc=0.8656 gpu=0.1055 ms kgen=8 fusões_duplas=[] inter={'h1': '2.9e-06'}
+  OK  fp32 marca h2                          |Δ|máx= 5.96e-06 argmax=1.0000 acc=0.8656 gpu=0.1054 ms kgen=8 fusões_duplas=[] inter={'h2': '1.7e-06'}
+/home/jetson-nano-super/LASCAS-2027/bench/diag_mlp_pure.py:158: DeprecationWarning: Use Deprecated in TensorRT 10.1. Superseded by explicit quantization. instead.
+  cfg.int8_calibrator = calib
+  OK  fp32 flag INT8 (=int8auto)             |Δ|máx= 4.77e-06 argmax=1.0000 acc=0.8656 gpu=0.1252 ms kgen=0 fusões_duplas=[]
+  ERR fp16auto                               |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.0985 ms kgen=7 fusões_duplas=[]
+  OK  fp16auto marca h1                      |Δ|máx= 5.96e-06 argmax=1.0000 acc=0.8656 gpu=0.1046 ms kgen=8 fusões_duplas=[] inter={'h1': '2.9e-06'}
+  ERR fp16                                   |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.1524 ms kgen=7 fusões_duplas=[]
+  OK  fp16 marca h1                          |Δ|máx= 1.94e-02 argmax=1.0000 acc=0.8656 gpu=0.1651 ms kgen=8 fusões_duplas=[] inter={'h1': '6.6e-03'}
+  ERR fp16 opt0                              |Δ|máx= 1.61e+01 argmax=0.0722 acc=0.0667 gpu=0.1528 ms kgen=8 fusões_duplas=[]
+
+relatório: /home/jetson-nano-super/LASCAS-2027/diag/mlp_pure_tribranch_18cls/diag_report.json

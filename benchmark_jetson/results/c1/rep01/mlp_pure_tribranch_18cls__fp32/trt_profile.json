@@ -1,0 +1,21 @@
+[
+  { "count" : 2551 }
+, { "name" : "tri_none_mlp/ord_c1/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_none_mlp/ord_c1/Conv1D", "timeMs" : 49.0076, "averageMs" : 0.0192111, "medianMs" : 0.018784, "percentage" : 16.8937 }
+, { "name" : "const_fold_opt__7899", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_none_mlp/ord_bn1/batchnorm/mul:0", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "const_fold_opt__7898", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_none_mlp/ord_c1/Conv1D/Squeeze", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(PWN(tri_none_mlp/ord_c1/BiasAdd + tri_none_mlp/ord_c1/Relu), PWN(tri_none_mlp/ord_bn1/batchnorm/mul_1)), PWN(tri_none_mlp/ord_bn1/batchnorm/add_1))", "timeMs" : 24.7337, "averageMs" : 0.00969567, "medianMs" : 0.009472, "percentage" : 8.5261 }
+, { "name" : "tri_none_mlp/ord_c2/Conv1D/ExpandDims", "timeMs" : 0, "averageMs" : 0, "medianMs" : 0, "percentage" : 0 }
+, { "name" : "tri_none_mlp/ord_c2/Conv1D", "timeMs" : 45.3813, "averageMs" : 0.0177896, "medianMs" : 0.017568, "percentage" : 15.6437 }
+, { "name" : "dummy_shape_call__mye1525_0_myl9_0", "timeMs" : 6.32171, "averageMs" : 0.00247813, "medianMs" : 0.002496, "percentage" : 2.1792 }
+, { "name" : "__myl_AddRelMea_myl9_1", "timeMs" : 25.1779, "averageMs" : 0.00986984, "medianMs" : 0.009728, "percentage" : 8.67925 }
+, { "name" : "__myl_MulSumAddRel_myl9_2", "timeMs" : 19.3341, "averageMs" : 0.00757902, "medianMs" : 0.007424, "percentage" : 6.66477 }
+, { "name" : "__myl_MulAddResMulSumAddRel_myl9_3", "timeMs" : 19.0511, "averageMs" : 0.00746808, "medianMs" : 0.007392, "percentage" : 6.56722 }
+, { "name" : "__myl_ResMulSumAddRel_myl9_4", "timeMs" : 19.1105, "averageMs" : 0.00749136, "medianMs" : 0.007456, "percentage" : 6.58769 }
+, { "name" : "__myl_ResMulSumAddRel_myl9_5", "timeMs" : 19.2747, "averageMs" : 0.00755575, "medianMs" : 0.007424, "percentage" : 6.64431 }
+, { "name" : "__myl_ResMulSumAddRel_myl9_6", "timeMs" : 25.3058, "averageMs" : 0.00991995, "medianMs" : 0.010048, "percentage" : 8.72332 }
+, { "name" : "__myl_ResMulSumAddRel_myl9_7", "timeMs" : 21.9619, "averageMs" : 0.00860912, "medianMs" : 0.008448, "percentage" : 7.57062 }
+, { "name" : "__myl_ResMulSumAdd_myl9_8", "timeMs" : 15.4334, "averageMs" : 0.00604993, "medianMs" : 0.005984, "percentage" : 5.32013 }
+]

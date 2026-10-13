@@ -1,0 +1,1349 @@
+{
+ "Layers": [
+  {
+   "Name": "tri_none_mlp/sc_bn/batchnorm/mul:0 + ONNXTRT_Broadcast",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 1) [Shuffle]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 36
+   },
+   "dimensions": [
+    1,
+    36
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "tri_none_mlp/sc_bn/batchnorm/sub:0 + ONNXTRT_Broadcast_1",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 4) [Shuffle]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 36
+   },
+   "dimensions": [
+    1,
+    36
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "const_fold_opt__7898",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 31) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 32
+   },
+   "dimensions": [
+    1,
+    32,
+    1
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "tri_none_mlp/ord_bn1/batchnorm/mul:0",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 34) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 32
+   },
+   "dimensions": [
+    1,
+    32,
+    1
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "const_fold_opt__7899",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 36) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 32
+   },
+   "dimensions": [
+    1,
+    32,
+    1
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "const_fold_opt__7896",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 51) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 48
+   },
+   "dimensions": [
+    1,
+    48,
+    1
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "PWN(PWN(tri_none_mlp/sc_bn/batchnorm/mul_1), PWN(tri_none_mlp/sc_bn/batchnorm/add_1))",
+   "LayerType": "PointWiseV2",
+   "Inputs": [
+    {
+     "Name": "scalars",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    },
+    {
+     "Name": "(Unnamed Layer* 1) [Shuffle]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    },
+    {
+     "Name": "(Unnamed Layer* 4) [Shuffle]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/sc_bn/batchnorm/add_1:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "PointWise",
+   "ParameterSubType": "PointWiseExpression",
+   "NbInputArgs": 3,
+   "InputArgs": [
+    "arg0",
+    "arg1",
+    "arg2"
+   ],
+   "NbOutputVars": 1,
+   "OutputVars": [
+    "var1"
+   ],
+   "NbParams": 0,
+   "Params": [],
+   "NbLiterals": 0,
+   "Literals": [],
+   "NbOperations": 2,
+   "Operations": [
+    "auto const var0 = pwgen::iMul(arg0, arg1);",
+    "auto const var1 = pwgen::iPlus(var0, arg2);"
+   ],
+   "TacticValue": "0x000000000000001c",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/sc_bn/batchnorm/mul_1]\u001e[ONNX Layer: tri_none_mlp/sc_bn/batchnorm/add_1]"
+  },
+  {
+   "Name": "reshape_before_tri_none_mlp/sc_fc1/MatMul",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/sc_bn/batchnorm/add_1:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "reshape_before_tri_none_mlp/sc_fc1/MatMul",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      36,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/sc_fc1/MatMul]"
+  },
+  {
+   "Name": "tri_none_mlp/sc_fc1/MatMul + tri_none_mlp/sc_fc1/BiasAdd + tri_none_mlp/sc_fc1/Relu",
+   "LayerType": "CaskGemmConvolution",
+   "Inputs": [
+    {
+     "Name": "reshape_before_tri_none_mlp/sc_fc1/MatMul",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      36,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/sc_fc1/Relu_out_tensor",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      64,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    1
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    0
+   ],
+   "PostPadding": [
+    0,
+    0
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 64,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Float",
+    "Count": 2304
+   },
+   "Bias": {
+    "Type": "Float",
+    "Count": 64
+   },
+   "HasBias": 1,
+   "HasReLU": 1,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "RELU",
+   "TacticName": "sm70_xmma_gemm_as_conv1x1_f32f32_f32_f32_tn_n_simt_small_batch_bias_relu",
+   "TacticValue": "0x000000000002032c",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/sc_fc1/MatMul]\u001e[ONNX Layer: tri_none_mlp/sc_fc1/BiasAdd]\u001e[ONNX Layer: tri_none_mlp/sc_fc1/Relu]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_c1/Conv1D/ExpandDims",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "orders",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c1/Conv1D/ExpandDims]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_c1/Conv1D",
+   "LayerType": "CaskConvolution",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    3
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    1
+   ],
+   "PostPadding": [
+    0,
+    1
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 32,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Float",
+    "Count": 576
+   },
+   "Bias": {
+    "Type": "Float",
+    "Count": 0
+   },
+   "HasBias": 0,
+   "HasReLU": 0,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "NONE",
+   "TacticName": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nchwkcrs_nchw_tilesize64x64x8_stage3_warpsize1x4x1_g1_ffma_aligna4_alignc4",
+   "TacticValue": "0xa31d27de74b895ff",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c1/Conv1D]"
+  },
+  {
+   "Name": "tri_none_mlp/sc_fc2/MatMul + tri_none_mlp/sc_fc2/BiasAdd + tri_none_mlp/sc_fc2/Relu",
+   "LayerType": "CaskGemmConvolution",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/sc_fc1/Relu_out_tensor",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      64,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/fusion/concat:0_before_shuffle",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    1
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    0
+   ],
+   "PostPadding": [
+    0,
+    0
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 32,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Float",
+    "Count": 2048
+   },
+   "Bias": {
+    "Type": "Float",
+    "Count": 32
+   },
+   "HasBias": 1,
+   "HasReLU": 1,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "RELU",
+   "TacticName": "sm50_xmma_cublas_gemvx_f32f32_f32_f32_nn_n_int32_unit_n_launch_param32x4x4_strided_unit_stride",
+   "TacticValue": "0x00000000000202c1",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/sc_fc2/MatMul]\u001e[ONNX Layer: tri_none_mlp/sc_fc2/BiasAdd]\u001e[ONNX Layer: tri_none_mlp/sc_fc2/Relu]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_c1/Conv1D/Squeeze",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D/Squeeze:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c1/Conv1D/Squeeze]"
+  },
+  {
+   "Name": "PWN(PWN(PWN(tri_none_mlp/ord_c1/BiasAdd + tri_none_mlp/ord_c1/Relu), PWN(tri_none_mlp/ord_bn1/batchnorm/mul_1)), PWN(tri_none_mlp/ord_bn1/batchnorm/add_1))",
+   "LayerType": "PointWiseV2",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c1/Conv1D/Squeeze:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    },
+    {
+     "Name": "(Unnamed Layer* 31) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    },
+    {
+     "Name": "(Unnamed Layer* 34) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    },
+    {
+     "Name": "(Unnamed Layer* 36) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_bn1/batchnorm/add_1:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "PointWise",
+   "ParameterSubType": "PointWiseExpression",
+   "NbInputArgs": 4,
+   "InputArgs": [
+    "arg0",
+    "arg1",
+    "arg2",
+    "arg3"
+   ],
+   "NbOutputVars": 1,
+   "OutputVars": [
+    "var3"
+   ],
+   "NbParams": 0,
+   "Params": [],
+   "NbLiterals": 1,
+   "Literals": [
+    "0.000000e+00f"
+   ],
+   "NbOperations": 4,
+   "Operations": [
+    "auto const var0 = pwgen::iPlus(arg0, arg1);",
+    "auto const var1 = pwgen::iMax(var0, literal0);",
+    "auto const var2 = pwgen::iMul(var1, arg2);",
+    "auto const var3 = pwgen::iPlus(var2, arg3);"
+   ],
+   "TacticValue": "0x0000000000000009",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c1/BiasAdd]\u001e[ONNX Layer: tri_none_mlp/ord_c1/Relu]\u001e[ONNX Layer: tri_none_mlp/ord_bn1/batchnorm/mul_1]\u001e[ONNX Layer: tri_none_mlp/ord_bn1/batchnorm/add_1]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_c2/Conv1D/ExpandDims",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_bn1/batchnorm/add_1:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c2/Conv1D/ExpandDims]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_c2/Conv1D",
+   "LayerType": "CaskConvolution",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    3
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    1
+   ],
+   "PostPadding": [
+    0,
+    1
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 48,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Float",
+    "Count": 4608
+   },
+   "Bias": {
+    "Type": "Float",
+    "Count": 0
+   },
+   "HasBias": 0,
+   "HasReLU": 0,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "NONE",
+   "TacticName": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nchwkcrs_nchw_tilesize32x32x8_stage3_warpsize1x2x1_g1_ffma_aligna4_alignc4",
+   "TacticValue": "0xb0bf940d5e0f9f45",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c2/Conv1D]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_c2/Conv1D/Squeeze",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D/Squeeze:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c2/Conv1D/Squeeze]"
+  },
+  {
+   "Name": "PWN(tri_none_mlp/ord_c2/BiasAdd + tri_none_mlp/ord_c2/Relu)",
+   "LayerType": "PointWiseV2",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Conv1D/Squeeze:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    },
+    {
+     "Name": "(Unnamed Layer* 51) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Relu:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "PointWise",
+   "ParameterSubType": "PointWiseExpression",
+   "NbInputArgs": 2,
+   "InputArgs": [
+    "arg0",
+    "arg1"
+   ],
+   "NbOutputVars": 1,
+   "OutputVars": [
+    "var1"
+   ],
+   "NbParams": 0,
+   "Params": [],
+   "NbLiterals": 1,
+   "Literals": [
+    "0.000000e+00f"
+   ],
+   "NbOperations": 2,
+   "Operations": [
+    "auto const var0 = pwgen::iPlus(arg0, arg1);",
+    "auto const var1 = pwgen::iMax(var0, literal0);"
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_c2/BiasAdd]\u001e[ONNX Layer: tri_none_mlp/ord_c2/Relu]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_gap/Mean",
+   "LayerType": "Reduce",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_c2/Relu:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/ord_gap/Mean:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Reduce",
+   "Operation": "AVG",
+   "ReduceAxes": [
+    0,
+    0,
+    1
+   ],
+   "KeepDimensions": 1,
+   "TacticValue": "0x0000000000000002",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_gap/Mean]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_gap/Mean_Squeeze__7902 + reshape_before_tri_none_mlp/ord_fc/MatMul",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/ord_gap/Mean:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "reshape_before_tri_none_mlp/ord_fc/MatMul",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_gap/Mean_Squeeze__7902]\u001e[ONNX Layer: tri_none_mlp/ord_fc/MatMul]"
+  },
+  {
+   "Name": "tri_none_mlp/ord_fc/MatMul + tri_none_mlp/ord_fc/BiasAdd + tri_none_mlp/ord_fc/Relu",
+   "LayerType": "CaskGemmConvolution",
+   "Inputs": [
+    {
+     "Name": "reshape_before_tri_none_mlp/ord_fc/MatMul",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/fusion/concat:0_before_shuffle",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      64,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    1
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    0
+   ],
+   "PostPadding": [
+    0,
+    0
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 64,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Float",
+    "Count": 3072
+   },
+   "Bias": {
+    "Type": "Float",
+    "Count": 64
+   },
+   "HasBias": 1,
+   "HasReLU": 1,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "RELU",
+   "TacticName": "sm70_xmma_gemm_as_conv1x1_f32f32_f32_f32_tn_n_simt_small_batch_bias_relu",
+   "TacticValue": "0x000000000002032c",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/ord_fc/MatMul]\u001e[ONNX Layer: tri_none_mlp/ord_fc/BiasAdd]\u001e[ONNX Layer: tri_none_mlp/ord_fc/Relu]"
+  },
+  {
+   "Name": "tri_none_mlp/mlp_h0/MatMul + tri_none_mlp/mlp_h0/BiasAdd + tri_none_mlp/mlp_h0/Relu",
+   "LayerType": "CaskGemmConvolution",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/fusion/concat:0_before_shuffle",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      96,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/mlp_h0/Relu_out_tensor",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      317,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    1
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    0
+   ],
+   "PostPadding": [
+    0,
+    0
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 317,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Float",
+    "Count": 30432
+   },
+   "Bias": {
+    "Type": "Float",
+    "Count": 317
+   },
+   "HasBias": 1,
+   "HasReLU": 1,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "RELU",
+   "TacticName": "sm50_xmma_cublas_smallN_NN_f32f32_f32_f32_nn_n_thread_count256threads_per_row8b_elems_per_thread2bias_or_reluTrue",
+   "TacticValue": "0x0000000000020712",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/mlp_h0/MatMul]\u001e[ONNX Layer: tri_none_mlp/mlp_h0/BiasAdd]\u001e[ONNX Layer: tri_none_mlp/mlp_h0/Relu]"
+  },
+  {
+   "Name": "tri_none_mlp/mlp_h1/MatMul + tri_none_mlp/mlp_h1/BiasAdd + tri_none_mlp/mlp_h1/Relu",
+   "LayerType": "CaskGemmConvolution",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/mlp_h0/Relu_out_tensor",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      317,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/mlp_h1/Relu_out_tensor",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      317,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    1
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    0
+   ],
+   "PostPadding": [
+    0,
+    0
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 317,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Float",
+    "Count": 100489
+   },
+   "Bias": {
+    "Type": "Float",
+    "Count": 317
+   },
+   "HasBias": 1,
+   "HasReLU": 1,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "RELU",
+   "TacticName": "sm70_xmma_gemm_as_conv1x1_f32f32_f32_f32_tn_n_simt_small_batch_bias_relu",
+   "TacticValue": "0x000000000002032c",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/mlp_h1/MatMul]\u001e[ONNX Layer: tri_none_mlp/mlp_h1/BiasAdd]\u001e[ONNX Layer: tri_none_mlp/mlp_h1/Relu]"
+  },
+  {
+   "Name": "tri_none_mlp/mlp_h2/MatMul + tri_none_mlp/mlp_h2/BiasAdd + tri_none_mlp/mlp_h2/Relu",
+   "LayerType": "CaskGemmConvolution",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/mlp_h1/Relu_out_tensor",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      317,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/mlp_h2/Relu_out_tensor",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      317,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    1
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    0
+   ],
+   "PostPadding": [
+    0,
+    0
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 317,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Float",
+    "Count": 100489
+   },
+   "Bias": {
+    "Type": "Float",
+    "Count": 317
+   },
+   "HasBias": 1,
+   "HasReLU": 1,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "RELU",
+   "TacticName": "sm70_xmma_gemm_as_conv1x1_f32f32_f32_f32_tn_n_simt_small_batch_bias_relu",
+   "TacticValue": "0x000000000002032c",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/mlp_h2/MatMul]\u001e[ONNX Layer: tri_none_mlp/mlp_h2/BiasAdd]\u001e[ONNX Layer: tri_none_mlp/mlp_h2/Relu]"
+  },
+  {
+   "Name": "tri_none_mlp/mlp_logits/MatMul + tri_none_mlp/mlp_logits/BiasAdd",
+   "LayerType": "CaskGemmConvolution",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/mlp_h2/Relu_out_tensor",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      317,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_mlp/mlp_logits/MatMul_conv_out",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      18,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    1
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    0
+   ],
+   "PostPadding": [
+    0,
+    0
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 18,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Float",
+    "Count": 5706
+   },
+   "Bias": {
+    "Type": "Float",
+    "Count": 18
+   },
+   "HasBias": 1,
+   "HasReLU": 0,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "NONE",
+   "TacticName": "sm50_xmma_cublas_gemvx_f32f32_f32_f32_tn_n_int32_unit_n_launch_param4x32x1_strided_unit_stride",
+   "TacticValue": "0x00000000000207b6",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/mlp_logits/MatMul]\u001e[ONNX Layer: tri_none_mlp/mlp_logits/BiasAdd]"
+  },
+  {
+   "Name": "reshape_after_tri_none_mlp/mlp_logits/MatMul",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "tri_none_mlp/mlp_logits/MatMul_conv_out",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      18,
+      1,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "mlp_logits",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      18
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_mlp/mlp_logits/MatMul]"
+  }
+ ],
+ "Bindings": [
+  "time",
+  "orders",
+  "scalars",
+  "mlp_logits"
+ ]
+}

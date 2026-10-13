@@ -1,0 +1,174 @@
+{
+ "model": "mobilenetv3_light_mlp_tribranch_18cls",
+ "backbone": "light",
+ "head": "MLP",
+ "variant": "ort_cuda",
+ "backend": "onnxruntime-cuda",
+ "runtime": "onnxruntime 1.24.0",
+ "providers": [
+  "CUDAExecutionProvider",
+  "CPUExecutionProvider"
+ ],
+ "input_names_fed": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "n_eval": 900,
+ "accuracy": 0.9,
+ "macro_f1": 0.8996856648735471,
+ "vs_keras": {
+  "max_abs": 0.011907339096069336,
+  "mean_abs": 0.00026834812728159223,
+  "argmax_agree": 1.0,
+  "n_argmax_diff": 0
+ },
+ "latency_e2e_us": {
+  "n": 2000,
+  "mean": 5203.863581500001,
+  "std": 159.6031700472485,
+  "min": 4806.804,
+  "p50": 5192.621499999999,
+  "p90": 5303.0144,
+  "p95": 5335.525799999999,
+  "p99": 6075.294179999999,
+  "max": 6826.341
+ },
+ "latency_gpu_us": null,
+ "latency_first_us": 344746.641,
+ "latency_accpass_us": {
+  "n": 899,
+  "mean": 5176.356454949944,
+  "std": 94.76017564454958,
+  "min": 4933.911,
+  "p50": 5170.749,
+  "p90": 5272.2357999999995,
+  "p95": 5301.606400000001,
+  "p99": 5377.063120000001,
+  "max": 6794.309
+ },
+ "load_s": 0.28315980796469375,
+ "n_warmup": 580,
+ "power_idle": {
+  "n_samples": 451,
+  "duration_s": 9.010034756036475,
+  "vdd_in_w": 6.461883033259421,
+  "vdd_in_w_std": 0.028617666650979298,
+  "cpu_gpu_cv_w": 1.4293148381374723,
+  "soc_w": 2.2791679999999994,
+  "gpu_load_pct": 0.0
+ },
+ "power_active": {
+  "n_samples": 950,
+  "duration_s": 19.00013768201461,
+  "vdd_in_w": 8.137109827368421,
+  "vdd_in_w_std": 0.0902407340619388,
+  "cpu_gpu_cv_w": 2.72811068631579,
+  "soc_w": 2.3192912842105264,
+  "gpu_load_pct": 32.50452631578948
+ },
+ "active_s": 20.00013768201461,
+ "n_active": 3837,
+ "throughput_ips": 191.84867929436672,
+ "energy": {
+  "vdd_in_total_mj": 42.41420820459801,
+  "vdd_in_dynamic_mj": 8.73202150919467,
+  "cpu_gpu_cv_total_mj": 14.220117106617455,
+  "cpu_gpu_cv_dynamic_mj": 6.769897259420198
+ },
+ "memory": {
+  "avail_baseline_kb": 5755508,
+  "avail_loaded_kb": 5607572,
+  "avail_min_kb": 5328920.0,
+  "footprint_peak_mb": 416.58984375,
+  "footprint_loaded_mb": 144.46875,
+  "vmhwm_mb": 639.5,
+  "vmrss_mb": 639.5
+ },
+ "engine_mb": null,
+ "engine_device_mem_mb": null,
+ "onnx_mb": 0.865104,
+ "snapshot_start": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 38.0,
+   "gpu-thermal": 37.281,
+   "soc0-thermal": 37.656,
+   "soc1-thermal": 38.062,
+   "soc2-thermal": 37.468,
+   "tj-thermal": 38.062
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3561184,
+   "MemAvailable": 5803932,
+   "Buffers": 81556,
+   "Cached": 2322188
+  }
+ },
+ "snapshot_end": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 37.593,
+   "gpu-thermal": 37.343,
+   "soc0-thermal": 37.562,
+   "soc1-thermal": 37.937,
+   "soc2-thermal": 37.375,
+   "tj-thermal": 37.968
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3106636,
+   "MemAvailable": 5349488,
+   "Buffers": 81588,
+   "Cached": 2322260
+  }
+ },
+ "marks_s": {
+  "start": 0.0,
+  "baseline": 1.525,
+  "load_start": 1.5252,
+  "load_end": 1.8083,
+  "acc_start": 1.8086,
+  "acc_end": 6.8161,
+  "lat_start": 9.8174,
+  "lat_end": 20.2413,
+  "idle_start": 20.2413,
+  "idle_end": 30.2513,
+  "act_start": 30.2513,
+  "act_end": 50.2515
+ },
+ "protocol": {
+  "model": "mobilenetv3_light_mlp_tribranch_18cls",
+  "variant": "ort_cuda",
+  "engines": "/home/jetson-nano-super/LASCAS-2027/engines/b1",
+  "out": "/home/jetson-nano-super/LASCAS-2027/results/c1/rep02/mobilenetv3_light_mlp_tribranch_18cls__ort_cuda",
+  "warmup_s": 3.0,
+  "lat_iters": 2000,
+  "lat_max_s": 40.0,
+  "idle_s": 10.0,
+  "active_s": 20.0,
+  "sample_hz": 50.0,
+  "trim_s": 1.0
+ }
+}

@@ -1,0 +1,438 @@
+{
+ "trt": "10.3.0",
+ "versions": {
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "kernel": "5.15.185-tegra",
+  "l4t": "# R36 (release), REVISION: 5.0, GCID: 43688277, BOARD: generic, EABI: aarch64, DATE: Fri Jan 16 03:50:45 UTC 2026",
+  "board": "NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super",
+  "tensorrt": "10.3.0",
+  "onnxruntime": "1.24.0"
+ },
+ "snapshot": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 38.218,
+   "gpu-thermal": 37.687,
+   "soc0-thermal": 37.812,
+   "soc1-thermal": 38.187,
+   "soc2-thermal": 37.718,
+   "tj-thermal": 38.437
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 1652840,
+   "MemAvailable": 4064056,
+   "Buffers": 91380,
+   "Cached": 2485676
+  }
+ },
+ "results": [
+  {
+   "model": "tribranch18__kan",
+   "precision": "fp32",
+   "build_s": 43.9,
+   "engine_bytes": 3895108,
+   "device_memory_bytes": 1314816,
+   "out_dtype_counts": {
+    "fp32": 260,
+    "none": 8
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__kan",
+   "precision": "fp16",
+   "build_s": 62.95,
+   "engine_bytes": 2559956,
+   "device_memory_bytes": 625152,
+   "out_dtype_counts": {
+    "fp16": 310,
+    "none": 8,
+    "fp32": 2
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 43
+   }
+  },
+  {
+   "model": "tribranch18__kan",
+   "precision": "int8_cA",
+   "build_s": 397.04,
+   "engine_bytes": 2813460,
+   "device_memory_bytes": 1248768,
+   "out_dtype_counts": {
+    "fp32": 344,
+    "int8": 98,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 64,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__kan",
+   "precision": "int8_cB",
+   "build_s": 260.13,
+   "engine_bytes": 2809412,
+   "device_memory_bytes": 1248768,
+   "out_dtype_counts": {
+    "int8": 103,
+    "fp32": 341,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 64,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "kan_pure_tribranch_18cls",
+   "precision": "fp32",
+   "build_s": 3.55,
+   "engine_bytes": 521756,
+   "device_memory_bytes": 7168,
+   "out_dtype_counts": {
+    "fp32": 21,
+    "none": 1
+   },
+   "compute_layers": {
+    "n": 2,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "kan_pure_tribranch_18cls",
+   "precision": "fp16",
+   "build_s": 6.07,
+   "engine_bytes": 396644,
+   "device_memory_bytes": 4608,
+   "out_dtype_counts": {
+    "fp32": 2,
+    "fp16": 24,
+    "none": 1
+   },
+   "compute_layers": {
+    "n": 2,
+    "int8_in": 0,
+    "fp16_in": 2
+   }
+  },
+  {
+   "model": "kan_pure_tribranch_18cls",
+   "precision": "int8_cA",
+   "build_s": 89.55,
+   "engine_bytes": 822804,
+   "device_memory_bytes": 10752,
+   "out_dtype_counts": {
+    "int8": 36,
+    "fp32": 94,
+    "none": 4
+   },
+   "compute_layers": {
+    "n": 13,
+    "int8_in": 13,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "kan_pure_tribranch_18cls",
+   "precision": "int8_cB",
+   "build_s": 89.22,
+   "engine_bytes": 838100,
+   "device_memory_bytes": 10752,
+   "out_dtype_counts": {
+    "int8": 37,
+    "fp32": 99,
+    "none": 4
+   },
+   "compute_layers": {
+    "n": 13,
+    "int8_in": 13,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__mlp",
+   "precision": "fp32",
+   "build_s": 31.81,
+   "engine_bytes": 3805276,
+   "device_memory_bytes": 1314816,
+   "out_dtype_counts": {
+    "fp32": 261,
+    "none": 8
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__mlp",
+   "precision": "fp16",
+   "build_s": 48.83,
+   "engine_bytes": 2394076,
+   "device_memory_bytes": 649216,
+   "out_dtype_counts": {
+    "fp16": 316,
+    "none": 8,
+    "fp32": 2
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 43
+   }
+  },
+  {
+   "model": "tribranch18__mlp",
+   "precision": "int8_cA",
+   "build_s": 216.6,
+   "engine_bytes": 2544268,
+   "device_memory_bytes": 1248768,
+   "out_dtype_counts": {
+    "int8": 97,
+    "fp32": 316
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 62,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "tribranch18__mlp",
+   "precision": "int8_cB",
+   "build_s": 217.43,
+   "engine_bytes": 2599404,
+   "device_memory_bytes": 1248768,
+   "out_dtype_counts": {
+    "int8": 100,
+    "fp32": 320
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 62,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "fp32",
+   "build_s": 1.97,
+   "engine_bytes": 1146540,
+   "device_memory_bytes": 7168,
+   "out_dtype_counts": {
+    "fp32": 17,
+    "none": 1
+   },
+   "compute_layers": {
+    "n": 2,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "fp16",
+   "build_s": 4.09,
+   "engine_bytes": 631412,
+   "device_memory_bytes": 4608,
+   "out_dtype_counts": {
+    "fp32": 3,
+    "fp16": 19,
+    "none": 1
+   },
+   "compute_layers": {
+    "n": 2,
+    "int8_in": 0,
+    "fp16_in": 2
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "int8_cA",
+   "build_s": 21.74,
+   "engine_bytes": 609380,
+   "device_memory_bytes": 9216,
+   "out_dtype_counts": {
+    "fp32": 24,
+    "int8": 14
+   },
+   "compute_layers": {
+    "n": 9,
+    "int8_in": 9,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mlp_pure_tribranch_18cls",
+   "precision": "int8_cB",
+   "build_s": 21.84,
+   "engine_bytes": 595908,
+   "device_memory_bytes": 9216,
+   "out_dtype_counts": {
+    "int8": 16,
+    "fp32": 21
+   },
+   "compute_layers": {
+    "n": 9,
+    "int8_in": 9,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "precision": "fp32",
+   "build_s": 29.92,
+   "engine_bytes": 1917820,
+   "device_memory_bytes": 688128,
+   "out_dtype_counts": {
+    "fp32": 260,
+    "none": 8
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "precision": "fp16",
+   "build_s": 50.69,
+   "engine_bytes": 1608148,
+   "device_memory_bytes": 311808,
+   "out_dtype_counts": {
+    "fp16": 301,
+    "none": 8,
+    "fp32": 2
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 43
+   }
+  },
+  {
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "precision": "int8_cA",
+   "build_s": 251.26,
+   "engine_bytes": 2216340,
+   "device_memory_bytes": 624128,
+   "out_dtype_counts": {
+    "fp32": 350,
+    "int8": 95,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 64,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_kan_tribranch_18cls",
+   "precision": "int8_cB",
+   "build_s": 251.1,
+   "engine_bytes": 2240076,
+   "device_memory_bytes": 624128,
+   "out_dtype_counts": {
+    "fp32": 356,
+    "int8": 95,
+    "none": 2
+   },
+   "compute_layers": {
+    "n": 64,
+    "int8_in": 64,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "precision": "fp32",
+   "build_s": 28.96,
+   "engine_bytes": 1916860,
+   "device_memory_bytes": 688128,
+   "out_dtype_counts": {
+    "fp32": 257,
+    "none": 8
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "precision": "fp16",
+   "build_s": 49.38,
+   "engine_bytes": 1532940,
+   "device_memory_bytes": 311808,
+   "out_dtype_counts": {
+    "fp16": 309,
+    "none": 8,
+    "fp32": 2
+   },
+   "compute_layers": {
+    "n": 43,
+    "int8_in": 0,
+    "fp16_in": 43
+   }
+  },
+  {
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "precision": "int8_cA",
+   "build_s": 210.27,
+   "engine_bytes": 2089812,
+   "device_memory_bytes": 624128,
+   "out_dtype_counts": {
+    "int8": 93,
+    "fp32": 327
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 62,
+    "fp16_in": 0
+   }
+  },
+  {
+   "model": "mobilenetv3_light_mlp_tribranch_18cls",
+   "precision": "int8_cB",
+   "build_s": 209.67,
+   "engine_bytes": 2031116,
+   "device_memory_bytes": 624128,
+   "out_dtype_counts": {
+    "int8": 93,
+    "fp32": 325
+   },
+   "compute_layers": {
+    "n": 62,
+    "int8_in": 62,
+    "fp16_in": 0
+   }
+  }
+ ]
+}

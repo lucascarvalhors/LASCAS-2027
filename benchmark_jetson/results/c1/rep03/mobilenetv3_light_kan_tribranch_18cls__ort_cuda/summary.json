@@ -1,0 +1,174 @@
+{
+ "model": "mobilenetv3_light_kan_tribranch_18cls",
+ "backbone": "light",
+ "head": "KAN",
+ "variant": "ort_cuda",
+ "backend": "onnxruntime-cuda",
+ "runtime": "onnxruntime 1.24.0",
+ "providers": [
+  "CUDAExecutionProvider",
+  "CPUExecutionProvider"
+ ],
+ "input_names_fed": [
+  "time",
+  "orders",
+  "scalars"
+ ],
+ "n_eval": 900,
+ "accuracy": 0.9177777777777778,
+ "macro_f1": 0.9188262590854277,
+ "vs_keras": {
+  "max_abs": 0.012893199920654297,
+  "mean_abs": 0.0003950751644133786,
+  "argmax_agree": 1.0,
+  "n_argmax_diff": 0
+ },
+ "latency_e2e_us": {
+  "n": 2000,
+  "mean": 5936.628885,
+  "std": 135.0444413092447,
+  "min": 5512.58,
+  "p50": 5930.141,
+  "p90": 6020.2262,
+  "p95": 6053.8112,
+  "p99": 6295.52185,
+  "max": 7293.646
+ },
+ "latency_gpu_us": null,
+ "latency_first_us": 358188.998,
+ "latency_accpass_us": {
+  "n": 899,
+  "mean": 5928.024741935484,
+  "std": 129.6013381000485,
+  "min": 5605.606,
+  "p50": 5918.413,
+  "p90": 6008.2392,
+  "p95": 6051.8240000000005,
+  "p99": 6326.26876,
+  "max": 7829.275
+ },
+ "load_s": 0.3409347939887084,
+ "n_warmup": 508,
+ "power_idle": {
+  "n_samples": 450,
+  "duration_s": 9.010034593986347,
+  "vdd_in_w": 6.471701902222221,
+  "vdd_in_w_std": 0.028820903394419242,
+  "cpu_gpu_cv_w": 1.4349321955555554,
+  "soc_w": 2.2757364622222216,
+  "gpu_load_pct": 0.0
+ },
+ "power_active": {
+  "n_samples": 951,
+  "duration_s": 19.004220582952257,
+  "vdd_in_w": 8.120081833859096,
+  "vdd_in_w_std": 0.08254447427033151,
+  "cpu_gpu_cv_w": 2.6873713732912727,
+  "soc_w": 2.322637392218717,
+  "gpu_load_pct": 35.43207150368034
+ },
+ "active_s": 20.004220582952257,
+ "n_active": 3415,
+ "throughput_ips": 170.71397437550192,
+ "energy": {
+  "vdd_in_total_mj": 47.565419665048566,
+  "vdd_in_dynamic_mj": 9.655799636010489,
+  "cpu_gpu_cv_total_mj": 15.741953071633954,
+  "cpu_gpu_cv_dynamic_mj": 7.3364771824763215
+ },
+ "memory": {
+  "avail_baseline_kb": 5754852,
+  "avail_loaded_kb": 5607620,
+  "avail_min_kb": 5310264.0,
+  "footprint_peak_mb": 434.16796875,
+  "footprint_loaded_mb": 143.78125,
+  "vmhwm_mb": 660.76171875,
+  "vmrss_mb": 660.71875
+ },
+ "engine_mb": null,
+ "engine_device_mem_mb": null,
+ "onnx_mb": 0.889771,
+ "snapshot_start": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 38.687,
+   "gpu-thermal": 38.156,
+   "soc0-thermal": 38.375,
+   "soc1-thermal": 38.687,
+   "soc2-thermal": 38.125,
+   "tj-thermal": 38.687
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3521700,
+   "MemAvailable": 5805876,
+   "Buffers": 84124,
+   "Cached": 2360080
+  }
+ },
+ "snapshot_end": {
+  "gpu_freq_mhz": 1020.0,
+  "gpu_max_mhz": 1020.0,
+  "cpu_freq_mhz": {
+   "cpu0": 1728.0,
+   "cpu1": 1728.0,
+   "cpu2": 1728.0,
+   "cpu3": 1728.0,
+   "cpu4": 1728.0,
+   "cpu5": 1728.0
+  },
+  "temp_c": {
+   "cpu-thermal": 37.875,
+   "gpu-thermal": 37.625,
+   "soc0-thermal": 37.75,
+   "soc1-thermal": 38.156,
+   "soc2-thermal": 37.562,
+   "tj-thermal": 38.156
+  },
+  "fan_pwm": "255",
+  "meminfo_kb": {
+   "MemTotal": 7789952,
+   "MemFree": 3048856,
+   "MemAvailable": 5333184,
+   "Buffers": 84180,
+   "Cached": 2360216
+  }
+ },
+ "marks_s": {
+  "start": 0.0,
+  "baseline": 1.5276,
+  "load_start": 1.5277,
+  "load_end": 1.8687,
+  "acc_start": 1.8689,
+  "acc_end": 7.5661,
+  "lat_start": 10.5678,
+  "lat_end": 22.4583,
+  "idle_start": 22.4583,
+  "idle_end": 32.4683,
+  "act_start": 32.4683,
+  "act_end": 52.4725
+ },
+ "protocol": {
+  "model": "mobilenetv3_light_kan_tribranch_18cls",
+  "variant": "ort_cuda",
+  "engines": "/home/jetson-nano-super/LASCAS-2027/engines/b1",
+  "out": "/home/jetson-nano-super/LASCAS-2027/results/c1/rep03/mobilenetv3_light_kan_tribranch_18cls__ort_cuda",
+  "warmup_s": 3.0,
+  "lat_iters": 2000,
+  "lat_max_s": 40.0,
+  "idle_s": 10.0,
+  "active_s": 20.0,
+  "sample_hz": 50.0,
+  "trim_s": 1.0
+ }
+}

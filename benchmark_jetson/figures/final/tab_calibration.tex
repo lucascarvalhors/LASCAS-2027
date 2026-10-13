@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{INT8 PTQ calibration ablation (cross-calibrated, Conv/MatMul forced to INT8). $\Delta$F1 vs.\ TensorRT FP32 (pp) and prediction flips (\%).}
+\label{tab:calib}
+\setlength{\tabcolsep}{4pt}
+\small
+\begin{tabular}{llcccc}
+\toprule
+ & & \multicolumn{2}{c}{Entropy (KL)} & \multicolumn{2}{c}{MinMax} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Backbone & Head & $\Delta$F1 & Flips & $\Delta$F1 & Flips \\
+\midrule
+Full & KAN & +0.32 & 1.4 & -0.15 & 2.8 \\
+Full & MLP & -1.61 & 3.3 & -5.44 & 7.7 \\
+Light & KAN & -5.29 & 8.1 & -5.02 & 9.1 \\
+Light & MLP & -0.74 & 4.4 & -5.09 & 9.9 \\
+None & KAN & -7.05 & 11.7 & -0.98 & 5.2 \\
+None & MLP & -1.78 & 3.9 & -2.04 & 6.3 \\
+\bottomrule
+\end{tabular}
+\end{table}

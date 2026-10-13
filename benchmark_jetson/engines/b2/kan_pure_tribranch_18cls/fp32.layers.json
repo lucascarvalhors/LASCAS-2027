@@ -1,0 +1,1603 @@
+{
+ "Layers": [
+  {
+   "Name": "tri_none_kan/ord_c1/Conv1D/ExpandDims",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "orders",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_kan/ord_c1/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/ord_c1/Conv1D/ExpandDims]"
+  },
+  {
+   "Name": "tri_none_kan/ord_c1/Conv1D",
+   "LayerType": "CaskConvolution",
+   "Inputs": [
+    {
+     "Name": "tri_none_kan/ord_c1/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      6,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_kan/ord_c1/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    3
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    1
+   ],
+   "PostPadding": [
+    0,
+    1
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 32,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Float",
+    "Count": 576
+   },
+   "Bias": {
+    "Type": "Float",
+    "Count": 0
+   },
+   "HasBias": 0,
+   "HasReLU": 0,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "NONE",
+   "TacticName": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nchwkcrs_nchw_tilesize32x32x8_stage3_warpsize1x2x1_g1_ffma_aligna4_alignc4",
+   "TacticValue": "0xb0bf940d5e0f9f45",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/ord_c1/Conv1D]"
+  },
+  {
+   "Name": "const_fold_opt__7655",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 36) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 32
+   },
+   "dimensions": [
+    1,
+    32,
+    1
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "tri_none_kan/ord_bn1/batchnorm/mul:0",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 34) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 32
+   },
+   "dimensions": [
+    1,
+    32,
+    1
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "const_fold_opt__7653",
+   "LayerType": "Constant",
+   "Inputs": [],
+   "Outputs": [
+    {
+     "Name": "(Unnamed Layer* 31) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Constant",
+   "weights": {
+    "Type": "Float",
+    "Count": 32
+   },
+   "dimensions": [
+    1,
+    32,
+    1
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "tri_none_kan/ord_c1/Conv1D/Squeeze",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "tri_none_kan/ord_c1/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_kan/ord_c1/Conv1D/Squeeze:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/ord_c1/Conv1D/Squeeze]"
+  },
+  {
+   "Name": "PWN(PWN(PWN(tri_none_kan/ord_c1/BiasAdd + tri_none_kan/ord_c1/Relu), PWN(tri_none_kan/ord_bn1/batchnorm/mul_1)), PWN(tri_none_kan/ord_bn1/batchnorm/add_1))",
+   "LayerType": "PointWiseV2",
+   "Inputs": [
+    {
+     "Name": "tri_none_kan/ord_c1/Conv1D/Squeeze:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    },
+    {
+     "Name": "(Unnamed Layer* 31) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    },
+    {
+     "Name": "(Unnamed Layer* 34) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    },
+    {
+     "Name": "(Unnamed Layer* 36) [Constant]_output",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_kan/ord_bn1/batchnorm/add_1:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "PointWise",
+   "ParameterSubType": "PointWiseExpression",
+   "NbInputArgs": 4,
+   "InputArgs": [
+    "arg0",
+    "arg1",
+    "arg2",
+    "arg3"
+   ],
+   "NbOutputVars": 1,
+   "OutputVars": [
+    "var3"
+   ],
+   "NbParams": 0,
+   "Params": [],
+   "NbLiterals": 1,
+   "Literals": [
+    "0.000000e+00f"
+   ],
+   "NbOperations": 4,
+   "Operations": [
+    "auto const var0 = pwgen::iPlus(arg0, arg1);",
+    "auto const var1 = pwgen::iMax(var0, literal0);",
+    "auto const var2 = pwgen::iMul(var1, arg2);",
+    "auto const var3 = pwgen::iPlus(var2, arg3);"
+   ],
+   "TacticValue": "0x000000000000001c",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/ord_c1/BiasAdd]\u001e[ONNX Layer: tri_none_kan/ord_c1/Relu]\u001e[ONNX Layer: tri_none_kan/ord_bn1/batchnorm/mul_1]\u001e[ONNX Layer: tri_none_kan/ord_bn1/batchnorm/add_1]"
+  },
+  {
+   "Name": "tri_none_kan/ord_c2/Conv1D/ExpandDims",
+   "LayerType": "NoOp",
+   "Inputs": [
+    {
+     "Name": "tri_none_kan/ord_bn1/batchnorm/add_1:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_kan/ord_c2/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "TacticValue": "0x0000000000000000",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/ord_c2/Conv1D/ExpandDims]"
+  },
+  {
+   "Name": "tri_none_kan/ord_c2/Conv1D",
+   "LayerType": "CaskConvolution",
+   "Inputs": [
+    {
+     "Name": "tri_none_kan/ord_c2/Conv1D/ExpandDims:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      32,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_kan/ord_c2/Conv1D:0",
+     "Location": "Device",
+     "Dimensions": [
+      1,
+      48,
+      1,
+      21
+     ],
+     "Format/Datatype": "Row major linear FP32"
+    }
+   ],
+   "ParameterType": "Convolution",
+   "Kernel": [
+    1,
+    3
+   ],
+   "PaddingMode": "kEXPLICIT_ROUND_DOWN",
+   "PrePadding": [
+    0,
+    1
+   ],
+   "PostPadding": [
+    0,
+    1
+   ],
+   "Stride": [
+    1,
+    1
+   ],
+   "Dilation": [
+    1,
+    1
+   ],
+   "OutMaps": 48,
+   "Groups": 1,
+   "Weights": {
+    "Type": "Float",
+    "Count": 4608
+   },
+   "Bias": {
+    "Type": "Float",
+    "Count": 0
+   },
+   "HasBias": 0,
+   "HasReLU": 0,
+   "HasSparseWeights": 0,
+   "HasDynamicFilter": 0,
+   "HasDynamicBias": 0,
+   "HasResidual": 0,
+   "ConvXAsActInputIdx": -1,
+   "BiasAsActInputIdx": -1,
+   "ResAsActInputIdx": -1,
+   "Activation": "NONE",
+   "TacticName": "sm80_xmma_fprop_implicit_gemm_f32f32_f32f32_f32_nchwkcrs_nchw_tilesize32x32x8_stage3_warpsize1x2x1_g1_ffma_aligna4_alignc4",
+   "TacticValue": "0xb0bf940d5e0f9f45",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/ord_c2/Conv1D]"
+  },
+  {
+   "Name": "dummy_shape_call__mye85767_0_myl9_0",
+   "LayerType": "shape_call",
+   "Inputs": [],
+   "Outputs": [],
+   "TacticName": "",
+   "StreamId": 0,
+   "Metadata": ""
+  },
+  {
+   "Name": "__myl_AddRelMea_myl9_1",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_kan/ord_c2/Conv1D:0",
+     "Dimensions": [
+      1,
+      48,
+      21
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "const_fold_opt__7652_constantFloat",
+     "Dimensions": [
+      1,
+      48,
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "tri_none_kan/ord_gap/Mean_0'.1",
+     "Dimensions": [
+      1,
+      48,
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_AddRelMea_0xf2c00175b1147e61cf7342b171e0fdc1",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/ord_c2/BiasAdd]\u001f[ONNX Layer: tri_none_kan/ord_gap/Mean]\u001f[ONNX Layer: tri_none_kan/ord_c2/Relu]"
+  },
+  {
+   "Name": "__myl_MulSumAddRel_myl9_2",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_kan/ord_fc/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_37_constantFloat",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85448_dconst",
+     "Dimensions": [
+      48,
+      64
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_kan/ord_gap/Mean_0'.1",
+     "Dimensions": [
+      48,
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "__myln_k_arg__bb1_4",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_MulSumAddRel_0xbb5768edf0e3b5e7c7da17576fc95030",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/ord_fc/MatMul]\u001f[ONNX Layer: tri_none_kan/ord_fc/Relu]\u001f[ONNX Layer: tri_none_kan/ord_fc/BiasAdd]"
+  },
+  {
+   "Name": "__myl_MulAddResMulSumAddRel_myl9_3",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_kan/sc_fc1/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_3_constantFloat",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85463_dconst",
+     "Dimensions": [
+      36,
+      64
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_kan/sc_bn/batchnorm/sub_0 _ ONNXTRT_Broadcast_1_constantFloat",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "scalars",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_kan/sc_bn/batchnorm/mul_0 _ ONNXTRT_Broadcast_constantFloat",
+     "Dimensions": [
+      1,
+      36
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "__myln_k_arg__bb1_5",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_MulAddResMulSumAddRel_0x181954ae59d0dc4e9d5f984e035a14ca",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/sc_bn/batchnorm/mul_1]\u001f[ONNX Layer: tri_none_kan/sc_bn/batchnorm/add_1]\u001f[ONNX Layer: tri_none_kan/sc_fc1/MatMul]\u001f[ONNX Layer: tri_none_kan/sc_fc1/Relu]\u001f[ONNX Layer: tri_none_kan/sc_fc1/BiasAdd]"
+  },
+  {
+   "Name": "__myl_ResMulSumAddRel_myl9_4",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "tri_none_kan/sc_fc2/BiasAdd/ReadVariableOp_0 _ ONNXTRT_Broadcast_5_constantFloat",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85478_dconst",
+     "Dimensions": [
+      64,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_5",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "__myln_k_arg__bb1_6",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_ResMulSumAddRel_0xab800872343ec566886e33e94fc6cb73",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/sc_fc2/MatMul]\u001f[ONNX Layer: tri_none_kan/sc_fc2/Relu]\u001f[ONNX Layer: tri_none_kan/sc_fc2/BiasAdd]"
+  },
+  {
+   "Name": "__myl_ConResMeaSubMulSum_myl9_5",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "__myln_k_arg__bb1_4",
+     "Dimensions": [
+      1,
+      64
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_6",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "__myln_k_arg__bb1_8",
+     "Dimensions": [
+      1,
+      1,
+      96,
+      1
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "ReduceSumSquare__7355_0'_unsqueezed0.1",
+     "Dimensions": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_ConResMeaSubMulSum_0x246bdd9c89b0ea628387d528e208b625",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/fusion/concat]\u001f[ONNX Layer: ReduceSumSquare__7355]\u001f[ONNX Layer: ReduceMean__7345]\u001f[ONNX Layer: tri_none_kan/kan_h0/kan_ln/Reshape]"
+  },
+  {
+   "Name": "__myl_DivResAddSqrDivMulAddResMulAddTanResNegExpAddDivMulEqlGtrOrLtAndCasSliSliAddSubSubAddSubAddEtc_myl9_6",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "__mye84702_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84747_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84727_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85340_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84687_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84732_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84737_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85335_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84697_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84742_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84752_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85330_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84712_dconst",
+     "Dimensions": [
+      1,
+      1,
+      12
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84717_dconst",
+     "Dimensions": [
+      1,
+      1,
+      12
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84722_dconst",
+     "Dimensions": [
+      1,
+      1,
+      12
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85493_dconst",
+     "Dimensions": [
+      96,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84758_dconst",
+     "Dimensions": [
+      864,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_kan/kan_h0/kan_ln/add/ReadVariableOp_0 _ ONNXTRT_Broadcast_147_constantFloat",
+     "Dimensions": [
+      1,
+      96
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_kan/kan_h0/kan_ln/mul/ReadVariableOp_0 _ ONNXTRT_Broadcast_145_constantFloat",
+     "Dimensions": [
+      1,
+      96
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_8",
+     "Dimensions": [
+      1,
+      1,
+      96,
+      1
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "ReduceSumSquare__7355_0'_unsqueezed0.1",
+     "Dimensions": [
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "__myln_k_arg__bb1_9",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_DivResAddSqrDivMulAddResMulAddTanResNegExpAddDivMulEqlGtrOrLtAndCasSliSliAddSubSubAddSubAddEtc_0x32aa7033fb5dd45c5f4c8d6e032ef42c",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: Div__7365]\u001f[ONNX Layer: tri_none_kan/kan_h0/kan_ln/FusedBatchNormV3]\u001f[ONNX Layer: tri_none_kan/kan_h0/kan_ln/mul]\u001f[ONNX Layer: tri_none_kan/kan_h0/kan_ln/Reshape_1]\u001f[ONNX Layer: tri_none_kan/kan_h0/Tanh]\u001f[ONNX Layer: tri_none_kan/kan_h0/kan_ln/add]\u001f[ONNX Layer: tri_none_kan/kan_h0/mul_1]\u001f[ONNX Layer: tri_none_kan/kan_h0/MatMul]\u001f[ONNX Layer: Gemm__7816]\u001f[ONNX Layer: tri_none_kan/kan_h0/add_9]\u001f[ONNX Layer: tri_none_kan/kan_h0/GreaterEqual]\u001f[ONNX Layer: tri_none_kan/kan_h0/Cast]\u001f[ONNX Layer: tri_none_kan/kan_h0/and]\u001f[ONNX Layer: tri_none_kan/kan_h0/Less]\u001f[ONNX Layer: tri_none_kan/kan_h0/strided_slice_8]\u001f[ONNX Layer: tri_none_kan/kan_h0/strided_slice_9]\u001f[ONNX Layer: tri_none_kan/kan_h0/sub]\u001f[ONNX Layer: tri_none_kan/kan_h0/truediv]\u001f[ONNX Layer: tri_none_kan/kan_h0/add_2]\u001f[ONNX Layer: tri_none_kan/kan_h0/mul_3]\u001f[ONNX Layer: tri_none_kan/kan_h0/mul_4]\u001f[ONNX Layer: tri_none_kan/kan_h0/truediv_1]\u001f[ONNX Layer: tri_none_kan/kan_h0/sub_2]\u001f[ONNX Layer: tri_none_kan/kan_h0/strided_slice_16]\u001f[ONNX Layer: tri_none_kan/kan_h0/strided_slice_17]\u001f[ONNX Layer: tri_none_kan/kan_h0/sub_4]\u001f[ONNX Layer: tri_none_kan/kan_h0/truediv_2]\u001f[ONNX Layer: tri_none_kan/kan_h0/add_5]\u001f[ONNX Layer: tri_none_kan/kan_h0/mul_5]\u001f[ONNX Layer: tri_none_kan/kan_h0/mul_6]\u001f[ONNX Layer: tri_none_kan/kan_h0/truediv_3]\u001f[ONNX Layer: tri_none_kan/kan_h0/sub_6]\u001f[ONNX Layer: tri_none_kan/kan_h0/strided_slice_24]\u001f[ONNX Layer: tri_none_kan/kan_h0/strided_slice_25]\u001f[ONNX Layer: tri_none_kan/kan_h0/sub_8]\u001f[ONNX Layer: tri_none_kan/kan_h0/truediv_4]\u001f[ONNX Layer: tri_none_kan/kan_h0/add_8]\u001f[ONNX Layer: tri_none_kan/kan_h0/mul_7]\u001f[ONNX Layer: tri_none_kan/kan_h0/mul_8]\u001f[ONNX Layer: tri_none_kan/kan_h0/truediv_5]\u001f[ONNX Layer: tri_none_kan/kan_h0/sub_10]\u001f[ONNX Layer: tri_none_kan/kan_h0/ExpandDims]\u001f[ONNX Layer: tri_none_kan/kan_h0/Sigmoid]"
+  },
+  {
+   "Name": "__myl_ResMeaSubMulSum_myl9_7",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "__myln_k_arg__bb1_9",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "ReduceSumSquare__7424_0'_unsqueezed0.1",
+     "Dimensions": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_11",
+     "Dimensions": [
+      1,
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_ResMeaSubMulSum_0xc8c3983aedd91a246d2002a559012dc5",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/kan_h1/kan_ln/Reshape]\u001f[ONNX Layer: ReduceMean__7414]\u001f[ONNX Layer: ReduceSumSquare__7424]"
+  },
+  {
+   "Name": "__myl_DivResAddSqrDivMulAddResMulAddTanResNegExpAddDivMulResMulEqlGtrOrLtAndCasSliSliAddSubSubAddEtc_myl9_8",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "__mye84787_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84832_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84812_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85355_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84772_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84817_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84822_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85350_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84782_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84827_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84837_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85345_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84797_dconst",
+     "Dimensions": [
+      1,
+      1,
+      12
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84802_dconst",
+     "Dimensions": [
+      1,
+      1,
+      12
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84807_dconst",
+     "Dimensions": [
+      1,
+      1,
+      12
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85518_dconst",
+     "Dimensions": [
+      32,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84843_dconst",
+     "Dimensions": [
+      288,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_kan/kan_h1/kan_ln/add/ReadVariableOp_0 _ ONNXTRT_Broadcast_512_constantFloat",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_kan/kan_h1/kan_ln/mul/ReadVariableOp_0 _ ONNXTRT_Broadcast_510_constantFloat",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_11",
+     "Dimensions": [
+      1,
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "ReduceSumSquare__7424_0'_unsqueezed0.1",
+     "Dimensions": [
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "__myln_k_arg__bb1_12",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_DivResAddSqrDivMulAddResMulAddTanResNegExpAddDivMulResMulEqlGtrOrLtAndCasSliSliAddSubSubAddEtc_0x09e343ffb95edb0ee5f72b49f6638ce7",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: Div__7434]\u001f[ONNX Layer: tri_none_kan/kan_h1/kan_ln/FusedBatchNormV3]\u001f[ONNX Layer: tri_none_kan/kan_h1/kan_ln/mul]\u001f[ONNX Layer: tri_none_kan/kan_h1/kan_ln/Reshape_1]\u001f[ONNX Layer: tri_none_kan/kan_h1/Tanh]\u001f[ONNX Layer: tri_none_kan/kan_h1/kan_ln/add]\u001f[ONNX Layer: tri_none_kan/kan_h1/mul_1]\u001f[ONNX Layer: tri_none_kan/kan_h1/MatMul]\u001f[ONNX Layer: Gemm__7778]\u001f[ONNX Layer: tri_none_kan/kan_h1/add_9]\u001f[ONNX Layer: tri_none_kan/kan_h1/GreaterEqual]\u001f[ONNX Layer: tri_none_kan/kan_h1/Cast]\u001f[ONNX Layer: tri_none_kan/kan_h1/and]\u001f[ONNX Layer: tri_none_kan/kan_h1/Less]\u001f[ONNX Layer: tri_none_kan/kan_h1/strided_slice_8]\u001f[ONNX Layer: tri_none_kan/kan_h1/strided_slice_9]\u001f[ONNX Layer: tri_none_kan/kan_h1/sub]\u001f[ONNX Layer: tri_none_kan/kan_h1/truediv]\u001f[ONNX Layer: tri_none_kan/kan_h1/add_2]\u001f[ONNX Layer: tri_none_kan/kan_h1/mul_3]\u001f[ONNX Layer: tri_none_kan/kan_h1/mul_4]\u001f[ONNX Layer: tri_none_kan/kan_h1/truediv_1]\u001f[ONNX Layer: tri_none_kan/kan_h1/sub_2]\u001f[ONNX Layer: tri_none_kan/kan_h1/strided_slice_16]\u001f[ONNX Layer: tri_none_kan/kan_h1/strided_slice_17]\u001f[ONNX Layer: tri_none_kan/kan_h1/sub_4]\u001f[ONNX Layer: tri_none_kan/kan_h1/truediv_2]\u001f[ONNX Layer: tri_none_kan/kan_h1/add_5]\u001f[ONNX Layer: tri_none_kan/kan_h1/mul_5]\u001f[ONNX Layer: tri_none_kan/kan_h1/mul_6]\u001f[ONNX Layer: tri_none_kan/kan_h1/truediv_3]\u001f[ONNX Layer: tri_none_kan/kan_h1/sub_6]\u001f[ONNX Layer: tri_none_kan/kan_h1/strided_slice_24]\u001f[ONNX Layer: tri_none_kan/kan_h1/strided_slice_25]\u001f[ONNX Layer: tri_none_kan/kan_h1/sub_8]\u001f[ONNX Layer: tri_none_kan/kan_h1/truediv_4]\u001f[ONNX Layer: tri_none_kan/kan_h1/add_8]\u001f[ONNX Layer: tri_none_kan/kan_h1/mul_7]\u001f[ONNX Layer: tri_none_kan/kan_h1/mul_8]\u001f[ONNX Layer: tri_none_kan/kan_h1/truediv_5]\u001f[ONNX Layer: tri_none_kan/kan_h1/sub_10]\u001f[ONNX Layer: tri_none_kan/kan_h1/ExpandDims]\u001f[ONNX Layer: tri_none_kan/kan_h1/Sigmoid]"
+  },
+  {
+   "Name": "__myl_ResMeaSubMulSum_myl9_9",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "__myln_k_arg__bb1_12",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "ReduceSumSquare__7493_0'_unsqueezed0.1",
+     "Dimensions": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_14",
+     "Dimensions": [
+      1,
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_ResMeaSubMulSum_0xc8c3983aedd91a246d2002a559012dc5",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/kan_h2/kan_ln/Reshape]\u001f[ONNX Layer: ReduceMean__7483]\u001f[ONNX Layer: ReduceSumSquare__7493]"
+  },
+  {
+   "Name": "__myl_DivResAddSqrDivMulAddResMulAddTanResNegExpAddDivMulResMulEqlGtrOrLtAndCasSliSliAddSubSubAddEtc_myl9_10",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "__mye84872_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84917_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84897_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85370_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84857_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84902_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84907_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85365_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84867_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84912_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84922_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85360_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84882_dconst",
+     "Dimensions": [
+      1,
+      1,
+      12
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84887_dconst",
+     "Dimensions": [
+      1,
+      1,
+      12
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84892_dconst",
+     "Dimensions": [
+      1,
+      1,
+      12
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85543_dconst",
+     "Dimensions": [
+      32,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84928_dconst",
+     "Dimensions": [
+      288,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_kan/kan_h2/kan_ln/add/ReadVariableOp_0 _ ONNXTRT_Broadcast_877_constantFloat",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_kan/kan_h2/kan_ln/mul/ReadVariableOp_0 _ ONNXTRT_Broadcast_875_constantFloat",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_14",
+     "Dimensions": [
+      1,
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "ReduceSumSquare__7493_0'_unsqueezed0.1",
+     "Dimensions": [
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "__myln_k_arg__bb1_15",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_DivResAddSqrDivMulAddResMulAddTanResNegExpAddDivMulResMulEqlGtrOrLtAndCasSliSliAddSubSubAddEtc_0x09e343ffb95edb0ee5f72b49f6638ce7",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: Div__7503]\u001f[ONNX Layer: tri_none_kan/kan_h2/kan_ln/FusedBatchNormV3]\u001f[ONNX Layer: tri_none_kan/kan_h2/kan_ln/mul]\u001f[ONNX Layer: tri_none_kan/kan_h2/kan_ln/Reshape_1]\u001f[ONNX Layer: tri_none_kan/kan_h2/Tanh]\u001f[ONNX Layer: tri_none_kan/kan_h2/kan_ln/add]\u001f[ONNX Layer: tri_none_kan/kan_h2/mul_1]\u001f[ONNX Layer: tri_none_kan/kan_h2/MatMul]\u001f[ONNX Layer: Gemm__7702]\u001f[ONNX Layer: tri_none_kan/kan_h2/add_9]\u001f[ONNX Layer: tri_none_kan/kan_h2/GreaterEqual]\u001f[ONNX Layer: tri_none_kan/kan_h2/Cast]\u001f[ONNX Layer: tri_none_kan/kan_h2/and]\u001f[ONNX Layer: tri_none_kan/kan_h2/Less]\u001f[ONNX Layer: tri_none_kan/kan_h2/strided_slice_8]\u001f[ONNX Layer: tri_none_kan/kan_h2/strided_slice_9]\u001f[ONNX Layer: tri_none_kan/kan_h2/sub]\u001f[ONNX Layer: tri_none_kan/kan_h2/truediv]\u001f[ONNX Layer: tri_none_kan/kan_h2/add_2]\u001f[ONNX Layer: tri_none_kan/kan_h2/mul_3]\u001f[ONNX Layer: tri_none_kan/kan_h2/mul_4]\u001f[ONNX Layer: tri_none_kan/kan_h2/truediv_1]\u001f[ONNX Layer: tri_none_kan/kan_h2/sub_2]\u001f[ONNX Layer: tri_none_kan/kan_h2/strided_slice_16]\u001f[ONNX Layer: tri_none_kan/kan_h2/strided_slice_17]\u001f[ONNX Layer: tri_none_kan/kan_h2/sub_4]\u001f[ONNX Layer: tri_none_kan/kan_h2/truediv_2]\u001f[ONNX Layer: tri_none_kan/kan_h2/add_5]\u001f[ONNX Layer: tri_none_kan/kan_h2/mul_5]\u001f[ONNX Layer: tri_none_kan/kan_h2/mul_6]\u001f[ONNX Layer: tri_none_kan/kan_h2/truediv_3]\u001f[ONNX Layer: tri_none_kan/kan_h2/sub_6]\u001f[ONNX Layer: tri_none_kan/kan_h2/strided_slice_24]\u001f[ONNX Layer: tri_none_kan/kan_h2/strided_slice_25]\u001f[ONNX Layer: tri_none_kan/kan_h2/sub_8]\u001f[ONNX Layer: tri_none_kan/kan_h2/truediv_4]\u001f[ONNX Layer: tri_none_kan/kan_h2/add_8]\u001f[ONNX Layer: tri_none_kan/kan_h2/mul_7]\u001f[ONNX Layer: tri_none_kan/kan_h2/mul_8]\u001f[ONNX Layer: tri_none_kan/kan_h2/truediv_5]\u001f[ONNX Layer: tri_none_kan/kan_h2/sub_10]\u001f[ONNX Layer: tri_none_kan/kan_h2/ExpandDims]\u001f[ONNX Layer: tri_none_kan/kan_h2/Sigmoid]"
+  },
+  {
+   "Name": "__myl_ResMeaSubMulSum_myl9_11",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "__myln_k_arg__bb1_15",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "ReduceSumSquare__7562_0'_unsqueezed0.1",
+     "Dimensions": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_17",
+     "Dimensions": [
+      1,
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_ResMeaSubMulSum_0xc8c3983aedd91a246d2002a559012dc5",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: tri_none_kan/kan_logits/kan_ln/Reshape]\u001f[ONNX Layer: ReduceMean__7552]\u001f[ONNX Layer: ReduceSumSquare__7562]"
+  },
+  {
+   "Name": "__myl_DivResAddSqrDivMulAddResMulAddTanResNegExpAddDivMulResMulEqlGtrOrLtAndCasSliSliAddSubSubAddEtc_myl9_12",
+   "LayerType": "kgen",
+   "Inputs": [
+    {
+     "Name": "__mye84957_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85002_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84982_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85385_dconst",
+     "Dimensions": [
+      1,
+      1,
+      9
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84942_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84987_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84992_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85380_dconst",
+     "Dimensions": [
+      1,
+      1,
+      10
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84952_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84997_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85007_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85375_dconst",
+     "Dimensions": [
+      1,
+      1,
+      11
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84967_dconst",
+     "Dimensions": [
+      1,
+      1,
+      12
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84972_dconst",
+     "Dimensions": [
+      1,
+      1,
+      12
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye84977_dconst",
+     "Dimensions": [
+      1,
+      1,
+      12
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85568_dconst",
+     "Dimensions": [
+      32,
+      18
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__mye85013_dconst",
+     "Dimensions": [
+      288,
+      18
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_kan/kan_logits/kan_ln/add/ReadVariableOp_0 _ ONNXTRT_Broadcast_1242_constantFloat",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "tri_none_kan/kan_logits/kan_ln/mul/ReadVariableOp_0 _ ONNXTRT_Broadcast_1240_constantFloat",
+     "Dimensions": [
+      1,
+      32
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "__myln_k_arg__bb1_17",
+     "Dimensions": [
+      1,
+      1,
+      32,
+      1
+     ],
+     "Format/Datatype": "Float"
+    },
+    {
+     "Name": "ReduceSumSquare__7562_0'_unsqueezed0.1",
+     "Dimensions": [
+      1
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "Outputs": [
+    {
+     "Name": "kan_logits",
+     "Dimensions": [
+      1,
+      18
+     ],
+     "Format/Datatype": "Float"
+    }
+   ],
+   "TacticName": "__myl_DivResAddSqrDivMulAddResMulAddTanResNegExpAddDivMulResMulEqlGtrOrLtAndCasSliSliAddSubSubAddEtc_0xcfbb1b541e966b1da97086b02af1ca3e",
+   "StreamId": 0,
+   "Metadata": "[ONNX Layer: Div__7572]\u001f[ONNX Layer: tri_none_kan/kan_logits/kan_ln/FusedBatchNormV3]\u001f[ONNX Layer: tri_none_kan/kan_logits/kan_ln/mul]\u001f[ONNX Layer: tri_none_kan/kan_logits/kan_ln/Reshape_1]\u001f[ONNX Layer: tri_none_kan/kan_logits/Tanh]\u001f[ONNX Layer: tri_none_kan/kan_logits/kan_ln/add]\u001f[ONNX Layer: tri_none_kan/kan_logits/mul_1]\u001f[ONNX Layer: tri_none_kan/kan_logits/MatMul]\u001f[ONNX Layer: Gemm__7740]\u001f[ONNX Layer: tri_none_kan/kan_logits/add_9]\u001f[ONNX Layer: tri_none_kan/kan_logits/GreaterEqual]\u001f[ONNX Layer: tri_none_kan/kan_logits/Cast]\u001f[ONNX Layer: tri_none_kan/kan_logits/and]\u001f[ONNX Layer: tri_none_kan/kan_logits/Less]\u001f[ONNX Layer: tri_none_kan/kan_logits/strided_slice_8]\u001f[ONNX Layer: tri_none_kan/kan_logits/strided_slice_9]\u001f[ONNX Layer: tri_none_kan/kan_logits/sub]\u001f[ONNX Layer: tri_none_kan/kan_logits/truediv]\u001f[ONNX Layer: tri_none_kan/kan_logits/add_2]\u001f[ONNX Layer: tri_none_kan/kan_logits/mul_3]\u001f[ONNX Layer: tri_none_kan/kan_logits/mul_4]\u001f[ONNX Layer: tri_none_kan/kan_logits/truediv_1]\u001f[ONNX Layer: tri_none_kan/kan_logits/sub_2]\u001f[ONNX Layer: tri_none_kan/kan_logits/strided_slice_16]\u001f[ONNX Layer: tri_none_kan/kan_logits/strided_slice_17]\u001f[ONNX Layer: tri_none_kan/kan_logits/sub_4]\u001f[ONNX Layer: tri_none_kan/kan_logits/truediv_2]\u001f[ONNX Layer: tri_none_kan/kan_logits/add_5]\u001f[ONNX Layer: tri_none_kan/kan_logits/mul_5]\u001f[ONNX Layer: tri_none_kan/kan_logits/mul_6]\u001f[ONNX Layer: tri_none_kan/kan_logits/truediv_3]\u001f[ONNX Layer: tri_none_kan/kan_logits/sub_6]\u001f[ONNX Layer: tri_none_kan/kan_logits/strided_slice_24]\u001f[ONNX Layer: tri_none_kan/kan_logits/strided_slice_25]\u001f[ONNX Layer: tri_none_kan/kan_logits/sub_8]\u001f[ONNX Layer: tri_none_kan/kan_logits/truediv_4]\u001f[ONNX Layer: tri_none_kan/kan_logits/add_8]\u001f[ONNX Layer: tri_none_kan/kan_logits/mul_7]\u001f[ONNX Layer: tri_none_kan/kan_logits/mul_8]\u001f[ONNX Layer: tri_none_kan/kan_logits/truediv_5]\u001f[ONNX Layer: tri_none_kan/kan_logits/sub_10]\u001f[ONNX Layer: tri_none_kan/kan_logits/ExpandDims]\u001f[ONNX Layer: tri_none_kan/kan_logits/Sigmoid]"
+  }
+ ],
+ "Bindings": [
+  "time",
+  "orders",
+  "scalars",
+  "kan_logits"
+ ]
+}
