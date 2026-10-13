@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Power mode: MAXN SUPER vs.\ 15\,W (same TensorRT FP32 engines, batch 1). Latency: mean end-to-end; $P$: mean VDD\_IN power while inferring; $E$: VDD\_IN energy per inference.}
+\label{tab:powermodes}
+\setlength{\tabcolsep}{3pt}
+\small
+\begin{tabular}{llcccccc}
+\toprule
+ & & \multicolumn{2}{c}{Latency (ms)} & \multicolumn{2}{c}{$P$ (W)} & \multicolumn{2}{c}{$E$ (mJ)} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+Backbone & Head & MAXN & 15\,W & MAXN & 15\,W & MAXN & 15\,W \\
+\midrule
+Full & KAN & 1.381 & 1.995 & 10.97 & 8.54 & 15.16 & 17.09 \\
+Full & MLP & 1.365 & 1.963 & 10.86 & 8.59 & 14.82 & 16.85 \\
+Light & KAN & 1.095 & 1.529 & 9.36 & 7.71 & 10.24 & 11.79 \\
+Light & MLP & 1.077 & 1.505 & 9.30 & 7.68 & 10.02 & 11.56 \\
+None & KAN & 0.220 & 0.292 & 8.35 & 7.22 & 1.84 & 2.11 \\
+None & MLP & 0.202 & 0.230 & 8.14 & 7.17 & 1.64 & 1.65 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,36 @@
+\begin{table*}[t]
+\centering
+\caption{Accuracy and deployment cost on the Jetson Orin Nano Super (TensorRT 10.3, batch 1). $\Delta$F1: change vs.\ TensorRT FP32 with 95\% bootstrap CI; flips: predictions that change vs.\ FP32. INT8: entropy PTQ on Conv/MatMul, cross-calibrated (no sample is evaluated by an engine calibrated on it). Engine: H2D+GPU+D2H latency measured by \texttt{trtexec}; E2E: synchronous Python loop (mean $\pm$ s.d.\ across runs, and P99). Energy: whole-module VDD\_IN per inference.}
+\label{tab:main}
+\setlength{\tabcolsep}{3.5pt}
+\small
+\begin{tabular}{lllccccccc}
+\toprule
+Backbone & Head & Prec. & Macro-F1 (\%) & $\Delta$F1 (pp) [95\% CI] & Flips (\%) & Engine (ms) & E2E (ms) & E2E P99 & Energy (mJ) \\
+\midrule
+Full & KAN & FP32 & 93.47 & -- & -- & 1.245 & 1.381 $\pm$ 0.005 & 1.421 & 15.16 \\
+ &  & FP16 & 93.58 & +0.11 [+0.00, +0.36] & 0.1 & 1.385 & 1.545 $\pm$ 0.003 & 1.589 & 15.00 \\
+ &  & INT8 & 93.79 & +0.32 [-0.47, +1.10] & 1.4 & 2.254 & 2.435 $\pm$ 0.012 & 2.674 & 23.26 \\
+\addlinespace[2pt]
+Full & MLP & FP32 & 94.33 & -- & -- & 1.223 & 1.365 $\pm$ 0.002 & 1.464 & 14.82 \\
+ &  & FP16 & 94.33 & +0.00 [+0.00, +0.00] & 0.0 & 1.336 & 1.484 $\pm$ 0.006 & 1.541 & 14.22 \\
+ &  & INT8 & 92.72 & -1.61 [-2.78, -0.47] & 3.3 & 2.160 & 2.353 $\pm$ 0.010 & 2.592 & 22.50 \\
+\addlinespace[2pt]
+Light & KAN & FP32 & 91.88 & -- & -- & 0.947 & 1.095 $\pm$ 0.028 & 1.473 & 10.24 \\
+ &  & FP16 & 92.30 & +0.42 [+0.09, +0.89] & 0.4 & 1.306 & 1.444 $\pm$ 0.010 & 1.579 & 12.60 \\
+ &  & INT8 & 86.59 & -5.29 [-7.16, -3.55] & 8.1 & 1.780 & 1.937 $\pm$ 0.013 & 2.013 & 17.09 \\
+\addlinespace[2pt]
+Light & MLP & FP32 & 89.97 & -- & -- & 0.925 & 1.077 $\pm$ 0.007 & 1.125 & 10.02 \\
+ &  & FP16 & 89.97 & +0.00 [+0.00, +0.00] & 0.0 & 1.290 & 1.438 $\pm$ 0.014 & 1.540 & 12.41 \\
+ &  & INT8 & 89.22 & -0.74 [-2.14, +0.56] & 4.4 & 1.650 & 1.824 $\pm$ 0.009 & 1.882 & 16.09 \\
+\addlinespace[2pt]
+None & KAN & FP32 & 88.43 & -- & -- & 0.132 & 0.220 $\pm$ 0.001 & 0.251 & 1.84 \\
+ &  & FP16 & 88.43 & +0.00 [+0.00, +0.00] & 0.0 & 0.185 & 0.275 $\pm$ 0.001 & 0.311 & 2.26 \\
+ &  & INT8 & 81.38 & -7.05 [-9.25, -5.02] & 11.7 & 0.492 & 0.626 $\pm$ 0.003 & 0.672 & 4.85 \\
+\addlinespace[2pt]
+None & MLP & FP32 & 86.54 & -- & -- & 0.103 & 0.202 $\pm$ 0.001 & 0.232 & 1.64 \\
+ &  & FP16 & 86.54 & +0.00 [+0.00, +0.00] & 0.0 & 0.154 & 0.262 $\pm$ 0.001 & 0.295 & 2.09 \\
+ &  & INT8 & 84.76 & -1.78 [-2.97, -0.58] & 3.9 & 0.187 & 0.306 $\pm$ 0.003 & 0.345 & 2.39 \\
+\bottomrule
+\end{tabular}
+\end{table*}

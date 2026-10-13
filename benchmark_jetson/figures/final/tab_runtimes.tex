@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Runtime baselines (FP32, batch 1): mean end-to-end latency (ms) and VDD\_IN energy per inference (mJ).}
+\label{tab:runtimes}
+\setlength{\tabcolsep}{3.5pt}
+\small
+\begin{tabular}{llcccccc}
+\toprule
+ & & \multicolumn{2}{c}{ORT CPU} & \multicolumn{2}{c}{ORT CUDA} & \multicolumn{2}{c}{TRT FP32} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+Backbone & Head & ms & mJ & ms & mJ & ms & mJ \\
+\midrule
+Full & KAN & 7.586 & 83.75 & 6.623 & 57.17 & 1.381 & 15.16 \\
+Full & MLP & 7.099 & 79.82 & 5.392 & 47.62 & 1.365 & 14.82 \\
+Light & KAN & 3.581 & 39.34 & 5.951 & 47.82 & 1.095 & 10.24 \\
+Light & MLP & 3.232 & 36.38 & 5.239 & 42.64 & 1.077 & 10.02 \\
+None & KAN & 0.508 & 5.40 & 2.791 & 21.25 & 0.220 & 1.84 \\
+None & MLP & 0.130 & 1.40 & 0.826 & 6.47 & 0.202 & 1.64 \\
+\bottomrule
+\end{tabular}
+\end{table}
